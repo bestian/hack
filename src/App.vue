@@ -1,7 +1,9 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+<template lang='pug'>
+  #app
+    router-view
+    footer
+      a(href="mailto:bestian@gmail.com")
+        | bestian@gmail.com
   </div>
 </template>
 
