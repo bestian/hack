@@ -1,18 +1,24 @@
 <template lang="pug">
   .hello
     sui-segment(raised='')
-      router-link(to="/course")
-        sui-header.tada(size="large") {{ msg }}
-      router-link(to="/course")
+      sui-header.tada(size="large") {{ msg }}
+      router-link(to="/home")
         img(src="../assets/logo.png")
+      sui-header.haha(size="medium") 想學寫網站嗎? Vue.js 是很好的入門喔~
+      sui-header.haha(size="medium") 學習資源
+      sui-list(ordered)
+        a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h") {{ l.n }}
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Course',
   data () {
     return {
-      msg: '歡迎'
+      msg: '用Vue.js架網站',
+      links: [
+        {n: 'vue黑板', h: 'http://goban.tw/#/see/vue/0/1'}
+      ]
     }
   }
 }

@@ -1,5 +1,14 @@
 <template lang='pug'>
   #app
+    sui-menu(:widths="2")
+      sui-menu-item
+        router-link(to="/")
+          sui-icon(name="home")
+          | Home
+      sui-menu-item
+        router-link(to="/course")
+          sui-icon(name="users")
+          | 課程
     router-view
     footer
       a(href="mailto:bestian@gmail.com")
@@ -20,6 +29,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
