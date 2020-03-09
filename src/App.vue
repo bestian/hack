@@ -32,6 +32,12 @@ export default {
 </script>
 
 <style>
+
+body {
+  background-image: url('/static/bg-img.jpeg');
+  background-repeat: repeat;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
