@@ -47,7 +47,7 @@ export default {
         {n: 'html黑板', h: 'http://goban.tw/#/see/html/0/0'},
         {n: 'css黑板', h: 'http://goban.tw/#/see/css/0/0'},
         {n: 'javascript黑板', h: 'http://goban.tw/#/see/javascript/0/0'},
-        {n: '小巴的前端教室', h: 'http://goban.tw/#/see/bt_frontend/0/0'}
+        {n: 'hack with bestian', h: 'https://www.github.com/bestian/hack'}
       ],
       works: [
         {n: '零時黑板', h: 'http://goban.tw'},
