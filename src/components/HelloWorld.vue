@@ -2,9 +2,9 @@
   .hello
     sui-segment(raised='')
       router-link(to="/course")
-        sui-header.tada(size="large") {{ msg }}
+        img.logo(src="../assets/logo.png")
       router-link(to="/course")
-        img(src="../assets/logo.png")
+        sui-header(size="large") {{ msg }}
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '歡迎'
+      msg: '歡迎，請按此'
     }
   }
 }
@@ -20,15 +20,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.tada {
-  position: relative;
-  animation: tada 4s infinite;
-}
-
-@keyframes tada {
-  0%   {color:red; left:-5vw; top:0px;}
-  50%  {color:blue; left:5vw; top:0x;}
-  100% {color:red; left:-5vw; top:0px;}
-}
 
 </style>
