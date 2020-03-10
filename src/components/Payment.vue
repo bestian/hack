@@ -15,9 +15,10 @@
               .ui.sub.header
                 | $NT1200 / 時
           sui-grid-column
-            sui-header.haha(size="medium") 小團體
+            sui-header.haha(size="medium") 一對二
               .ui.sub.header
-                | $NT500 / 人時
+                | $NT600 / 人時
+          sui-grid-column
 </template>
 <script>
 export default {
@@ -35,12 +36,6 @@ export default {
 .tada {
   position: relative;
   animation: tada 4s infinite;
-}
-
-@keyframes tada {
-  0%   {color:red; left:-5vw; top:0px;}
-  50%  {color:blue; left:5vw; top:0x;}
-  100% {color:red; left:-5vw; top:0px;}
 }
 
 </style>

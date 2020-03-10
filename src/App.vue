@@ -66,12 +66,14 @@ footer {
   position: relative;
   animation: tada 4s ease-in-out infinite;
 }
+/*
 
 @keyframes tada {
-  0%   {color: #cc0000; right: 5vw}
-  50%  {color: #000000; right: -5vw}
-  100% {color: #cc0000; right: 5vw}
-}
+  0%   {color:red; left:-5vw; top:0px;}
+  50%  {color:blue; left:5vw; top:0x;}
+  100% {color:red; left:-5vw; top:0px;}
+} 
+*/
 
 @keyframes haha {
   0%   {transform: scale(1); -webkit-transform: scale(1)}
