@@ -1,10 +1,9 @@
 <template lang='pug'>
   #app
-    sui-menu(:widths="5")
+    sui-menu.no-print(:widths="5")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
-          | Home
       sui-menu-item
         router-link(to="/course")
           sui-icon(name="users")
@@ -107,11 +106,17 @@ footer {
   }
 }
 
+.print-only {
+  visibility: hidden;
+}
+
 @media print {
   .no-print {
     visibility: hidden;
-    color: transparent;
-    background-color: transparent;
+  }
+
+  .print-only {
+    visibility: visible;
   }
 }
 </style>

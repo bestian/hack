@@ -33,7 +33,7 @@
             sui-list(ordered)
               a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
                 img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
-                | {{ s.n }}
+                | {{ s.n }} - by {{ s.a }}
 </template>
 
 <script>
@@ -64,8 +64,8 @@ export default {
         {n: 'Bestian@LinkedIn', h: 'https://www.linkedin.com/in/bestian-tang-5a968843/'}
       ],
       students: [
-        {n: 'Minecraft介紹網站', h: 'https://github.com/Hans-lee-2006/minecraft'},
-        {n: '自製模型介紹網站', h: 'https://github.com/jinglunT/model'}
+        {n: 'Minecraft介紹網站', h: 'https://github.com/Hans-lee-2006/minecraft', a: 'Hans-lee-2006'},
+        {n: '自製模型介紹網站', h: 'https://github.com/jinglunT/model', a: 'jinglunT'}
       ]
     }
   }
