@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Course from '@/components/Course'
 import Flow from '@/components/Flow'
 import Payment from '@/components/Payment'
+import FAQ from '@/components/FAQ'
 import 'semantic-ui-css/semantic.min.css'
 
 Vue.use(Router)
@@ -29,6 +30,11 @@ export default new Router({
       path: '/payment',
       name: 'Payment',
       component: Payment
+    },
+    {
+      path: '/faq',
+      name: 'FAQ',
+      component: FAQ
     }
   ]
 })

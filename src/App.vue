@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu(:widths="4")
+    sui-menu(:widths="5")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -17,6 +17,10 @@
         router-link(to="/payment")
           sui-icon(name="payment")
           | 學費
+      sui-menu-item
+        router-link(to="/faq")
+          sui-icon(name="question")
+          | FAQ
     router-view
     footer
       span.tada 目前開放預約課程時間: 週三上下午、週四下午；週六上午。
