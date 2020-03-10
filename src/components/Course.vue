@@ -8,7 +8,7 @@
         .sub.header 和Bestian 學習 Vue.js 是很好的入門喔~
       br
       br
-      sui-grid(:columns="4" divided)
+      sui-grid(:columns="4" doubling divided)
         sui-grid-row
           sui-grid-column
             sui-header.haha(size="medium") 學習資源
