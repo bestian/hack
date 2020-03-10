@@ -24,7 +24,7 @@
       p.ans 如果未來正式發佈上網，就會有一個正式的網址可以連結。
       sui-header(size="medium") 為什麼要上課，不是自學程式就好？
       p.ans 現在網上資源很多，當然可以自學。
-      p.ans 
+      p.ans 但是有經驗的先行者帶領，比較事半功倍。
       sui-header(size="medium") 為什麼要從Vue入門，不是從html+css+javascript？
       p.ans Vue是一個完整的框架，學生可以從範本改起，邊改邊學習
         a(href = "http://goban.tw/#/see/html/0/0", target="_blank") html
