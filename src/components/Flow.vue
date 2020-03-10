@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'Course',
+  name: 'Flow',
   data () {
     return {
       msg: '上課流程',

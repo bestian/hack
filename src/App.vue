@@ -22,10 +22,12 @@
           sui-icon(name="question")
           | FAQ
     router-view
-    footer
-      span.tada 目前開放預約課程時間: 週三上下午、週四下午；週六上午。
-        a(href="mailto:bestian@gmail.com")
-          | 洽詢與報名: bestian@gmail.com
+    footer.tada
+      span 目前開放預約課程時間: 週四下午；週六上午。
+        a(href="mailto:bestian@gmail.com", target="_blank")
+          | 洽詢: bestian@gmail.com
+        | &nbsp;&nbsp;|&nbsp;&nbsp;
+        a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名表請按此
   </div>
 </template>
 
@@ -51,23 +53,24 @@ body {
 }
 
 footer {
-  position: fixed;
+  font-size: 1.2em;
   padding: 1em;
   bottom: 0;
   right: 0;
-  text-align: right;
+  text-align: center;
   z-index: 9;
+  background-color: white;
 }
 
 .tada {
   position: relative;
-  animation: tada 4s infinite;
+  animation: tada 4s ease-in-out infinite;
 }
 
 @keyframes tada {
-  0%   {color: #cc0000; right: 10vw}
-  50%  {color: #000000; right: 0vw}
-  100% {color: #cc0000; right: 10vw}
+  0%   {color: #cc0000; right: 5vw}
+  50%  {color: #000000; right: -5vw}
+  100% {color: #cc0000; right: 5vw}
 }
 
 @keyframes haha {

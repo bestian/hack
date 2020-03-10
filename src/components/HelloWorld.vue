@@ -3,7 +3,6 @@
     sui-segment(raised='')
       router-link(to="/course")
         img.logo(src="../assets/logo.png")
-      router-link(to="/course")
         sui-header(size="large") {{ msg }}
 </template>
 
@@ -12,7 +11,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '歡迎，請按此'
+      msg: '歡迎，請按圖換下一頁'
     }
   }
 }
