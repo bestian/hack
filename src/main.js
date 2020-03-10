@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import SuiVue from 'semantic-ui-vue'
+import '@babel/polyfill'
 
 Vue.use(SuiVue)
 
