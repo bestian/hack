@@ -72,8 +72,7 @@ footer {
   0%   {color:red; left:-5vw; top:0px;}
   50%  {color:blue; left:5vw; top:0x;}
   100% {color:red; left:-5vw; top:0px;}
-} 
-*/
+} */
 
 @keyframes haha {
   0%   {transform: scale(1); -webkit-transform: scale(1)}
@@ -89,6 +88,13 @@ footer {
 
 .router-link-exact-active.router-link-active {
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 420px) {
+  .router-link-exact-active.router-link-active {
+    font-size: 1em;
+    color: purple !important;
+  }
 }
 
 </style>
