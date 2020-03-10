@@ -4,33 +4,33 @@
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
+          span.fat-only 首頁
       sui-menu-item
         router-link(to="/course")
           sui-icon(name="users")
-          br.thin-only
-          | 課程
+          span.fat-only 課程
       sui-menu-item
         router-link(to="/flow")
           sui-icon(name="sync")
-          br.thin-only
-          | 流程
+          span.fat-only 流程
       sui-menu-item
         router-link(to="/payment")
           sui-icon(name="payment")
-          br.thin-only
-          | 學費
+          span.fat-only 學費
       sui-menu-item
         router-link(to="/faq")
           sui-icon(name="question")
-          br.thin-only
-          | 問題
+          span.fat-only 問題
     router-view
     footer.tada
-      span 目前開放預約課程時間: 週四下午；週六上午。
+      span 目前開放預約課程時間:
+        br
+        | 週一下午、週三上午、週四下午。
+        br
         a(href="mailto:bestian@gmail.com", target="_blank")
           | 洽詢: bestian@gmail.com
-        | &nbsp;&nbsp;|&nbsp;&nbsp;
-        a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名表請按此
+        br
+        a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 報名表請按此
   </div>
 </template>
 
@@ -57,7 +57,8 @@ body {
 
 footer {
   font-size: 1.2em;
-  padding: 1em;
+  text-align: left !important;
+  padding: 1em 2em;
   bottom: 0;
   right: 0;
   text-align: center;
@@ -67,7 +68,7 @@ footer {
 
 .tada {
   position: relative;
-  animation: tada 4s ease-in-out infinite;
+  animation: tada 4s ease-in infinite;
 }
 /*
 
@@ -91,6 +92,7 @@ footer {
 
 .router-link-exact-active.router-link-active {
   font-size: 1.5em;
+  color: purple !important;
 }
 
 @media screen and (max-width: 420px) {
@@ -102,7 +104,13 @@ footer {
 
 @media screen and (min-width: 420px) {
   .thin-only {
-    display: none;
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .fat-only {
+    display: none !important;
   }
 }
 
