@@ -24,7 +24,33 @@
       p.ans 如果未來正式發佈上網，就會有一個正式的網址可以連結。
       sui-header(size="medium") 為什麼要上課，不是自學程式就好？
       p.ans 現在網上資源很多，當然可以自學。
-      p.ans 但是有一位有經驗的工程師可以引入門，之後修行看個人，會比較容易。
+      p.ans 
+      sui-header(size="medium") 為什麼要從Vue入門，不是從html+css+javascript？
+      p.ans Vue是一個完整的框架，學生可以從範本改起，邊改邊學習
+        a(href = "http://goban.tw/#/see/html/0/0", target="_blank") html
+        | +
+        a(href = "http://goban.tw/#/see/css/0/0", target="_blank") css
+        |+
+        a(href = "http://goban.tw/#/see/javascript/0/0", target="_blank") javascript
+        |。
+      p.ans 原則上，我們會先教
+        a(href = "http://goban.tw/#/see/html/0/0", target="_blank") html
+        |+
+        a(href = "http://goban.tw/#/see/javascript/0/0", target="_blank") html
+        |，
+        a(href = "http://goban.tw/#/see/javascript/0/0", target="_blank") javascript
+        | 比較晚教。
+      p.ans 但是，
+        a(href = "https://vuejs.org/v2/guide/routing.html", target="_blank") 路由(router)
+        | 和把資料結構化，以
+        a(href = "https://vuejs.org/v2/guide/list.html", target="_blank") v-for
+        | 的方式重覆生成html段落，會比較早教。
+      sui-header(size="medium") 學費怎麼算？
+      p.ans $NT1200 / 時，一對二時均攤。
+      sui-header(size="medium") 其他問題？
+      p.ans
+        a(href="mailto:bestian@gmail.com", target="_blank")
+          | 洽詢: bestian@gmail.com
 
 </template>
 <script>

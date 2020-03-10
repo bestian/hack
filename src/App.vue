@@ -8,19 +8,23 @@
       sui-menu-item
         router-link(to="/course")
           sui-icon(name="users")
+          br.thin-only
           | 課程
       sui-menu-item
         router-link(to="/flow")
           sui-icon(name="sync")
+          br.thin-only
           | 流程
       sui-menu-item
         router-link(to="/payment")
           sui-icon(name="payment")
+          br.thin-only
           | 學費
       sui-menu-item
         router-link(to="/faq")
           sui-icon(name="question")
-          | FAQ
+          br.thin-only
+          | 問題
     router-view
     footer.tada
       span 目前開放預約課程時間: 週四下午；週六上午。
@@ -97,4 +101,17 @@ footer {
   }
 }
 
+@media screen and (min-width: 420px) {
+  .thin-only {
+    display: none;
+  }
+}
+
+@media print {
+  .no-print {
+    visibility: hidden;
+    color: transparent;
+    background-color: transparent;
+  }
+}
 </style>
