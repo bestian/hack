@@ -9,6 +9,7 @@
 <script>
 export default {
   name: 'HelloWorld',
+  props: ['likes'],
   data () {
     return {
       msg: '歡迎學習寫網站，請按圖開始'

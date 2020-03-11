@@ -56,6 +56,7 @@
 <script>
 export default {
   name: 'FAQ',
+  props: ['likes'],
   data () {
     return {
       msg: '常見問題'

@@ -21,7 +21,7 @@
         router-link(to="/faq")
           sui-icon(name="question")
           span.fat-only 問題
-    router-view
+    router-view(:likes = "likes")
     footer.tada
       span 目前開放預約課程時間:
         br
@@ -36,7 +36,16 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      likes: [
+        { n: '某人',
+          r: '某人的媽媽',
+          q: '某句好話'
+        }]
+    }
+  }
 }
 </script>
 
@@ -58,7 +67,7 @@ body {
 footer {
   font-size: 1.2em;
   text-align: left !important;
-  padding: 1em 2em;
+  padding: 1em 5em;
   bottom: 0;
   right: 0;
   text-align: center;
