@@ -1,9 +1,9 @@
 <template lang="pug">
   .hello.ui.container
+    sui-header(size="large") {{ msg }}
     router-link(to="/")
       img.logo(src="../assets/logo.png")
     sui-segment(raised='', padded='', align='left')
-      sui-header(size="large") {{ msg }}
       sui-header(size="medium") 跟Bestian遠距學習有什麼好呢？
       p.ans 以個別化的教育方法，量身打造合適的學習進程。
       p.ans 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
