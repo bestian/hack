@@ -21,7 +21,7 @@
         router-link(to="/faq")
           sui-icon(name="question")
           span.fat-only 問題
-    router-view(:likes = "likes")
+    router-view(:likes = "likes", :chats = "chats")
     footer.tada
       span 目前開放預約課程時間:
         br
@@ -35,15 +35,22 @@
 </template>
 
 <script>
+
+import { db, gobansRef, chatsRef } from './firebase/db'
+
 export default {
   name: 'App',
+  firebase: {
+    chats: chatsRef
+  },
   data () {
     return {
       likes: [
         { n: '某人',
           r: '某人的媽媽',
           q: '某句好話'
-        }]
+        }],
+      chats: undefined
     }
   }
 }

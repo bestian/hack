@@ -5,6 +5,7 @@ import Course from '@/components/Course'
 import Flow from '@/components/Flow'
 import Payment from '@/components/Payment'
 import FAQ from '@/components/FAQ'
+import Chat from '@/components/Chat'
 import 'semantic-ui-css/semantic.min.css'
 
 Vue.use(Router)
@@ -35,6 +36,11 @@ export default new Router({
       path: '/faq',
       name: 'FAQ',
       component: FAQ
+    },
+    {
+      path: '/chat',
+      name: 'Chat',
+      component: Chat
     }
   ]
 })
