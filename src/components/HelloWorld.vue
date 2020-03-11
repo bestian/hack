@@ -11,7 +11,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '歡迎，請按圖換下一頁'
+      msg: '歡迎學習寫網站，請按圖開始'
     }
   }
 }
