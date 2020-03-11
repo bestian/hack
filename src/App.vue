@@ -36,7 +36,7 @@
 
 <script>
 
-import { db, gobansRef, chatsRef } from './firebase/db'
+import { chatsRef } from './firebase/db'
 
 export default {
   name: 'App',
