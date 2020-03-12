@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello.ui.container
     sui-header(size="large") {{ msg }}
-    router-link(to="/")
+    router-link(to="/chat")
       img.logo(src="../assets/logo.png")
     sui-segment(raised='', padded='', align='left')
       sui-header(size="medium") 跟Bestian遠距學習有什麼好呢？

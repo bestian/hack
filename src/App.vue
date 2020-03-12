@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu.no-print(:widths="5")
+    sui-menu.no-print(:widths="6")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -21,7 +21,11 @@
         router-link(to="/faq")
           sui-icon(name="question")
           span.fat-only 問題
-    router-view(:likes = "likes", :chats = "chats")
+      sui-menu-item
+        router-link(to="/chats")
+          sui-icon(name="file")
+          span.fat-only 留言板
+    router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.tada
       span 目前開放預約課程時間:
         br
@@ -51,6 +55,21 @@ export default {
           q: '某句好話'
         }],
       chats: undefined
+    }
+  },
+  methods: {
+    submit: function (n, email, t) {
+      var o = {
+        n: n,
+        email: email,
+        t: t,
+        time: (new Date()).getTime()
+      }
+      if (t) {
+        this.$firebaseRefs.chats.push(o)
+      } else {
+        window.alert('請輸入留言')
+      }
     }
   }
 }
@@ -84,7 +103,7 @@ footer {
 
 .tada {
   position: relative;
-  animation: tada 4s ease-in infinite;
+  animation: tada 4s ease-in 3;
 }
 /*
 
