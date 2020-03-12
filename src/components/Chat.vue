@@ -12,8 +12,8 @@
           .content
             a.author(:herf="'mailto:' + c.email", target="_blank")   {{ c.n }} 說：
             .text {{ c.t }}
-            .metadata
-              span.date {{ parseTime(c.time) }}
+              .metadata
+                span.date {{ parseTime(c.time) }}
       .ui.form
         .two.fields
           .required.field
