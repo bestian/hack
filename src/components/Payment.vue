@@ -4,18 +4,18 @@
       sui-header(size="large") {{ msg }}
       router-link(to="/faq")
         img.logo(src="../assets/logo.png")
-      sui-header.haha(size="large") 要怎麼付費呢?
+      sui-header(size="large") 要怎麼付費呢?
         .ui.sub.header 以轉帳的方式，細節e-mail詳談~
       br
       br
       sui-grid(:columns="2" divided)
         sui-grid-row
           sui-grid-column
-            sui-header.haha(size="medium") 一對一
+            sui-header(size="medium") 一對一
               .ui.sub.header
                 | $NT1200 / 時
           sui-grid-column
-            sui-header.haha(size="medium") 一對二
+            sui-header(size="medium") 一對二
               .ui.sub.header
                 | $NT600 / 人時
           sui-grid-column

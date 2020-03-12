@@ -126,6 +126,10 @@ footer {
   cursor: pointer;
 }
 
+.haha {
+  animation: haha 2s infinite;
+}
+
 .router-link-exact-active.router-link-active {
   font-size: 1.5em;
   color: purple !important;

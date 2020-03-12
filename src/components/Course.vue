@@ -4,32 +4,32 @@
       sui-header(size="large") {{ msg }}
       router-link(to="/flow")
         img.logo(src="../assets/logo.png")
-      sui-header.haha(size="large") 想學寫網站嗎?
+      sui-header(size="large") 想學寫網站嗎?
         .sub.header 和Bestian 學習 Vue.js 是很好的入門喔~
       br
       br
       sui-grid(:columns="4" doubling divided)
         sui-grid-row
           sui-grid-column
-            sui-header.haha(size="medium") 學習資源
+            sui-header(size="medium") 學習資源
             sui-list(ordered)
               a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
                 img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
                 | {{ l.n }}
           sui-grid-column
-            sui-header.haha(size="medium") Bestian的作品
+            sui-header(size="medium") Bestian的作品
             sui-list(ordered)
               a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                 img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
                 | {{ w.n }}
           sui-grid-column
-            sui-header.haha(size="medium") Bestian是誰
+            sui-header(size="medium") Bestian是誰
             sui-list(ordered)
               a(is="sui-list-item" v-for="b in bestians", :key="b.n", :href="b.h", target="_blank")
                 img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
                 | {{ b.n }}
           sui-grid-column
-            sui-header.haha(size="medium") 學生作品與半成品
+            sui-header(size="medium") 學生作品與半成品
             sui-list(ordered)
               a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
                 img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")

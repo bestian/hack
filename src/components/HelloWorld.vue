@@ -3,10 +3,15 @@
     sui-segment(raised='')
       router-link(to="/course")
         img.logo(src="../assets/logo.png")
-        sui-header(size="large") {{ msg }}
-        p 以個別化的教育方法，量身打造合適的學習進程。
-        p 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
-        p 和Bestian 學習 Vue.js 是很好的入門喔~
+      sui-header(size="large") {{ msg }}
+      p 以個別化的教育方法，量身打造合適的學習進程。
+      p 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
+      p 和Bestian 學習 Vue.js 是很好的入門喔~
+      p 按
+        router-link(to="/course")
+          img.ui.mini.inline.image.haha(src="../assets/logo.png")
+        | 可以跳到下一頁喔~
+
 </template>
 
 <script>
