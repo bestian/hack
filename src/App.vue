@@ -80,7 +80,7 @@ export default {
 
 body {
   background-image: url('/static/bg-img.jpeg') !important;
-  background-repeat: repeat;
+  background-repeat: repeat !important;
 }
 
 #app {
