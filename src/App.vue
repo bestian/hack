@@ -79,7 +79,7 @@ export default {
 <style>
 
 body {
-  background-image: url('/static/bg-img.jpeg');
+  background-image: url('/static/bg-img.jpeg') !important;
   background-repeat: repeat;
 }
 
@@ -101,8 +101,8 @@ body {
 }
 
 .ui.segment {
-  background-color: hsla(143, 100%, 71%, 0.75);
-  font-size: 1.2em;
+  background-color: hsla(143, 100%, 71%, 0.75) !important;
+  font-size: 1.2em !important;
   box-shadow: 5px 5px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
 }
 
