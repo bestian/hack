@@ -4,6 +4,10 @@
     router-link(to="/chat")
       img.logo(src="../assets/logo.png")
     sui-segment(raised='', padded='', align='left')
+      sui-header(size="medium") Vue是什麼？
+      p vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript
+      p 參考
+        a(href="http://goban.tw/#see/vue/0/0") Vue黑板
       sui-header(size="medium") 跟Bestian遠距學習有什麼好呢？
       p.ans 以個別化的教育方法，量身打造合適的學習進程。
       p.ans 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。

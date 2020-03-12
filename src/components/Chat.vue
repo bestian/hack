@@ -45,8 +45,8 @@ export default {
   },
   methods: {
     submit: function (n, email, t) {
+      this.myText = ''
       this.$emit('submit', n, email, t)
-      this.t = ''
     },
     parseTime: function (t) {
       return (new Date(t)).toLocaleDateString()
