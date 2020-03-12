@@ -83,15 +83,6 @@ body {
   background-repeat: repeat;
 }
 
-#nav-bar {
-  font-size: 1.2em;
-}
-
-.ui.segment {
-  background-color: #99ff99;
-  font-size: 1.2em;
-}
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -100,7 +91,24 @@ body {
   color: #2c3e50;
 }
 
+.ui.header {
+  color: hsla(230, 86%, 30%, 0.9) !important;
+}
+
+#nav-bar {
+  font-size: 1.2em;
+  text-shadow: 1px 1px hsla(167, 84%, 73%, 0.8) !important;
+}
+
+.ui.segment {
+  background-color: hsla(143, 100%, 71%, 0.75);
+  font-size: 1.2em;
+  box-shadow: 5px 5px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
+}
+
 footer {
+  position: relative;
+  z-index: 9;
   font-size: 1.2em;
   text-align: left !important;
   padding: 1em 5em;
@@ -108,7 +116,8 @@ footer {
   right: 0;
   text-align: center;
   z-index: 9;
-  background-color: #a0ffa0;
+  background-color: hsla(118, 87%, 75%, 1);
+  box-shadow: 5px 5px 2px 1px hsla(251, 84%, 73%, 0.8);
 }
 
 .tada {
@@ -125,17 +134,21 @@ footer {
 
 @keyframes haha {
   0%   {transform: scale(1); -webkit-transform: scale(1)}
-  50%  {transform: scale(1); -webkit-transform: scale(1.5)}
+  50%  {top: 1em; transform: scale(1.5); -webkit-transform: scale(1.5)}
   100% {transform: scale(1); -webkit-transform: scale(1)}
 }
 
 .logo {
+  position: relative;
+  top: 0;
   width: 10vmin !important;
   animation: haha 2s infinite;
   cursor: pointer;
 }
 
 .haha {
+  position: relative;
+  top: 0;
   animation: haha 2s infinite;
 }
 
