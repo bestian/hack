@@ -47,6 +47,9 @@
         | 的方式重覆生成html段落，會比較早教。
       sui-header(size="medium") 如果學生有透過這上課，是每個帳戶登錄進來看到的內容，會跟自己的功課有關嗎? 還是每個人都會看到所有在零時黑板上課的人的作業 (但不能更改)?
       p 是後者，每個人都會看到所有在零時黑板上課的人的作業 (但不能更改，除非對方願意開共筆權限給你)
+      sui-header(size="medium") 請問如果要學會如何用vue編寫黑板，大概會需要幾堂課呢?
+      p 其實零時黑板只是網址收集器，網站都是收集來的。要編內容一點也不難。
+      p 當然，要用vue重頭寫出一個零時黑板網站，可能要學一年吧~
       sui-header(size="medium") 學費怎麼算？
       p.ans $NT1200 / 時，一對二時均攤。
       sui-header(size="medium") 其他問題？
@@ -63,6 +66,17 @@ export default {
     return {
       msg: '常見問題'
     }
+  },
+  methods: {
+    scrollFix: function (hashbang) {
+      window.scroll({
+        top: hashbang,
+        behavior: 'smooth'
+      })
+    }
+  },
+  mounted: function () {
+    setTimeout(() => this.scrollFix(this.$route.params.bookmark), 100)
   }
 }
 </script>

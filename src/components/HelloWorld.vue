@@ -4,6 +4,9 @@
       router-link(to="/course")
         img.logo(src="../assets/logo.png")
         sui-header(size="large") {{ msg }}
+        p 以個別化的教育方法，量身打造合適的學習進程。
+        p 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
+        p 和Bestian 學習 Vue.js 是很好的入門喔~
 </template>
 
 <script>
