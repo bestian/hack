@@ -45,6 +45,8 @@ export default {
   },
   methods: {
     submit: function (n, email, t) {
+      this.myName = '訪客'
+      this.myEmail = ''
       this.myText = ''
       this.$emit('submit', n, email, t)
     },

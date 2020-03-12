@@ -67,6 +67,7 @@ export default {
       }
       if (t) {
         this.$firebaseRefs.chats.push(o)
+        window.alert('留言已送出')
       } else {
         window.alert('請輸入留言')
       }
