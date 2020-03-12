@@ -26,7 +26,7 @@
           sui-icon(name="file")
           span.fat-only 留言板
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
-    footer.tada
+    footer.tada#ad
       span 目前開放預約課程時間:
         br
         | 週一下午、週三上午、週四下午。
@@ -34,7 +34,7 @@
         a(href="mailto:bestian@gmail.com", target="_blank")
           | 洽詢: bestian@gmail.com
         br
-        a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 報名表請按此
+        a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
   </div>
 </template>
 
@@ -141,6 +141,9 @@ footer {
   .thin-only {
     display: none !important;
   }
+  footer.tada#ad {
+    padding-left: 20vw;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -162,4 +165,5 @@ footer {
     visibility: visible;
   }
 }
+
 </style>
