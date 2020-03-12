@@ -45,6 +45,8 @@
         | 和把資料結構化，以
         a(href = "https://vuejs.org/v2/guide/list.html", target="_blank") v-for
         | 的方式重覆生成html段落，會比較早教。
+      sui-header(size="medium") 如果學生有透過這上課，是每個帳戶登錄進來看到的內容，會跟自己的功課有關嗎? 還是每個人都會看到所有在零時黑板上課的人的作業 (但不能更改)?
+      p 是後者，每個人都會看到所有在零時黑板上課的人的作業 (但不能更改，除非對方願意開共筆權限給你)
       sui-header(size="medium") 學費怎麼算？
       p.ans $NT1200 / 時，一對二時均攤。
       sui-header(size="medium") 其他問題？
