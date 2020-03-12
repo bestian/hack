@@ -10,7 +10,7 @@
           a.avatar
             img(src="../assets/logo.png")
           .content
-            a.author(:herf="'mailto:' + c.email", target="_blank")   {{ c.n }} 說：
+            a.author(:href="'mailto:' + c.email", target="_blank")   {{ c.n }} 說：
             .text {{ c.t }}
               .metadata
                 span.date {{ parseTime(c.time) }}
