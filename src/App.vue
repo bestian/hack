@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu.no-print(:widths="6")
+    sui-menu#nav-bar.no-print(:widths="6")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -26,7 +26,7 @@
           sui-icon(name="file")
           span.fat-only 留言板
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
-    footer.tada#ad
+    footer.ui.container.tada#ad
       span 目前開放預約課程時間:
         br
         | 週一下午、週三上午、週四下午。
@@ -83,6 +83,15 @@ body {
   background-repeat: repeat;
 }
 
+#nav-bar {
+  font-size: 1.2em;
+}
+
+.ui.segment {
+  background-color: #99ff99;
+  font-size: 1.2em;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -99,7 +108,7 @@ footer {
   right: 0;
   text-align: center;
   z-index: 9;
-  background-color: white;
+  background-color: #a0ffa0;
 }
 
 .tada {

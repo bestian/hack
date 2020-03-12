@@ -1,16 +1,18 @@
 <template lang="pug">
   .hello
-    sui-segment(raised='')
-      router-link(to="/course")
-        img.logo(src="../assets/logo.png")
-      sui-header(size="large") {{ msg }}
-      p 以個別化的教育方法，量身打造合適的學習進程。
-      p 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
-      p 和Bestian 學習 Vue.js 是很好的入門喔~
-      p 按
+    .ui.container
+      sui-segment(raised='')
         router-link(to="/course")
-          img.ui.mini.inline.image.haha(src="../assets/logo.png")
-        | 可以跳到下一頁喔~
+          img.logo(src="../assets/logo.png")
+        sui-header(size="large") {{ msg }}
+        p 以個別化的教育方法，量身打造合適的學習進程。
+        p 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
+        p Vue.js是目前最夯的前端框架之一，可以有架構的建置網站。
+        p 和Bestian 學習 Vue.js 是很好的入門~
+        p 按
+          router-link(to="/course")
+            img.ui.mini.inline.image.haha(src="../assets/logo.png")
+          | 可以跳到下一頁喔~
 
 </template>
 
