@@ -2,13 +2,18 @@
 
 hack with Bestian
 
+# 成課網址
+
+* [hack with Bestian](http://hack.bestian.tw)
+
 # 相關專案
 
 1. [goban](https://github.com/g0v/goban)
+2. [freemath](https://github.com/bestian/freemath)
 
 # 錯誤回報
 
-1. [請寫進這裡](https://github.com/besitan/hack/issues)
+1. [請寫進這裡的議題區](https://github.com/besitan/hack/issues)
 
 # 寫給開發者
 
