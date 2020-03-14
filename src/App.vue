@@ -101,9 +101,9 @@ body {
 }
 
 .ui.segment {
-  background-color: hsla(143, 100%, 71%, 0.75) !important;
+  background-color: hsla(115, 100%, 94%, 0.81) !important;
   font-size: 1.2em !important;
-  box-shadow: 5px 5px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
+  box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
 }
 
 footer {
@@ -116,13 +116,13 @@ footer {
   right: 0;
   text-align: center;
   z-index: 9;
-  background-color: hsla(118, 87%, 75%, 1);
-  box-shadow: 5px 5px 2px 1px hsla(251, 84%, 73%, 0.8);
+  background-color: hsla(115, 100%, 81%, 0.64);
+  box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8);
 }
 
 .tada {
   position: relative;
-  animation: tada 4s ease-in 3;
+  animation: tada 2s ease-in 1;
 }
 /*
 
@@ -142,14 +142,14 @@ footer {
   position: relative;
   top: 0;
   width: 10vmin !important;
-  animation: haha 2s infinite;
+  animation: haha 1s 2;
   cursor: pointer;
 }
 
 .haha {
   position: relative;
   top: 0;
-  animation: haha 2s infinite;
+  animation: haha 1s 2;
 }
 
 .router-link-exact-active.router-link-active {

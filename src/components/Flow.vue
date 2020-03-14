@@ -43,9 +43,9 @@ export default {
       works: [
         {n: 'google hangouts', h: 'https://hangouts.google.com/webchat/start?hl=zh-TW'},
         {n: 'Node.js', h: 'https://nodejs.org/en/'},
+        {n: 'Vue.js', h: 'https://vuejs.org'},
         {n: 'Sublime Text', h: 'https://www.sublimetext.com/3'},
-        {n: 'Package Control', h: 'https://packagecontrol.io/installation'},
-        {n: 'View Syntex Highlight', h: 'https://packagecontrol.io/packages/Vue%20Syntax%20Highlight'}
+        {n: 'Github Desktop', h: 'https://desktop.github.com'}
       ],
       flows: [
         {n: '專題創作', h: 'https://www.tcavs.tc.edu.tw/upload/951219%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C%E7%9A%84%E5%AD%B8%E7%BF%92%E6%96%B9%E6%A1%88%E8%88%87%E6%8C%87%E5%B0%8E%E6%96%B9%E6%B3%95.pdf'},
