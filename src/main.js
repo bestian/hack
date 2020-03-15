@@ -6,6 +6,15 @@ import router from './router'
 import SuiVue from 'semantic-ui-vue'
 import '@babel/polyfill'
 import { rtdbPlugin } from 'vuefire'
+import VueAnalytics from 'vue-analytics'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-26178243-11',
+  router,
+  autoTracking: {
+    pageviewOnLoad: false
+  }
+})
 
 Vue.use(SuiVue)
 Vue.use(rtdbPlugin)
