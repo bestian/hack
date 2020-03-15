@@ -10,6 +10,10 @@
       p 簡而言之，框架(framework)就是一套規範或者規則（思想），大家（程式設計師）在該規範或者規則（思想）下工作。
       p 參考
         a(href="http://goban.tw/#see/vue/0/0") Vue黑板
+      sui-header(size="large") Vue的程式碼有多簡潔呢？
+      p.ans 很簡潔，可以參考看看這個
+        a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
+        | 就會有個概念了。
       sui-header(size="large") 跟Bestian遠距學習有什麼好呢？
       p.ans 以個別化的教育方法，量身打造合適的學習進程。
       p.ans 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
@@ -42,7 +46,7 @@
       p.ans 原則上，我們會先教
         a(href = "http://goban.tw/#/see/html/0/0", target="_blank") html
         |+
-        a(href = "http://goban.tw/#/see/javascript/0/0", target="_blank") html
+        a(href = "http://goban.tw/#/see/css/0/0", target="_blank") css
         |，
         a(href = "http://goban.tw/#/see/javascript/0/0", target="_blank") javascript
         | 比較晚教。
