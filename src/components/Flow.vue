@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      sui-segment(raised='')
+      sui-segment(raised='').ranged
         sui-header(size="large") {{ msg }}
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")

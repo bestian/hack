@@ -101,9 +101,63 @@ body {
 }
 
 .ui.segment {
-  background-color: hsla(115, 100%, 94%, 0.81) !important;
+  background-color: hsla(115, 100%, 100%, 0.81) !important;
   font-size: 1.2em !important;
   box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
+}
+
+.sunflower::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(/static/img/logo-big.jpg);
+  background-size: contain;
+  filter: grayscale(50%);
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(/static/img/heart.jpg);
+  background-size: contain;
+  filter: grayscale(75%);
+  opacity: 0.8;
+}
+
+.ui.segment.code {
+  background-color: hsla(115, 50%, 95%, 0.81) !important;
+}
+
+.code::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(/static/img/code.jpg);
+  filter: grayscale(80%);
+  opacity: 0.36;
+}
+
+.ui.segment.ranged {
+  background-color: hsla(0, 50%, 95%, 0.81) !important;
+}
+
+.ranged::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url(/static/img/ranged.jpg);
+  background-size: contain;
+  filter: grayscale(75%);
+  opacity: 1;
 }
 
 footer {

@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      sui-segment(raised='')
+      sui-segment(raised='').sunflower
         router-link(to="/course")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") {{ msg }}
