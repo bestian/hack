@@ -27,14 +27,15 @@
           span.fat-only 留言板
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.ui.container.tada#ad
-      span 目前開放預約課程時間:
-        br
-        | 週一下午、週三上午、週四下午。
-        br
-        a(href="mailto:bestian@gmail.com", target="_blank")
+      .ui.list
+        .item 目前開放預約課程時間:
+        .item 週一下午、週三上午、週四下午。
+        a.item(href="mailto:bestian@gmail.com", target="_blank")
           | 洽詢: bestian@gmail.com
-        br
-        a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
+        a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
+        a.item(href="http://www.github.com/bestian/hack", target="_blank")
+          i.github.icon
+          | 原始碼
   </div>
 </template>
 

@@ -7,6 +7,9 @@ import SuiVue from 'semantic-ui-vue'
 import '@babel/polyfill'
 import { rtdbPlugin } from 'vuefire'
 import VueAnalytics from 'vue-analytics'
+import VueSimpleMarkdown from 'vue-simple-markdown'
+
+Vue.use(VueSimpleMarkdown)
 
 Vue.use(VueAnalytics, {
   id: 'UA-26178243-11',
