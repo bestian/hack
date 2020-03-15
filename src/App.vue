@@ -155,6 +155,7 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-image: url(/static/img/ranged.jpg);
+  background-repeat: no-repeat;
   background-size: contain;
   filter: grayscale(75%);
   opacity: 1;
