@@ -100,6 +100,14 @@ body {
   text-shadow: 1px 1px hsla(167, 84%, 73%, 0.8) !important;
 }
 
+#nav-bar a {
+  position: absolute;
+  padding-top: 10px;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 .ui.segment {
   background-color: hsla(115, 100%, 100%, 0.81) !important;
   font-size: 1.2em !important;
@@ -208,7 +216,7 @@ footer {
 }
 
 .router-link-exact-active.router-link-active {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: purple !important;
 }
 
