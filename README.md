@@ -1,8 +1,10 @@
 # hack
+和Bestian學程式(hack with Bestian)
 
-hack with Bestian
+# 聯絡方式
+bestian@gmail.com
 
-# 成課網址
+# 組課網址
 
 * [hack with Bestian](http://hack.bestian.tw)
 
