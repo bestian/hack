@@ -38,11 +38,6 @@ export default new Router({
       component: FAQ
     },
     {
-      path: '/faq/:bookmark',
-      name: 'FAQ',
-      component: FAQ
-    },
-    {
       path: '/chat',
       name: 'Chat',
       component: Chat

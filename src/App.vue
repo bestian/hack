@@ -24,7 +24,7 @@
       sui-menu-item
         router-link(to="/chat")
           sui-icon(name="file")
-          span.fat-only 留言板
+          span.fat-only 留言
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.ui.container.tada#ad
       .ui.list
