@@ -56,6 +56,7 @@ export default {
         {n: '自學地圖', h: 'http://map.alearn.org.tw'},
         {n: '自學2.0', h: 'http://we.alearn.org.tw'},
         {n: '認照片遊戲', h: 'http://elder.game.tw'},
+        {n: '走失聯絡卡', h: 'http://imlost.bestian.tw'},
         {n: '小巴開發的手機App', h: 'http://goban.tw/#/see/bestian_apps/0/0'},
         {n: '更多小巴開發的網站', h: 'http://goban.tw/#/see/bestian_apps/0/0'}
       ],
