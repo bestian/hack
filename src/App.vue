@@ -85,7 +85,11 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif,
+               'Microsoft JhengHei',
+                'Microsoft YaHei',
+                'STHeiti',
+                'Apple LiGothic Medium';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
