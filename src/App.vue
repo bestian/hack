@@ -80,8 +80,10 @@ export default {
 <style>
 
 body {
-  background-image: url('/static/bg-img.jpeg') !important;
-  background-repeat: repeat !important;
+
+  background-image: url(/static/img/bg-big.jpg);
+ /* background-image: url('/static/bg-img.jpeg') !important; */
+ /* background-repeat: repeat !important; */
 }
 
 #app {
@@ -116,11 +118,11 @@ body {
 }
 
 .ui.segment {
-  background-color: hsla(115, 100%, 100%, 0.81) !important;
+/*  background-color: hsla(115, 100%, 100%, 0.81) !important; */
   font-size: 1.2em !important;
   box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
 }
-
+/*
 .sunflower::before {
   content: "";
   position: absolute;
@@ -174,10 +176,11 @@ body {
   background-size: contain;
   filter: grayscale(75%);
   opacity: 1;
-}
+} */ 
 
 footer {
   position: relative;
+  color: white;
   z-index: 9;
   font-size: 1.2em;
   text-align: left !important;
@@ -186,8 +189,12 @@ footer {
   right: 0;
   text-align: center;
   z-index: 9;
-  background-color: hsla(115, 100%, 81%, 0.64);
+  background-color: hsla(137, 100%, 16%, 1);
   box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8);
+}
+
+footer a, footer i {
+  color: white !important;
 }
 
 .tada {
