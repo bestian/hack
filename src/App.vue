@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="6")
+    sui-menu#nav-bar.no-print(:widths="6" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -36,6 +36,8 @@
         a.item(href="http://www.github.com/bestian/hack", target="_blank")
           i.github.icon
           | 原始碼
+
+    a.attr(href="http://www.freepik.com", target="_blank") Designed by Ydlabs / Freepik
   </div>
 </template>
 
@@ -79,9 +81,17 @@ export default {
 
 <style>
 
-body {
+a.attr {
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  bottom: 0;
+  font-size: .2em;
+}
 
-  background-image: url(/static/img/bg-big.jpg);
+body {
+  background-image: url(/static/img/OLO2E00.jpg);
+  background-size: contain;
  /* background-image: url('/static/bg-img.jpeg') !important; */
  /* background-repeat: repeat !important; */
 }
@@ -104,7 +114,8 @@ body {
 
 #nav-bar {
   font-size: 1.2em;
-  text-shadow: 1px 1px hsla(167, 84%, 73%, 0.8) !important;
+  background-color: hsla(195, 29%, 23%, 1);
+/*  text-shadow: 1px 1px hsla(167, 84%, 73%, 0.8) !important; */
 }
 
 #nav-bar a {
@@ -120,7 +131,7 @@ body {
 .ui.segment {
 /*  background-color: hsla(115, 100%, 100%, 0.81) !important; */
   font-size: 1.2em !important;
-  box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8) !important;
+/*  box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8) !important; */
 }
 /*
 .sunflower::before {
@@ -176,7 +187,7 @@ body {
   background-size: contain;
   filter: grayscale(75%);
   opacity: 1;
-} */ 
+} */
 
 footer {
   position: relative;
@@ -189,8 +200,8 @@ footer {
   right: 0;
   text-align: center;
   z-index: 9;
-  background-color: hsla(137, 100%, 16%, 1);
-  box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8);
+  background-color: hsla(195, 29%, 23%, 1);
+  /* box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8); */
 }
 
 footer a, footer i {
@@ -231,13 +242,12 @@ footer a, footer i {
 
 .router-link-exact-active.router-link-active {
   font-size: 1.3em;
-  color: purple !important;
+/*  color: hsla(138, 100%, 76%, 1) !important; */
 }
 
 @media screen and (max-width: 420px) {
   .router-link-exact-active.router-link-active {
     font-size: 1em;
-    color: purple !important;
   }
 }
 

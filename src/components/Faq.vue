@@ -1,9 +1,10 @@
 <template lang="pug">
   .hello.ui.container
-    sui-header(size="large") {{ msg }}
-    router-link(to="/chat")
-      img.logo(src="../assets/logo.png")
     sui-segment(raised='', padded='', align='left')
+      div.fluid
+        sui-header(size="large") {{ msg }}
+        router-link(to="/chat")
+          img.logo(src="../assets/logo.png")
       sui-header(size="large")
         | Vue是什麼？
       p vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript
@@ -97,15 +98,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.tada {
-  position: relative;
-  animation: tada 4s infinite;
-}
 
-@keyframes tada {
-  0%   {color:red; left:-5vw; top:0px;}
-  50%  {color:blue; left:5vw; top:0x;}
-  100% {color:red; left:-5vw; top:0px;}
+.fluid {
+  text-align: center;
+  width:100%;
 }
-
 </style>

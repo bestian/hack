@@ -1,9 +1,10 @@
 <template lang="pug">
   .chats
-    sui-header(size="large") {{ msg }}
-    router-link(to="/")
-      img.logo(src="../assets/logo.png")
     .ui.left.aligned.segment.container
+      div.fluid
+        sui-header(size="large") {{ msg }}
+        router-link(to="/")
+          img.logo(src="../assets/logo.png")
       .ui.comments
         h3.ui.dividing.header 歡迎留言
         .comment(v-for="c in chats" :key="c.time")
@@ -69,4 +70,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.fluid {
+  text-align: center;
+  width:100%;
+}
 </style>
