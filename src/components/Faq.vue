@@ -73,11 +73,12 @@
       p.ans 5. 使用者的設定與網站的架構
       p.ans 6. 路由(router)
       p.ans 7. 導航列的架設
-      p.ans 8. 自訂專案目標以及用Github pages發佈上網
-      p.ans 9. 修改標題
-      p.ans 10. 臉書元資料和臉書分享按鈕
-      p.ans 11. 自製留言板
-      p.ans 12. 互動功能與函式
+      p.ans 8. 使用配色器
+      p.ans 9. 自訂專案目標以及用Github pages發佈上網
+      p.ans 10. 修改標題
+      p.ans 11. 臉書元資料和臉書分享按鈕
+      p.ans 12. 自製留言板
+      p.ans 13. 互動功能與函式
       p.ans 這些不是每堂課教一樣東西，而是邊做邊學。
       sui-header(size="large") 學費怎麼算？
       p.ans $NT1200 / 時，一對二時均攤。
