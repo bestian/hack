@@ -65,6 +65,20 @@
       sui-header(size="large") 請問如果要學會如何用vue編寫黑板，大概會需要幾堂課呢?
       p 其實零時黑板只是網址收集器，網站都是收集來的。要編內容一點也不難。
       p 當然，要用vue重頭寫出一個零時黑板網站，可能要學一年吧~
+      sui-header(size="large") 如果設定比較簡單的目標呢？比方說前10堂課會學習到什麼？
+      p.ans 1. 如何用Vue創建網站
+      p.ans 2. 如何把資料結構化，再用v-for呈現
+      p.ans 3. 放超連結
+      p.ans 4. 放圖片
+      p.ans 5. 使用者的設定與網站的架構
+      p.ans 6. 路由(router)
+      p.ans 7. 導航列的架設
+      p.ans 8. 自訂專案目標以及用Github pages發佈上網
+      p.ans 9. 修改標題
+      p.ans 10. 臉書元資料和臉書分享按鈕
+      p.ans 11. 自製留言板
+      p.ans 12. 互動功能與函式
+      p.ans 這些不是每堂課教一樣東西，而是邊做邊學。
       sui-header(size="large") 學費怎麼算？
       p.ans $NT1200 / 時，一對二時均攤。
       sui-header(size="large") 其他問題？
