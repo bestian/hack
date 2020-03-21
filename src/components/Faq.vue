@@ -71,14 +71,29 @@
       p.ans 3. 放超連結
       p.ans 4. 放圖片
       p.ans 5. 使用者的設定與網站的架構
-      p.ans 6. 路由(router)
-      p.ans 7. 導航列的架設
+      p.ans 6. 路由(router)與導航列的架設
+      p.ans 7. margin, padding, font-size, text-decoration等
       p.ans 8. 使用配色器
       p.ans 9. 自訂專案目標以及用Github pages發佈上網
       p.ans 10. 修改標題
       p.ans 11. 臉書元資料和臉書分享按鈕
       p.ans 12. 自製留言板
       p.ans 13. 互動功能與函式
+      p.ans 這些不是每堂課教一樣東西，而是邊做邊學。
+      sui-header(size="large") 如果設定比較難的目標呢？比方說再10堂課會學習到什麼？
+      p.ans 1. 取得遠端資料
+      p.ans 2. 資料剖析與呈現
+      p.ans 3. 各種API
+      p.ans 4. GET和POST
+      p.ans 5. 使用者經驗
+      p.ans 6. google分析
+      p.ans 7. firebase初步
+      p.ans 8. 影音檔的處理
+      p.ans 9. v-if, v-else, v-show等
+      p.ans 10. :style, :class等
+      p.ans 11. 漸變與動畫效果
+      p.ans 12. 深入學習css
+      p.ans 13. pug語法
       p.ans 這些不是每堂課教一樣東西，而是邊做邊學。
       sui-header(size="large") 學費怎麼算？
       p.ans $NT1200 / 時，一對二時均攤。
