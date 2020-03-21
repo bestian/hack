@@ -33,7 +33,7 @@
         a.item(href="mailto:bestian@gmail.com", target="_blank")
           | 洽詢: bestian@gmail.com
         a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
-        a.item(href="http://www.github.com/bestian/hack", target="_blank")
+        a.item#src(href="http://www.github.com/bestian/hack", target="_blank")
           i.github.icon
           | 原始碼
 
@@ -206,6 +206,15 @@ footer {
 
 footer a, footer i {
   color: white !important;
+}
+
+#src {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #333;
+  padding: .2em;
 }
 
 .tada {
