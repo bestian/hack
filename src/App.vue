@@ -90,8 +90,8 @@ a.attr {
 }
 
 body {
-  background-image: url(/static/img/OLO2E00.jpg);
-  background-size: contain;
+  background-image: url(/static/img/OLO2E00.jpg) !important;
+  background-size: contain !important;
  /* background-image: url('/static/bg-img.jpeg') !important; */
  /* background-repeat: repeat !important; */
 }
