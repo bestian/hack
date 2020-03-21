@@ -36,6 +36,10 @@
       sui-header(size="large") 為什麼要上課，不是自學程式就好？
       p.ans 現在網上資源很多，當然可以自學。
       p.ans 但是有經驗的先行者帶領，比較事半功倍。
+      p.ans 即時互動、觀念釐清、真實的人我互動
+      p.ans 人的指導與機器式引導還是有區別的
+      sui-header(size="large") 大人也可以參加嗎？
+      p.ans 當然歡迎報名
       sui-header(size="large") 為什麼要從Vue入門，不是從html+css+javascript？
       p.ans Vue是一個完整的框架，學生可以從範本改起，邊改邊學習
         a(href = "http://goban.tw/#/see/html/0/0", target="_blank") html
@@ -96,7 +100,7 @@
       p.ans 13. pug語法
       p.ans 這些不是每堂課教一樣東西，而是邊做邊學。最重要的是，程式碼太多學不完，過程中陪養學生的自學能力，可以自己查資料解決問題。
       sui-header(size="large") 學費怎麼算？
-      p.ans $NT1200 / 時，一對二時均攤。
+      p.ans $NT1200 / 時，一對二700 / 人時。
       sui-header(size="large") 其他問題？
       p.ans
         a(href="mailto:bestian@gmail.com", target="_blank")

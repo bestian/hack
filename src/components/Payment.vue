@@ -18,7 +18,7 @@
             sui-grid-column
               sui-header(size="medium") 一對二
                 .ui.sub.header
-                  | $NT600 / 人時
+                  | $NT700 / 人時
 </template>
 <script>
 export default {
