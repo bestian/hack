@@ -90,7 +90,7 @@ a.attr {
 }
 
 body {
-  background-color: hsla(160, 70%, 60%, 1);
+  background-color: hsla(160, 70%, 60%, 1) !important;
  /* border: 3px solid hsla(0, 70%, 70%, 1); */
  /*  background-image: url(/static/img/OLO2E00.jpg) !important;
    background-size: contain !important; */
