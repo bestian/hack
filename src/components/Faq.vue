@@ -137,4 +137,9 @@ export default {
   text-align: center;
   width:100%;
 }
+
+p.ans::before {
+  content: '*'
+}
+
 </style>

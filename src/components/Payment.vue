@@ -6,7 +6,7 @@
         router-link(to="/faq")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 要怎麼付費呢?
-          .ui.sub.header 以轉帳的方式，細節e-mail詳談~
+          .sub.header 以轉帳的方式，細節e-mail詳談~
         br
         br
         sui-grid(:columns="2" divided)
