@@ -37,7 +37,7 @@
           i.github.icon
           | 原始碼
 
-    a.attr(href="http://www.freepik.com", target="_blank") Designed by Ydlabs / Freepik
+    //a.attr(href="http://www.freepik.com", target="_blank") Designed by Ydlabs / Freepik
   </div>
 </template>
 
@@ -90,7 +90,7 @@ a.attr {
 }
 
 body {
-  background-color: hsla(20, 70%, 60%, 1);
+  background-color: hsla(160, 70%, 60%, 1);
  /* border: 3px solid hsla(0, 70%, 70%, 1); */
  /*  background-image: url(/static/img/OLO2E00.jpg) !important;
    background-size: contain !important; */
