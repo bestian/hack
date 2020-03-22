@@ -90,8 +90,11 @@ a.attr {
 }
 
 body {
-  background-image: url(/static/img/OLO2E00.jpg) !important;
-  background-size: contain !important;
+  background-color: hsla(20, 70%, 60%, 1);
+ /* border: 3px solid hsla(0, 70%, 70%, 1); */
+ /*  background-image: url(/static/img/OLO2E00.jpg) !important;
+   background-size: contain !important; */
+
  /* background-image: url('/static/bg-img.jpeg') !important; */
  /* background-repeat: repeat !important; */
 }
@@ -128,10 +131,14 @@ body {
   width: 100%;
 }
 
+p {
+  font-size: 18px;
+}
+
 .ui.segment {
 /*  background-color: hsla(115, 100%, 100%, 0.81) !important; */
   font-size: 1.2em !important;
-/*  box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8) !important; */
+  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important;
 }
 /*
 .sunflower::before {
@@ -201,7 +208,7 @@ footer {
   text-align: center;
   z-index: 9;
   background-color: hsla(195, 29%, 23%, 1);
-  /* box-shadow: 1px 1px 2px 1px hsla(251, 84%, 73%, 0.8); */
+  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important;
 }
 
 footer a, footer i {
