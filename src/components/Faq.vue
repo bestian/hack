@@ -60,15 +60,12 @@
         | 和把資料結構化，以
         a(href = "https://vuejs.org/v2/guide/list.html", target="_blank") v-for
         | 的方式重覆生成html段落，會比較早教。
-      sui-header(size="large") 如果學生有透過這上課，是每個帳戶登錄進來看到的內容，會跟自己的功課有關嗎? 還是每個人都會看到所有在零時黑板上課的人的作業 (但不能更改)?
-      p 是後者，每個人都會看到所有在零時黑板上課的人的作業 (但不能更改，除非對方願意開共筆權限給你)
+      sui-header(size="large") 學生上課是每個帳戶登錄進來看到的內容，只跟自己的功課有關嗎? 還是每個人都會看到所有人的作業 (但不能更改)?
+      p 是後者，除非對方願意開共筆權限給你，才能更改。基本上鼓勵相互幫忙。
       sui-header(size="large") 學生的作品原始碼是公開的嗎？
       p 是的，我們用免費的
         a(href = "https://www.github.com/", target = "_blank") Github
         | 帳號創建的專案都是公開的。
-      sui-header(size="large") 請問如果要學會如何用vue編寫黑板，大概會需要幾堂課呢?
-      p 其實零時黑板只是網址收集器，網站都是收集來的。要編內容一點也不難。
-      p 當然，要用vue重頭寫出一個零時黑板網站，可能要學一年吧~
       sui-header(size="large") 如果設定比較簡單的目標呢？比方說前10堂課會學習到什麼？
       p.ans 1. 如何用Vue創建網站
       p.ans 2. 如何把資料結構化，再用v-for呈現
@@ -81,8 +78,9 @@
       p.ans 9. 自訂專案目標以及用Github pages發佈上網
       p.ans 10. 修改標題
       p.ans 11. 臉書元資料和臉書分享按鈕
-      p.ans 12. 自製留言板
+      p.ans 12. markdown語法
       p.ans 13. 互動功能與函式
+      p.ans 14. 自製留言板
       p.ans 這些不是每堂課教一樣東西，而是邊做邊學。
       sui-header(size="large") 如果設定比較難的目標呢？比方說再10堂課會學習到什麼？
       p.ans 1. 取得遠端資料
