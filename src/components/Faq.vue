@@ -11,7 +11,7 @@
         p vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript
         p 簡而言之，框架(framework)就是一套規範或者規則（思想），大家（程式設計師）在該規範或者規則（思想）下工作。
         p 參考
-          a(href="http://goban.tw/#see/vue/0/0") Vue黑板
+          a(href="http://goban.tw/#see/vue/0/0") Vue棋盤
         sui-header(size="large") Vue的程式碼有多簡潔呢？
         p.ans 很簡潔，可以參考看看這個
           a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
@@ -24,7 +24,7 @@
         p.ans 透過螢幕分享，可以即時和學生協作
         p.ans 在意學生每個好奇點，盡量回答每一個提問。
         p.ans 搭配
-          a(href="http://goban.tw", target="_blank") 零時黑板
+          a(href="http://goban.tw", target="_blank") 知識棋盤
           | 教材，培養孩子自學的習慣。
         sui-header(size="large") 跟Bestian遠距學習需要交通嗎？
         p.ans 省去交通勞頓，在家即可學習。
