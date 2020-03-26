@@ -81,7 +81,7 @@ export default {
 
 <style>
 
-.column > .ui.list {
+.column .ui.list {
     text-align: left;
     padding: 1em;
     min-height: 250px;

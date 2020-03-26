@@ -12,18 +12,20 @@
         br
         sui-grid(:columns="2" divided)
           sui-grid-row
-            sui-grid-column.light-green
-              sui-header(size="medium") 一對一
-                .ui.sub.header
-                  | $NT1200 / 時。試課500元。
-                  br
-                  | 也歡迎換工而不是付費喔~
-            sui-grid-column.light-yellow
-              sui-header(size="medium") 一對二
-                .ui.sub.header
-                  | $NT700 / 人時。試課500元。
-                  br
-                  | 也歡迎換工而不是付費喔~
+            sui-grid-column
+              .light-green
+                sui-header(size="medium") 一對一
+                  .ui.sub.header
+                    | $NT1200 / 時。試課500元。
+                    br
+                    | 也歡迎換工而不是付費喔~
+            sui-grid-column
+              .light-yellow
+                sui-header(size="medium") 一對二
+                  .ui.sub.header
+                    | $NT700 / 人時。試課500元。
+                    br
+                    | 也歡迎換工而不是付費喔~
 </template>
 <script>
 export default {

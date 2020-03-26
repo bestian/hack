@@ -9,26 +9,29 @@
           .sub.header 視訊連線是很好的方式喔~
         br
         br
-        sui-grid(:columns="3" divided)
+        sui-grid(:columns="3")
           sui-grid-row
-            sui-grid-column.light-blue
-              sui-header(size="medium") 視訊連線
-              sui-list(ordered)
-                a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
-                  img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
-                  | {{ l.n }}
-            sui-grid-column.light-green
-              sui-header(size="medium") 工具下載
-              sui-list(ordered)
-                a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
-                  img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
-                  | {{ w.n }}
-            sui-grid-column.light-yellow
-              sui-header(size="medium") 進行方式
-              sui-list(ordered)
-                a(is="sui-list-item" v-for="f in flows", :key="f.n", :href="f.h", target="_blank")
-                  img(:src="'https://www.google.com/s2/favicons?domain=' + f.h")
-                  | {{ f.n }}
+            sui-grid-column
+              .light-blue
+                sui-header(size="medium") 視訊連線
+                sui-list(ordered)
+                  a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
+                    img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
+                    | {{ l.n }}
+            sui-grid-column
+              .light-green
+                sui-header(size="medium") 工具下載
+                sui-list(ordered)
+                  a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
+                    img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
+                    | {{ w.n }}
+            sui-grid-column
+              .light-yellow
+                sui-header(size="medium") 進行方式
+                sui-list(ordered)
+                  a(is="sui-list-item" v-for="f in flows", :key="f.n", :href="f.h", target="_blank")
+                    img(:src="'https://www.google.com/s2/favicons?domain=' + f.h")
+                    | {{ f.n }}
 </template>
 
 <script>
