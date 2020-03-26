@@ -11,25 +11,25 @@
         br
         sui-grid(:columns="4" doubling divided)
           sui-grid-row
-            sui-grid-column
+            sui-grid-column.light-green
               sui-header(size="medium") 學習資源
               sui-list(ordered)
                 a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
                   img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
                   | {{ l.n }}
-            sui-grid-column
+            sui-grid-column.light-blue
               sui-header(size="medium") Bestian的作品
               sui-list(ordered)
                 a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                   img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
                   | {{ w.n }}
-            sui-grid-column
+            sui-grid-column.light-green
               sui-header(size="medium") Bestian是誰
               sui-list(ordered)
                 a(is="sui-list-item" v-for="b in bestians", :key="b.n", :href="b.h", target="_blank")
                   img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
                   | {{ b.n }}
-            sui-grid-column
+            sui-grid-column.light-yellow
               sui-header(size="medium") 學生作品與半成品
               sui-list(ordered)
                 a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
@@ -61,9 +61,9 @@ export default {
         {n: '自製的其他網站', h: 'http://goban.tw/#/see/bestian_apps/1/0'}
       ],
       bestians: [
-        {n: 'Bestian@github', h: 'https://www.github.com/bestian'},
-        {n: 'Bestian@Facebook', h: 'https://www.facebook.com/bestiant'},
-        {n: 'Bestian@LinkedIn', h: 'https://www.linkedin.com/in/bestian-tang-5a968843/'}
+        {n: 'Be@github', h: 'https://www.github.com/bestian'},
+        {n: 'Be@Facebook', h: 'https://www.facebook.com/bestiant'},
+        {n: 'Be@LinkedIn', h: 'https://www.linkedin.com/in/bestian-tang-5a968843/'}
       ],
       students: [
         {n: 'Minecraft介紹網站', h: 'https://github.com/Hans-lee-2006/minecraft', a: 'Hans-lee-2006'},
@@ -76,15 +76,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.tada {
-  position: relative;
-  animation: tada 4s infinite;
-}
-
-@keyframes tada {
-  0%   {color:red; left:-5vw; top:0px;}
-  50%  {color:blue; left:5vw; top:0x;}
-  100% {color:red; left:-5vw; top:0px;}
-}
 
 </style>

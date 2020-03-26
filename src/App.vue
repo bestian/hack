@@ -81,6 +81,26 @@ export default {
 
 <style>
 
+.column .ui.list {
+  text-align: left;
+  padding: .6em 1.5em;
+  min-height: 250px;
+  justify-content: center;
+}
+
+.light-green.column .ui.list {
+  background-color: hsla(120, 89%, 90%, 1)
+}
+.light-blue.column .ui.list {
+  background-color: hsla(182, 89%, 90%, 1)
+}
+.light-red.column .ui.list {
+  background-color: hsla(0, 89%, 90%, 1)
+}
+.light-yellow.column .ui.list {
+  background-color: hsla(60, 89%, 90%, 1)
+}
+
 a.attr {
   position: fixed;
   z-index: 9;
