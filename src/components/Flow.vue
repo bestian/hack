@@ -9,7 +9,7 @@
           .sub.header 視訊連線是很好的方式喔~
         br
         br
-        sui-grid(:columns="3")
+        sui-grid(:columns="3" stackable)
           sui-grid-row
             sui-grid-column
               .light-blue

@@ -81,10 +81,20 @@ export default {
 
 <style>
 
+.ui.grid>.row>.column {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
 .column .ui.list {
     text-align: left;
-    padding: 1em;
-    min-height: 250px;
+    height: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .column .ui.list {
+      height: auto;
+  }
 }
 
 .light-green, .light-blue, .light-red, .light-yellow {

@@ -9,7 +9,7 @@
           .sub.header 和Bestian 學習 Vue.js 是很好的入門喔~
         br
         br
-        sui-grid(:columns="4" doubling)
+        sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
               .light-red
@@ -34,7 +34,7 @@
                     | {{ b.n }}
             sui-grid-column
               .light-yellow
-                sui-header(size="medium") 學生作品與半成品
+                sui-header(size="medium") 學生半成品
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
@@ -48,10 +48,10 @@ export default {
     return {
       msg: '用Vue.js架網站',
       links: [
-        {n: 'vue黑板', h: 'http://goban.tw/#/see/vue/0/0'},
-        {n: 'html黑板', h: 'http://goban.tw/#/see/html/0/0'},
-        {n: 'css黑板', h: 'http://goban.tw/#/see/css/0/0'},
-        {n: 'javascript黑板', h: 'http://goban.tw/#/see/javascript/0/0'},
+        {n: 'vue棋盤', h: 'http://goban.tw/#/see/vue/0/0'},
+        {n: 'html棋盤', h: 'http://goban.tw/#/see/html/0/0'},
+        {n: 'css棋盤', h: 'http://goban.tw/#/see/css/0/0'},
+        {n: 'javascript棋盤', h: 'http://goban.tw/#/see/javascript/0/0'},
         {n: 'hack with bestian', h: 'https://www.github.com/bestian/hack'}
       ],
       works: [

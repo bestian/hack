@@ -10,7 +10,7 @@
           .sub.header 也歡迎換工而不是付費喔~
         br
         br
-        sui-grid(:columns="2" divided)
+        sui-grid(:columns="2" divided stackable)
           sui-grid-row
             sui-grid-column
               .light-green
