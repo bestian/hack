@@ -20,7 +20,7 @@
                     | {{ l.n }}
             sui-grid-column
               .light-blue
-                sui-header(size="medium") Bestian的作品
+                sui-header(size="medium") Bestian作品
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")

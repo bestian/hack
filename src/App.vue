@@ -33,7 +33,7 @@
         a.item(href="mailto:bestian@gmail.com", target="_blank")
           | 洽詢: bestian@gmail.com
         a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
-        a.item#src(href="http://www.github.com/bestian/hack", target="_blank")
+        a.item.fat-only#src(href="http://www.github.com/bestian/hack", target="_blank")
           i.github.icon
           | 原始碼
 
@@ -90,6 +90,7 @@ export default {
     text-align: left;
     height: 300px;
 }
+
 
 @media screen and (max-width: 767px) {
   .column .ui.list {
