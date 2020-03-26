@@ -20,7 +20,7 @@
       sui-menu-item
         router-link(to="/faq")
           sui-icon(name="question")
-          span.fat-only 問題
+          span.fat-only 問答
       sui-menu-item
         router-link(to="/chat")
           sui-icon(name="file")
@@ -81,24 +81,27 @@ export default {
 
 <style>
 
-.column .ui.list {
-  text-align: left;
-  padding: .6em 1.5em;
-  min-height: 250px;
-  justify-content: center;
+.column > .ui.list {
+    text-align: left;
+    padding: 1em;
+    min-height: 250px;
 }
 
-.light-green.column .ui.list {
-  background-color: hsla(120, 89%, 90%, 1)
+.light-green, .light-blue, .light-red, .light-yellow {
+  padding: 0.5em;
 }
-.light-blue.column .ui.list {
-  background-color: hsla(182, 89%, 90%, 1)
+
+.light-green, .light-green.column .ui.list {
+  background-color: hsla(120, 50%, 85%, 1)
 }
-.light-red.column .ui.list {
-  background-color: hsla(0, 89%, 90%, 1)
+.light-blue, .light-blue.column .ui.list {
+  background-color: hsla(182, 50%, 85%, 1)
 }
-.light-yellow.column .ui.list {
-  background-color: hsla(60, 89%, 90%, 1)
+.light-red, .light-red.column .ui.list {
+  background-color: hsla(0, 20%, 90%, 1)
+}
+.light-yellow, .light-yellow.column .ui.list {
+  background-color: hsla(60, 50%, 85%, 1)
 }
 
 a.attr {

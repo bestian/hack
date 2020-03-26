@@ -6,19 +6,19 @@
         router-link(to="/faq")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 要怎麼付費呢?
-          .sub.header 以轉帳的方式，細節e-mail詳談~
+          .sub.header 以轉帳的方式，先試課一次，之後e-mail詳談~
         br
         br
         sui-grid(:columns="2" divided)
           sui-grid-row
-            sui-grid-column
+            sui-grid-column.light-green
               sui-header(size="medium") 一對一
                 .ui.sub.header
-                  | $NT1200 / 時
-            sui-grid-column
+                  | $NT1200 / 時。試課500元。
+            sui-grid-column.light-yellow
               sui-header(size="medium") 一對二
                 .ui.sub.header
-                  | $NT700 / 人時
+                  | $NT700 / 人時。試課500元。
 </template>
 <script>
 export default {

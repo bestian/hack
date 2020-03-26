@@ -11,7 +11,7 @@
         br
         sui-grid(:columns="4" doubling divided)
           sui-grid-row
-            sui-grid-column.light-green
+            sui-grid-column.light-red
               sui-header(size="medium") 學習資源
               sui-list(ordered)
                 a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")

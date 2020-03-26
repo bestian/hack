@@ -7,15 +7,15 @@
           img.logo(src="../assets/logo.png")
       .ui.comments
         h3.ui.dividing.header 歡迎留言
-        .comment(v-for="c in chats" :key="c.time")
+        .comment(v-for="(c, idx, order) in chats" :key="c.time")
           a.avatar
             i.user.icon
-          .content
+          .content(:class = "bgColors[order % 4]")
             a.author(:href="'mailto:' + c.email", target="_blank")   {{ c.n }} 說：
             vue-simple-markdown.text(:source="c.t")
               .metadata
                 span.date -{{ parseTime(c.time) }}
-      .ui.form
+      .ui.form.light-blue
         .two.fields
           .required.field
             label 您的大名:
@@ -26,7 +26,7 @@
           .required.field
             label 請留言:
             input(type='text' v-model="myText" placeholder="您想說什麼？")
-        .ui.submit.button(@click="submit(myName, myEmail, myText)") 留言
+        .ui.submit.huge.green.button(@click="submit(myName, myEmail, myText)") 留言
       br
       br
 
@@ -41,7 +41,8 @@ export default {
       msg: '留言版',
       'myName': '訪客',
       'myEmail': '',
-      'myText': ''
+      'myText': '',
+      bgColors: ['light-blue', 'light-green', 'light-yellow', 'light-red']
     }
   },
   methods: {
