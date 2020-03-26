@@ -91,7 +91,6 @@ export default {
     height: 300px;
 }
 
-
 @media screen and (max-width: 767px) {
   .column .ui.list {
       height: auto;
