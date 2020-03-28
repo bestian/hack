@@ -28,8 +28,8 @@
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.ui.container.tada#ad
       .ui.list
-        .item 目前開放預約課程時間:
-        .item 僅週四上午。
+        .item 目前尚可預約課程時間:
+        .item 每週四上午各個時段。
         a.item(href="mailto:bestian@gmail.com", target="_blank")
           | 洽詢: bestian@gmail.com
         a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
