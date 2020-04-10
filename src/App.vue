@@ -300,7 +300,7 @@ footer a, footer i {
   }
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 421px) {
   .thin-only {
     display: none !important;
   }
