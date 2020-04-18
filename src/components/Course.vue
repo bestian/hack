@@ -71,7 +71,8 @@ export default {
       ],
       students: [
         {n: 'Minecraft介紹網站', h: 'https://github.com/Hans-lee-2006/minecraft', a: 'Hans-lee-2006'},
-        {n: '自製模型介紹網站', h: 'https://github.com/jinglunT/model', a: 'jinglunT'}
+        {n: '自製模型介紹網站', h: 'https://github.com/jinglunT/model', a: 'jinglunT'},
+        {n: 'BMI計算機', h: 'https://github.com/bestian/bmi', a: '共同創作'}
       ]
     }
   }
