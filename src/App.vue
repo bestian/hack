@@ -246,6 +246,7 @@ footer {
 
 footer a, footer i {
   color: white !important;
+  text-decoration: underline;
 }
 
 #src {
