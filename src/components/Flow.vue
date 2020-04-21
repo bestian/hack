@@ -9,7 +9,7 @@
           .sub.header 視訊連線是很好的方式喔~
         br
         br
-        sui-grid(:columns="3" stackable)
+        sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
               .light-blue
@@ -32,6 +32,12 @@
                   a(is="sui-list-item" v-for="f in flows", :key="f.n", :href="f.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + f.h")
                     | {{ f.n }}
+            sui-grid-column
+              .light-red
+                sui-header(size="medium") 補充說明
+                sui-list(ordered)
+                  div(is="sui-list-item" v-for = "d in des", :key = "d") {{ d }}
+
 </template>
 
 <script>
@@ -54,6 +60,11 @@ export default {
         {n: '專題創作', h: 'https://www.tcavs.tc.edu.tw/upload/951219%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C%E7%9A%84%E5%AD%B8%E7%BF%92%E6%96%B9%E6%A1%88%E8%88%87%E6%8C%87%E5%B0%8E%E6%96%B9%E6%B3%95.pdf'},
         {n: '參考資源', h: 'http://goban.tw'},
         {n: '有問必答', h: 'https://www.facebook.com/%E9%9B%B6%E6%99%82%E9%BB%91%E6%9D%BF-110565913890537/'}
+      ],
+      des: [
+        '學習者自選主題，教學者分享要製作它需要的語法。',
+        '以如何落實學習者的想像為中心',
+        '另透過觀攀與示範擴充學習者的想像'
       ]
     }
   }

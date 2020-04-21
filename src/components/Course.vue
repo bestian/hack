@@ -51,14 +51,14 @@ export default {
         {n: 'vue棋盤', h: 'http://goban.tw/#/see/vue/0/0'},
         {n: 'html棋盤', h: 'http://goban.tw/#/see/html/0/0'},
         {n: 'css棋盤', h: 'http://goban.tw/#/see/css/0/0'},
-        {n: 'javascript棋盤', h: 'http://goban.tw/#/see/javascript/0/0'},
-        {n: 'hack with bestian', h: 'https://www.github.com/bestian/hack'}
+        {n: 'javascript棋盤', h: 'http://goban.tw/#/see/javascript/0/0'}
       ],
       works: [
-        {n: '知識棋盤', h: 'http://goban.tw'},
+        {n: '跟Bestian一起架網站(本網站)', h: 'http://hack.bestian.tw'},
         {n: '自由數學', h: 'http://math.alearn.org.tw'},
         {n: '自學地圖', h: 'http://map.alearn.org.tw'},
         {n: '自學2.0', h: 'http://we.alearn.org.tw'},
+        {n: '知識棋盤', h: 'http://goban.tw'},
         {n: '認照片遊戲', h: 'http://elder.game.tw'},
         {n: '走失聯絡卡', h: 'http://imlost.bestian.tw'},
         {n: '自製的手機App', h: 'http://goban.tw/#/see/bestian_apps/0/0'},

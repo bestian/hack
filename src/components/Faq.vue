@@ -11,7 +11,11 @@
         p vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript
         p 簡而言之，框架(framework)就是一套規範或者規則（思想），大家（程式設計師）在該規範或者規則（思想）下工作。
         p 參考
-          a(href="http://goban.tw/#see/vue/0/0") Vue棋盤
+          a(href="http://vuejs.org", target="_blank") Vue官網
+          | 和
+          a(href="https://cli.vuejs.org/", target="_blank") Vue-Cli官網
+          | 和
+          a(href="http://goban.tw/#see/vue/0/0", target="_blank") Vue棋盤
         sui-header(size="large") Vue的程式碼有多簡潔呢？
         p.ans 很簡潔，可以參考看看這個
           a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
@@ -25,21 +29,28 @@
         p.ans 在意學生每個好奇點，盡量回答每一個提問。
         p.ans 搭配
           a(href="http://goban.tw", target="_blank") 知識棋盤
-          | 教材，培養孩子自學的習慣。
+          | 教材，培養學生自學的習慣。
         sui-header(size="large") 跟Bestian遠距學習需要交通嗎？
         p.ans 省去交通勞頓，在家即可學習。
         p.ans 只要有網路，各地都能上課。
       .light-yellow
-        sui-header(size="large") 怎樣的孩子適合此課程？
+        sui-header(size="large") 怎樣的學生適合此課程？
         p.ans 小五以上(10+歲)、有學習意願、能夠自律的學生。
-        p.ans (遠距課沒辦法伸手去管秩序，小朋友要能自律才能好好進行)
+        p.ans (遠距課沒辦法伸手去管秩序，學生要能自律才能好好進行)
         sui-header(size="large") 需要什麼設備？
         p.ans 一台能上網、有鏡頭和麥克風的筆電或桌電
-        sui-header(size="large") 家長可以看到孩子的作品嗎？
-        p.ans 可以，在進行中，可以請孩子在家用近端瀏覽器展示。
+        sui-header(size="large") 家長可以看到學生的作品嗎？
+        p.ans 可以，在進行中，可以請學生在家用近端瀏覽器展示。
         p.ans 如果未來正式發佈上網，就會有一個正式的網址可以連結。
+      .light-blue
         sui-header(size="large") 大人也可以參加嗎？
         p.ans 當然歡迎報名
+        sui-header(size="large") 如果是微創工作者，有明確目標，課程的內容可以量身打造嗎？
+        p.ans 當然可以，如果想架形象網站或是商品、活動介紹的網站，我們可以專門往這方向來合作。
+        sui-header(size="large") 如果是微創工作者，有明確目標，可以自訂域名嗎？
+        p.ans 當然可以，例如在
+          a(href = "http://myname.pchome.com.tw/", target="_blank") pchome買網址
+          | 買一個域名，再連結到github pages就行了。
       .light-red
         sui-header(size="large") 為什麼要上課，不是自學程式就好？
         p.ans 現在網上資源很多，當然可以自學。
@@ -73,11 +84,11 @@
           a(href = "https://www.github.com/", target = "_blank") Github
           | 帳號創建的專案都是公開的。
       .light-green
-        sui-header(size="large") 如果設定比較簡單的目標呢？比方說前10堂課會學習到什麼？
+        sui-header(size="large") 如果設定比較簡單的目標呢？比方說前10堂課可能會學習到什麼？
         p.ans 1. 如何用Vue創建網站
-        p.ans 2. 如何把資料結構化，再用v-for呈現
-        p.ans 3. 放超連結
-        p.ans 4. 放圖片
+        p.ans 2. 放超連結與放圖片
+        p.ans 3. 設計主題，分析使用者經驗
+        p.ans 4. 如何把資料結構化，再用v-for呈現
         p.ans 5. 使用者的設定與網站的架構
         p.ans 6. 路由(router)與導航列的架設
         p.ans 7. margin, padding, font-size, text-decoration等
@@ -87,23 +98,23 @@
         p.ans 11. 臉書元資料和臉書分享按鈕
         p.ans 12. markdown語法
         p.ans 13. 互動功能與函式
-        p.ans 14. 自製留言板
+        p.ans 14. 使用google分析追蹤使用者流量
         p.ans 這些不是每堂課教一樣東西，而是邊做邊學，學生作品的主題有別，學到的東西也會不一樣。
       .light-blue
-        sui-header(size="large") 如果設定比較難的目標呢？比方說再10堂課會學習到什麼？
+        sui-header(size="large") 如果設定比較難的目標呢？比方說再10堂課可能會學習到什麼？
         p.ans 1. 取得遠端資料
         p.ans 2. 資料剖析與呈現
-        p.ans 3. 各種API
+        p.ans 3. 各種需要的套件和API
         p.ans 4. GET和POST
-        p.ans 5. 使用者經驗
-        p.ans 6. google分析
-        p.ans 7. firebase初步
-        p.ans 8. 影音檔的處理
-        p.ans 9. v-if, v-else, v-show等
-        p.ans 10. :style, :class等
-        p.ans 11. 漸變與動畫效果
-        p.ans 12. 深入學習css
-        p.ans 13. pug語法
+        p.ans 5. firebase初步
+        p.ans 6. 自製留言板
+        p.ans 7. 影音檔的處理
+        p.ans 8. v-if, v-else, v-show等
+        p.ans 9. :style, :class等
+        p.ans 10. 漸變與動畫效果
+        p.ans 11. 深入學習css
+        p.ans 12. pug語法
+        p.ans 13. UI框架，例如Semantic-UI
         p.ans 這些不是每堂課教一樣東西，而是邊做邊學。最重要的是，程式碼太多學不完，過程中陪養學生的自學能力，可以自己查資料解決問題。
       .light-yellow
         sui-header(size="large") 學費怎麼算？
