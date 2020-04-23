@@ -11,7 +11,7 @@ import VueGtag from 'vue-gtag'
 
 Vue.use(VueGtag, {
   config: { id: 'UA-26178243-11' }
-})
+}, router)
 
 Vue.use(VueSimpleMarkdown)
 
