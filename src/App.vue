@@ -30,10 +30,10 @@
       .ui.list
         .item 目前尚可預約課程時間:
         .item 每週四上午各個時段、隔週三上午各個時段。
-        a.item(href="mailto:bestian@gmail.com", target="_blank")
+        a.item(href="mailto:bestian@gmail.com", target="_blank", @click="track('e-mail', 60)")
           | 洽詢: bestian@gmail.com
-        a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank") 報名: 請按此填表
-        a.item.fat-only#src(href="http://www.github.com/bestian/hack", target="_blank")
+        a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank", @click="track('viewform', 100)") 報名: 請按此填表
+        a.item.fat-only#src(href="http://www.github.com/bestian/hack", target="_blank", @click="track('github', 10)")
           i.github.icon
           | 原始碼
 
@@ -61,6 +61,14 @@ export default {
     }
   },
   methods: {
+    track (t, v) {
+      this.$gtag.event('action', {
+        event_category: t,
+        event_action: t,
+        event_label: t,
+        value: v
+      })
+    },
     submit: function (n, email, t) {
       var o = {
         n: n,
@@ -71,6 +79,7 @@ export default {
       if (t) {
         this.$firebaseRefs.chats.push(o)
         window.alert('留言已送出')
+        this.track('chat', 20)
       } else {
         window.alert('請輸入留言')
       }
