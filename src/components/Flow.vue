@@ -2,11 +2,9 @@
   .hello
     .ui.container
       sui-segment(raised='').ranged
-        sui-header(size="large") {{ msg }}
+        sui-header(size="large") 上課流程
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
-        sui-header(size="large") 要怎麼上課呢?
-          .sub.header 視訊連線是很好的方式喔~
         br
         br
         sui-grid(:columns="4" stackable)
@@ -45,7 +43,6 @@ export default {
   name: 'Flow',
   data () {
     return {
-      msg: '上課流程',
       links: [
         {n: 'google hangouts', h: 'https://hangouts.google.com/webchat/start?hl=zh-TW'}
       ],

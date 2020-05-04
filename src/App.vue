@@ -132,7 +132,7 @@ a.attr {
 }
 
 body {
-  background-color: hsla(160, 70%, 60%, 1) !important;
+ background-color: hsla(30, 75%, 86%, 1) !important;
  /* border: 3px solid hsla(0, 70%, 70%, 1); */
  /*  background-image: url(/static/img/OLO2E00.jpg) !important;
    background-size: contain !important; */
@@ -180,7 +180,7 @@ p {
 .ui.segment {
  background-color: hsla(120, 100%, 100%, .8) !important;
   font-size: 1.2em !important;
-  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important;
+/*  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important; */
 }
 /*
 .sunflower::before {
@@ -250,12 +250,16 @@ footer {
   text-align: center;
   z-index: 9;
   background-color: hsla(195, 29%, 23%, 1);
-  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important;
+/*  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important; */
 }
 
 footer a, footer i {
   color: white !important;
   text-decoration: underline;
+}
+
+p {
+  text-align: left;
 }
 
 #src {
