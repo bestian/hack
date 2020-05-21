@@ -57,6 +57,7 @@ export default {
       ],
       works: [
         {n: '本網站', h: 'http://hack.bestian.tw'},
+        {n: '自然美食DIY', h: 'http://food.bestian.tw'},
         {n: '自由數學', h: 'http://math.alearn.org.tw'},
         {n: '自學地圖', h: 'http://map.alearn.org.tw'},
         {n: '自學2.0', h: 'http://we.alearn.org.tw'},

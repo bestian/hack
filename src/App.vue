@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="6" inverted="")
+    sui-menu#nav-bar.no-print(:widths="7" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -25,6 +25,8 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
+      sui-menu-item.fat-only
+        iframe(src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fhack.bestian.tw&layout=button_count&size=small&appId=485195848253155&width=71&height=20", width="71", height="20", style="border:none;overflow:hidden", scrolling="no", frameborder="0" allowTransparency="true", allow="encrypted-media")
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.ui.container.tada#ad
       .ui.list
@@ -304,8 +306,8 @@ p {
 }
 
 .router-link-exact-active.router-link-active {
-  font-size: 1.3em;
-/*  color: hsla(138, 100%, 76%, 1) !important; */
+/*  font-size: 1em; */
+  color: hsla(138, 100%, 76%, 1) !important;
 }
 
 @media screen and (max-width: 420px) {
