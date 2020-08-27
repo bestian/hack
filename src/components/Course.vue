@@ -71,10 +71,10 @@ export default {
         {n: 'Be@github', h: 'https://www.github.com/bestian'}
       ],
       students: [
-        {n: 'Minecraft介紹網站', h: 'https://github.com/Hans-lee-2006/minecraft', a: 'Hans-lee-2006'},
+        {n: 'Minecraft介紹網站', h: 'https://github.com/Hans-lee-2006/minecraft/', a: 'Hans-lee-2006'},
         {n: '自製模型介紹網站', h: 'https://github.com/jinglunT/model', a: 'jinglunT'},
         {n: 'BMI計算機', h: 'https://github.com/bestian/bmi', a: '共同創作'},
-        {n: '小道小報fork版', h: 'https://github.com/Hans-lee-2006/xikxik', a: 'Hans-lee-2006+Bestian'}
+        {n: 'fb釣魚網站習作', h: 'https://github.com/Hans-lee-2006/fb/', a: 'Hans-lee-2006'}
       ]
     }
   }
