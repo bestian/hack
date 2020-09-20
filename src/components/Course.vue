@@ -74,7 +74,8 @@ export default {
         {n: 'Minecraft介紹網站', h: 'https://hans-lee-2006.github.io/minecraft/#/', a: 'Hans-lee-2006'},
         {n: '自製模型介紹網站', h: 'https://jinglunt.github.io/model/#/', a: 'jinglunT'},
         {n: 'BMI計算機', h: 'https://github.com/bestian/bmi', a: '共同創作'},
-        {n: 'fb釣魚網站習作', h: 'https://github.com/Hans-lee-2006/fb/', a: 'Hans-lee-2006'}
+        {n: 'fb釣魚網站習作', h: 'https://github.com/Hans-lee-2006/fb/', a: 'Hans-lee-2006'},
+        {n: '3D迷宮遊戲', h: 'https://bestian.github.io/maze/', a: '共同創作'}
       ]
     }
   }
