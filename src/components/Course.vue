@@ -75,7 +75,8 @@ export default {
         {n: '自製模型介紹網站', h: 'https://jinglunt.github.io/model/#/', a: 'jinglunT'},
         {n: 'BMI計算機', h: 'https:/bestian.github.io/bmi/#/', a: '共同創作'},
         {n: 'fb釣魚網站習作', h: 'https://hans-lee-2006.github.io/fb/#/', a: 'Hans-lee-2006'},
-        {n: '3D迷宮遊戲', h: 'https://bestian.github.io/maze/#/', a: '共同創作'}
+        {n: '3D迷宮遊戲', h: 'https://bestian.github.io/maze/#/', a: '共同創作'},
+        {n: '射飛碟', h: 'https://bestian.github.io/vue_svg_game/#/', a: '共同創作'}
       ]
     }
   }
