@@ -30,12 +30,12 @@
 <script>
 export default {
   name: 'Payment',
-  data () {
+  data() {
     return {
-      msg: '收費標準'
-    }
-  }
-}
+      msg: '收費標準',
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

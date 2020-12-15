@@ -130,23 +130,23 @@
 export default {
   name: 'FAQ',
   props: ['likes'],
-  data () {
+  data() {
     return {
-      msg: '常見問題'
-    }
+      msg: '常見問題',
+    };
   },
   methods: {
-    scrollFix: function (hashbang) {
+    scrollFix(hashbang) {
       window.scroll({
         top: hashbang,
-        behavior: 'smooth'
-      })
-    }
+        behavior: 'smooth',
+      });
+    },
   },
-  mounted: function () {
-    setTimeout(() => this.scrollFix(this.$route.params.bookmark), 100)
-  }
-}
+  mounted() {
+    setTimeout(() => this.scrollFix(this.$route.params.bookmark), 100);
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
