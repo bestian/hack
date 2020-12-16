@@ -118,7 +118,8 @@
         p.ans 這些不是每堂課教一樣東西，而是邊做邊學。最重要的是，程式碼太多學不完，過程中陪養學生的自學能力，可以自己查資料解決問題。
       .light-yellow
         sui-header(size="large") 學費怎麼算？
-        p.ans $NT1200 / 時，一對二700 / 人時。試課500 / 人時。
+        p.ans 參見
+          router-link(to="/payment") 學費
       .light-red
         sui-header(size="large") 其他問題？
         p.ans
