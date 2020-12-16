@@ -45,49 +45,50 @@
 
 <script>
 
-import { chatsRef } from './firebase/db'
+import { chatsRef } from './firebase/db';
 
 export default {
   name: 'App',
   firebase: {
-    chats: chatsRef
+    chats: chatsRef,
   },
-  data () {
+  data() {
     return {
       likes: [
-        { n: '某人',
+        {
+          n: '某人',
           r: '某人的媽媽',
-          q: '某句好話'
+          q: '某句好話',
         }],
-      chats: undefined
-    }
+      chats: undefined,
+    };
   },
   methods: {
-    track (t, v) {
+    track(t, v) {
       this.$gtag.event('action', {
         event_category: t,
         event_action: t,
         event_label: t,
-        value: v
-      })
+        value: v,
+      });
     },
-    submit: function (n, email, t) {
-      var o = {
-        n: n,
-        email: email,
-        t: t,
-        time: (new Date()).getTime()
-      }
+    submit(n, email, t) {
+      const o = {
+        n,
+        email,
+        t,
+        time: (new Date()).getTime(),
+      };
       if (t) {
-        this.$firebaseRefs.chats.push(o)
-        window.alert('留言已送出')
-        this.track('chat', 20)
+        this.$firebaseRefs.chats.push(o);
+        window.alert('留言已送出');
+        this.track('chat', 20);
       } else {
-        window.alert('請輸入留言')
+        window.alert('請輸入留言');
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style>
@@ -134,7 +135,7 @@ a.attr {
 }
 
 body {
- background-color: hsla(30, 75%, 86%, 1) !important;
+ background-color: hsla(120, 75%, 0%, 1) !important;
  /* border: 3px solid hsla(0, 70%, 70%, 1); */
  /*  background-image: url(/static/img/OLO2E00.jpg) !important;
    background-size: contain !important; */
@@ -156,7 +157,7 @@ body {
 }
 
 .ui.header {
-  color: hsla(230, 86%, 30%, 0.9) !important;
+  color: hsla(230, 86%, 30%, 1) !important;
 }
 
 #nav-bar {
@@ -180,7 +181,7 @@ p {
 }
 
 .ui.segment {
- background-color: hsla(120, 100%, 100%, .8) !important;
+ background-color: hsla(120, 100%, 90%, 1) !important;
   font-size: 1.2em !important;
 /*  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important; */
 }

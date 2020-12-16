@@ -36,36 +36,36 @@
 export default {
   name: 'Chat',
   props: ['likes', 'chats'],
-  data () {
+  data() {
     return {
       msg: '留言版',
-      'myName': '訪客',
-      'myEmail': '',
-      'myText': '',
-      bgColors: ['light-blue', 'light-green', 'light-yellow', 'light-red']
-    }
+      myName: '訪客',
+      myEmail: '',
+      myText: '',
+      bgColors: ['light-blue', 'light-green', 'light-yellow', 'light-red'],
+    };
   },
   methods: {
-    submit: function (n, email, t) {
-      function validateEmail (email) {
+    submit(n, email, t) {
+      function validateEmail(mail) {
         // eslint-disable-next-line
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        return re.test(String(email).toLowerCase())
+        return re.test(String(mail).toLowerCase());
       }
       if (!validateEmail(email)) {
-        window.alert('請輸入E-mail')
-        return
+        window.alert('請輸入E-mail');
+        return;
       }
-      this.myName = '訪客'
-      this.myEmail = ''
-      this.myText = ''
-      this.$emit('submit', n, email, t)
+      this.myName = '訪客';
+      this.myEmail = '';
+      this.myText = '';
+      this.$emit('submit', n, email, t);
     },
-    parseTime: function (t) {
-      return (new Date(t)).toLocaleDateString()
-    }
-  }
-}
+    parseTime(t) {
+      return (new Date(t)).toLocaleDateString();
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

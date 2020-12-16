@@ -47,40 +47,40 @@
 <script>
 export default {
   name: 'Course',
-  data () {
+  data() {
     return {
       links: [
-        {n: 'vue', h: 'http://goban.tw/#/see/vue/0/0'},
-        {n: 'html', h: 'http://goban.tw/#/see/html/0/0'},
-        {n: 'css', h: 'http://goban.tw/#/see/css/0/0'},
-        {n: 'javascript', h: 'http://goban.tw/#/see/javascript/0/0'}
+        { n: 'vue', h: 'http://goban.tw/#/see/vue/0/0' },
+        { n: 'html', h: 'http://goban.tw/#/see/html/0/0' },
+        { n: 'css', h: 'http://goban.tw/#/see/css/0/0' },
+        { n: 'javascript', h: 'http://goban.tw/#/see/javascript/0/0' },
       ],
       works: [
-        {n: '本網站', h: 'http://hack.bestian.tw'},
-        {n: '自然美食DIY', h: 'http://food.bestian.tw'},
-        {n: '自由數學', h: 'http://math.alearn.org.tw'},
-        {n: '自學地圖', h: 'http://map.alearn.org.tw'},
-        {n: '自學2.0', h: 'http://we.alearn.org.tw'},
-        {n: '知識棋盤', h: 'http://goban.tw'},
-        {n: '認照片遊戲', h: 'http://elder.game.tw'},
-        {n: '自製的手機App', h: 'http://goban.tw/#/see/bestian_apps/0/0'},
-        {n: '自製的其他網站', h: 'http://goban.tw/#/see/bestian_apps/1/0'}
+        { n: '本網站', h: 'http://hack.bestian.tw' },
+        { n: '自然美食DIY', h: 'http://food.bestian.tw' },
+        { n: '自由數學', h: 'http://math.alearn.org.tw' },
+        { n: '自學地圖', h: 'http://map.alearn.org.tw' },
+        { n: '自學2.0', h: 'http://we.alearn.org.tw' },
+        { n: '知識棋盤', h: 'http://goban.tw' },
+        { n: '認照片遊戲', h: 'http://elder.game.tw' },
+        { n: '自製的手機App', h: 'http://goban.tw/#/see/bestian_apps/0/0' },
+        { n: '自製的其他網站', h: 'http://goban.tw/#/see/bestian_apps/1/0' },
       ],
       bestians: [
-        {n: 'App開發小記', h: 'https://docs.google.com/document/d/1dDTbuP-U94GRfVV30jgGJMrA-eNy4JZsN40-jDuFwNs/edit#'},
-        {n: 'Be@github', h: 'https://www.github.com/bestian'}
+        { n: 'App開發小記', h: 'https://docs.google.com/document/d/1dDTbuP-U94GRfVV30jgGJMrA-eNy4JZsN40-jDuFwNs/edit#' },
+        { n: 'Be@github', h: 'https://www.github.com/bestian' },
       ],
       students: [
-        {n: 'Minecraft介紹網站', h: 'https://hans-lee-2006.github.io/minecraft/#/', a: 'Hans-lee-2006'},
-        {n: '自製模型介紹網站', h: 'https://jinglunt.github.io/model/#/', a: 'jinglunT'},
-        {n: 'BMI計算機', h: 'https:/bestian.github.io/bmi/#/', a: '共同創作'},
-        {n: 'fb釣魚網站習作', h: 'https://hans-lee-2006.github.io/fb/#/', a: 'Hans-lee-2006'},
-        {n: '3D迷宮遊戲', h: 'https://bestian.github.io/maze/#/', a: '共同創作'},
-        {n: '射飛碟', h: 'https://bestian.github.io/vue_svg_game/#/', a: '共同創作'}
-      ]
-    }
-  }
-}
+        { n: 'Minecraft介紹網站', h: 'https://hans-lee-2006.github.io/minecraft/#/', a: 'Hans-lee-2006' },
+        { n: '自製模型介紹網站', h: 'https://jinglunt.github.io/model/#/', a: 'jinglunT' },
+        { n: 'BMI計算機', h: 'https:/bestian.github.io/bmi/#/', a: '共同創作' },
+        { n: 'fb釣魚網站習作', h: 'https://hans-lee-2006.github.io/fb/#/', a: 'Hans-lee-2006' },
+        { n: '3D迷宮遊戲', h: 'https://bestian.github.io/maze/#/', a: '共同創作' },
+        { n: '射飛碟', h: 'https://bestian.github.io/vue_svg_game/#/', a: '共同創作' },
+      ],
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
