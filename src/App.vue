@@ -34,6 +34,7 @@
         .item 週一下午，週六上午，週日上午。
         a.item(href="mailto:bestian@gmail.com", target="_blank", @click="track('e-mail', 60)")
           | 洽詢: bestian@gmail.com
+        .item
         a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank", @click="track('viewform', 100)", rel="noopener noreferrer") 報名: 請按此填表
         a.item.fat-only#src(href="http://www.github.com/bestian/hack", target="_blank", @click="track('github', 10)", rel="noopener noreferrer")
           i.github.icon
