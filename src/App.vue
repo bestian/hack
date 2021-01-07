@@ -31,7 +31,7 @@
     footer.ui.container.tada#ad
       .ui.list
         .item 目前尚可預約課程時間:
-        .item 週一下午，週六上午，週日上午。
+        .item 週一下午，週四上午，週六上午，週日上午。
         a.item(href="mailto:bestian@gmail.com", target="_blank", @click="track('e-mail', 60)")
           | 洽詢: bestian@gmail.com
         .item
