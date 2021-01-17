@@ -31,9 +31,9 @@ export default {
     timelineItems: [
       {
         from: new Date(2021, 0),
-        title: '萌典',
+        title: '萌典、自主公民樸克牌',
         description:
-          '這個月重新構造了萌典<br/><a href = "https://bestian.github.io/q-moedict" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-moedict</a>',
+          '這個月重新構造了萌典、自主公民樸克牌<br/><a href = "https://bestian.github.io/q-moedict" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-moedict</a><br/><a href = "https://poker.bestian.tw" target="blank" rel="noopener noreferrer">https://poker.bestian.tw</a>',
       },
       {
         from: new Date(2020, 11),
