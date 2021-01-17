@@ -13,7 +13,7 @@
             img.ui.mini.inline.image.haha(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
         h3 創發軌跡：
-        Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
+    Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
 
 </template>
 
@@ -108,8 +108,11 @@ export default {
 }
 
 .timeline {
+  width: 100vw;
   max-width: 720px !important;
   margin: 0 auto;
+  overflow-x: hidden;
+  color: white;
 }
 
 .sunflower p {
