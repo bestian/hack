@@ -66,7 +66,7 @@ export default {
           '這個月更新了自學地圖<br/><a href = "https://map.alearn.org.tw" target="blank" rel="noopener noreferrer">https://map.alearn.org.tw</a>',
       },
       {
-        from: new Date(2020, 6),
+        from: new Date(2020, 5),
         title: '自由數學',
         description:
           '這個月更新了自由數學<br/><a href = "https://math.alearn.org.tw" target="blank" rel="noopener noreferrer">https://math.alearn.org.tw</a>',
