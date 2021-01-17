@@ -26,7 +26,7 @@
           sui-icon(name="file")
           span.fat-only 留言
       sui-menu-item.fat-only
-        iframe(src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fhack.bestian.tw&layout=button_count&size=small&appId=485195848253155&width=71&height=20", width="71", height="20", style="border:none;overflow:hidden", scrolling="no", frameborder="0" allowTransparency="true", allow="encrypted-media")
+        iframe(src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fhack.bestian.tw&layout=button_count&size=small&appId=485195848253155&width=71&height=20", width="110", height="20", style="border:none;overflow:hidden", scrolling="no", frameborder="0" allowTransparency="true", allow="encrypted-media")
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.ui.container.tada#ad
       .ui.list
@@ -345,6 +345,33 @@ p {
   .print-only {
     visibility: visible;
   }
+}
+
+.timeline-item .title-item {
+  font-size: 22px !important;
+}
+
+.timeline-item .description-item {
+  font-size: 18px !important;
+  color: white !important;
+  font-weight: normal !important;
+}
+
+img.history {
+  width: 180px !important;
+  float: left !important;
+  margin-right: 1em !important;
+}
+
+@media screen and (max-width: 420px) {
+  img.history {
+    width: 100px !important;
+  }
+}
+
+.timeline .wrapper-item .section-year .year {
+  font-size: 20px !important;
+  color: white !important;
 }
 
 </style>

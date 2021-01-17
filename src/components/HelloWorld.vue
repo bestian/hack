@@ -12,7 +12,7 @@
           router-link(to="/course")
             img.ui.mini.inline.image.haha(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
-        h3 創發軌跡：
+    h3.white 創發軌跡：
     Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
 
 </template>
@@ -108,10 +108,19 @@ export default {
 }
 
 .timeline {
-  width: 100vw;
   max-width: 720px !important;
+  color: white !important;
   margin: 0 auto;
-  overflow-x: hidden;
+}
+
+@media screen and (max-width: 420px) {
+  .timeline {
+    position: relative;
+    left: -2em;
+  }
+}
+
+.white {
   color: white;
 }
 
