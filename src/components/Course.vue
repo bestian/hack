@@ -32,7 +32,16 @@
               .light-green
                 sui-header(size="medium") 程式歷程
                 sui-list(ordered)
-                  div Bestian寫過純html+css+js的網站，後來學習jQuery，之後用AngularJS，最後停駐在實用的Vue框架上。
+                  div Bestian寫過純html+css+js的網站
+                    br
+                    br
+                    | 後來學習jQuery
+                    br
+                    br
+                    | 之後用AngularJS
+                    br
+                    br
+                    | 最後專注於Vue框架上。
                   a(is="sui-list-item" v-for="b in bestians", :key="b.n", :href="b.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
                     | {{ b.n }}
@@ -51,21 +60,21 @@ export default {
   data() {
     return {
       links: [
-        { n: 'vue', h: 'http://goban.tw/#/see/vue/0/0' },
-        { n: 'html', h: 'http://goban.tw/#/see/html/0/0' },
-        { n: 'css', h: 'http://goban.tw/#/see/css/0/0' },
-        { n: 'javascript', h: 'http://goban.tw/#/see/javascript/0/0' },
+        { n: 'vue', h: 'https://goban.tw/#/see/vue/0/0' },
+        { n: 'html', h: 'https://goban.tw/#/see/html/0/0' },
+        { n: 'css', h: 'https://goban.tw/#/see/css/0/0' },
+        { n: 'javascript', h: 'https://goban.tw/#/see/javascript/0/0' },
       ],
       works: [
-        { n: '本網站', h: 'http://hack.bestian.tw' },
-        { n: '自然美食DIY', h: 'http://food.bestian.tw' },
-        { n: '自由數學', h: 'http://math.alearn.org.tw' },
-        { n: '自學地圖', h: 'http://map.alearn.org.tw' },
-        { n: '自學2.0', h: 'http://we.alearn.org.tw' },
-        { n: '知識棋盤', h: 'http://goban.tw' },
-        { n: '認照片遊戲', h: 'http://elder.game.tw' },
-        { n: '自製的手機App', h: 'http://goban.tw/#/see/bestian_apps/0/0' },
-        { n: '自製的其他網站', h: 'http://goban.tw/#/see/bestian_apps/1/0' },
+        { n: '本網站', h: 'https://hack.bestian.tw' },
+        { n: '自然美食DIY', h: 'https://food.bestian.tw' },
+        { n: '自由數學', h: 'https://math.alearn.org.tw' },
+        { n: '自學地圖', h: 'https://map.alearn.org.tw' },
+        { n: '自學2.0', h: 'https://we.alearn.org.tw' },
+        { n: '知識棋盤', h: 'https://goban.tw' },
+        { n: '認照片遊戲', h: 'https://elder.game.tw' },
+        { n: '自製的手機App', h: 'https://goban.tw/#/see/bestian_apps/0/0' },
+        { n: '自製的其他網站', h: 'https://goban.tw/#/see/bestian_apps/1/0' },
       ],
       bestians: [
         { n: 'App開發小記', h: 'https://docs.google.com/document/d/1dDTbuP-U94GRfVV30jgGJMrA-eNy4JZsN40-jDuFwNs/edit#' },

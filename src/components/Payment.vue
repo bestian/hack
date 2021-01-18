@@ -14,14 +14,14 @@
           sui-grid-row
             sui-grid-column
               .light-green
-                sui-header(size="medium") 一對一
+                sui-header(size="large") 一對一
                   .ui.sub.header
                     | $NT1000 / 時。試課500元。
                     br
                     | 也歡迎換工而不是付費喔~
             sui-grid-column
               .light-yellow
-                sui-header(size="medium") 一對二
+                sui-header(size="large") 一對二
                   .ui.sub.header
                     | $NT600 / 人時。試課400元。
                     br
@@ -43,6 +43,10 @@ export default {
 .tada {
   position: relative;
   animation: tada 4s infinite;
+}
+
+.ui.sub.header {
+  font-size: 18px !important;
 }
 
 </style>

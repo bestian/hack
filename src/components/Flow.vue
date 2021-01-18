@@ -55,7 +55,7 @@ export default {
       ],
       flows: [
         { n: '專題創作', h: 'https://www.tcavs.tc.edu.tw/upload/951219%E5%B0%88%E9%A1%8C%E8%A3%BD%E4%BD%9C%E7%9A%84%E5%AD%B8%E7%BF%92%E6%96%B9%E6%A1%88%E8%88%87%E6%8C%87%E5%B0%8E%E6%96%B9%E6%B3%95.pdf' },
-        { n: '參考資源', h: 'http://goban.tw' },
+        { n: '參考資源', h: 'https://goban.tw' },
         { n: '有問必答', h: 'https://www.facebook.com/%E9%9B%B6%E6%99%82%E9%BB%91%E6%9D%BF-110565913890537/' },
       ],
       des: [

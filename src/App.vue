@@ -30,6 +30,7 @@
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
     footer.ui.container.tada#ad
       .ui.list
+        .item 試課學費: 500元
         .item 目前尚可預約課程時間:
         .item 週一下午，週四上午，週六上午，週日上午。
         a.item(href="mailto:bestian@gmail.com", target="_blank", @click="track('e-mail', 60)")
@@ -320,7 +321,7 @@ p {
   }
 }
 
-@media screen and (min-width: 421px) {
+@media screen and (min-width: 661px) {
   .thin-only {
     display: none !important;
   }
@@ -329,7 +330,7 @@ p {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 660px) {
   .fat-only {
     display: none !important;
   }

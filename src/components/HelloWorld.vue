@@ -4,7 +4,7 @@
       .ui.piled.segment.sunflower
         router-link(to="/course")
           img.logo(src="../assets/logo.png", alt="vue")
-        sui-header(size="large") 歡迎學習寫網站
+        sui-header(size="large") 歡迎和Bestian學習寫網站
         h3 以一對1~2人的小規模視訊教學，量身打造合適的學習進程。
         p.left 激發主動創發的自學精神，培養「彷」、「創」、「改」的良好學習習慣。
           br
@@ -14,11 +14,13 @@
           router-link(to="/course")
             img.ui.mini.inline.image.haha(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
-        h3 Vue簡介
-        .ui.bulleted.list
-          a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B9%8B%E4%B8%80-4d57f8d1b3d1", target="_blank" rel="noopener noreferrer") Vue簡介一：迴圈
-          a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer") Vue簡介二：樣式綁定
-          a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B8%89-1e3167063a67", target="_blank" rel="noopener noreferrer") Vue簡介三：雙向資料綁定
+        h2 Vue簡介
+        .ui.row
+          .light-red.column
+            .ui.bulleted.list
+              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B9%8B%E4%B8%80-4d57f8d1b3d1", target="_blank" rel="noopener noreferrer") Vue簡介一：迴圈
+              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer") Vue簡介二：樣式綁定
+              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B8%89-1e3167063a67", target="_blank" rel="noopener noreferrer") Vue簡介三：雙向資料綁定
     h3.white 創發軌跡：
     Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
 
@@ -97,7 +99,7 @@ export default {
           '<img class="history" src="./img/goban.png"/>這個月更新了知識棋盤<br/><a href = "https://goban.tw/#/" target="blank" rel="noopener noreferrer">https://goban.tw/#/</a>',
       },
       {
-        from: new Date(2018),
+        from: new Date(2019, 0),
         title: '更多',
         description:
           '<img class="history" src="https://avatars1.githubusercontent.com/u/109048?s=460&u=3df3fdbf63cf583fe2675156f62624124fdcca9a&v=4"/>更多記錄。請參考Github<br/><a href = "https://github.com/bestian" target="blank" rel="noopener noreferrer">https://github.com/bestian</a>',
@@ -147,4 +149,8 @@ export default {
   margin-left: 15vw;
 }
 
+.light-red.column .ui.list {
+  height: 5em;
+  min-height: 0;
+}
 </style>
