@@ -100,7 +100,7 @@ export default {
         from: new Date(2018),
         title: '更多',
         description:
-          '更多記錄。請參考Github<br/><a href = "https://github.com/bestian" target="blank" rel="noopener noreferrer">https://github.com/bestian</a>',
+          '<img class="history" src="https://avatars1.githubusercontent.com/u/109048?s=460&u=3df3fdbf63cf583fe2675156f62624124fdcca9a&v=4"/>更多記錄。請參考Github<br/><a href = "https://github.com/bestian" target="blank" rel="noopener noreferrer">https://github.com/bestian</a>',
       },
     ],
   }),

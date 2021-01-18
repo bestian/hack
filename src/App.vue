@@ -363,6 +363,7 @@ img.history {
   width: 180px !important;
   float: left !important;
   margin-right: 1em !important;
+  background-color: white !important;
 }
 
 @media screen and (max-width: 420px) {
