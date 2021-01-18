@@ -33,7 +33,7 @@
         .item 試課學費: 500元
         .item 目前尚可預約課程時間:
         .item 週一下午，週四上午，週六上午，週日上午。
-        a.item(href="mailto:bestian@gmail.com", target="_blank", @click="track('e-mail', 60)")
+        a.item(href="mailto:bestian@gmail.com?subject=我想瞭解Bestian的程式課", target="_blank", @click="track('e-mail', 60)")
           | 洽詢: bestian@gmail.com
         .item
         a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank", @click="track('viewform', 100)", rel="noopener noreferrer") 報名: 請按此填表
@@ -376,6 +376,10 @@ img.history {
 .timeline .wrapper-item .section-year .year {
   font-size: 20px !important;
   color: white !important;
+}
+
+a {
+/*  cursor: url('/img/cursor.png'), auto !important; */
 }
 
 </style>
