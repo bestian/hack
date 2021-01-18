@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      sui-segment(raised='').heart
+      .ui.piled.segment.heart
         sui-header(size="large") {{ msg }}
         router-link(to="/faq")
           img.logo(src="../assets/logo.png")

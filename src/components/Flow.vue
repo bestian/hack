@@ -1,12 +1,12 @@
 <template lang="pug">
   .hello
     .ui.container
-      sui-segment(raised='').ranged
+      .ui.piled.segment.ranged
         sui-header(size="large") 上課流程
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
-        br
-        br
+        sui-header(size="large") 視訊上課，不用交通
+          .sub.header 透過視訊上課，以及Gitgub協作平台，大家可以遠距協作開發程式。
         sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
