@@ -182,10 +182,11 @@ p {
 }
 
 .ui.segment {
- background-color: hsla(120, 100%, 90%, 1) !important;
+ background-color: hsla(120, 100%, 96%, 1) !important;
   font-size: 1.2em !important;
 /*  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important; */
 }
+
 /*
 .sunflower::before {
   content: "";
@@ -240,7 +241,8 @@ p {
   background-size: contain;
   filter: grayscale(75%);
   opacity: 1;
-} */
+}
+*/
 
 footer {
   position: relative;
