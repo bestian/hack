@@ -1,8 +1,11 @@
 <template lang="pug">
   .hello
     h1.white Bestian的作品
+    .ui.form.container
+      input(v-model = "key", placeholder="關鍵字查詢")
+    br
     .ui.four.doubling.cards.container
-      .ui.card(v-for="i in items", :key="i.title")
+      .ui.card(v-for="i in has(items, key)", :key="i.title")
         h2.ui.header {{i.title}}
         a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
           img(:src="i.img")
@@ -21,7 +24,13 @@
 export default {
   name: 'MyWork',
   props: ['likes'],
+  methods: {
+    has(items, k) {
+      return items.filter((o) => (o.title + o.description).indexOf(k) > -1);
+    },
+  },
   data: () => ({
+    key: '',
     items: [
       {
         from: new Date(2021, 0),
@@ -58,6 +67,42 @@ export default {
         description:
           '自學地圖是給自學家庭的入口頁，有許多資訊和諮詢專線的服務。',
       },
+      {
+        from: new Date(2020, 6),
+        title: '自學地圖',
+        img: './img/automap.png',
+        href: 'https://map.alearn.org.tw',
+        github: 'https://www.github.com/3dw/automap/',
+        description:
+          '自學地圖是給自學家庭的入口頁，有許多資訊和諮詢專線的服務。',
+      },
+      {
+        from: new Date(2020, 6),
+        title: '自主公民樸克牌',
+        img: './img/poker.png',
+        href: 'https://poker.bestian.tw',
+        github: 'https://www.github.com/bestian/pokercard/',
+        description:
+          '自主公民樸克牌是用QR-Code做的樸克牌，可以讓使用者自訂52個連結並印出。',
+      },
+      {
+        from: new Date(2020, 11),
+        title: '認字遊戲',
+        img: './img/moe.png',
+        href: 'https://bestian.github.io/q-write',
+        github: 'https://www.github.com/bestian/q-write/',
+        description:
+          '認字遊戲是給小朋友學習認字的工具，有多種遊戲模式，可自訂字庫。',
+      },
+      {
+        from: new Date(2020, 11),
+        title: '自由數學閃卡',
+        img: './img/flash.png',
+        href: 'https://bestian.github.io/q-flashcard',
+        github: 'https://www.github.com/bestian/q-flashcard/',
+        description:
+          '閃卡是練習心算的工具，有多種功能，可以自訂數字範圍。',
+      },
     ],
   }),
 };
@@ -65,6 +110,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+input {
+  width: 300px !important;
+}
 
 .white {
   color: white !important;
