@@ -4,7 +4,7 @@
     .ui.form.container
       input(v-model = "key", placeholder="關鍵字查詢")
     br
-    .ui.four.doubling.cards.container
+    .ui.four.doubling.stackable.cards.container
       .ui.card(v-for="i in has(items, key)", :key="i.title")
         h2.ui.header {{i.title}}
         a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
@@ -69,12 +69,12 @@ export default {
       },
       {
         from: new Date(2020, 6),
-        title: '自學地圖',
-        img: './img/automap.png',
-        href: 'https://map.alearn.org.tw',
-        github: 'https://www.github.com/3dw/automap/',
+        title: '自學2.0',
+        img: './img/auto20.png',
+        href: 'https://we.alearn.org.tw',
+        github: 'https://www.github.com/3dw/auto20/',
         description:
-          '自學地圖是給自學家庭的入口頁，有許多資訊和諮詢專線的服務。',
+          '自學2.0是一個交友網站，大家可以各自升起互助旗，程式會以地圖和列表的方式呈現，方便查詢。',
       },
       {
         from: new Date(2020, 6),
@@ -88,7 +88,7 @@ export default {
       {
         from: new Date(2020, 11),
         title: '認字遊戲',
-        img: './img/moe.png',
+        img: 'https://www.moedict.tw/%E5%AD%97.png',
         href: 'https://bestian.github.io/q-write',
         github: 'https://www.github.com/bestian/q-write/',
         description:
@@ -102,6 +102,24 @@ export default {
         github: 'https://www.github.com/bestian/q-flashcard/',
         description:
           '閃卡是練習心算的工具，有多種功能，可以自訂數字範圍。',
+      },
+      {
+        from: new Date(2019, 11),
+        title: '認照片遊戲',
+        img: './img/eldergame.png',
+        href: 'https://www.elder.game.tw/#/',
+        github: 'https://github.com/bestian/elder/',
+        description:
+          '您家中有年紀大的長輩嗎？作者最初是為了自己的外婆，寫了認照片遊戲，提供娛樂與刺激。目前提供4種認照片遊戲，讓您輸入自己家族成員的照片，幫助長輩記得大家。',
+      },
+      {
+        from: new Date(2020, 2),
+        title: '迷路聯絡卡',
+        img: './img/lost.png',
+        href: 'https://imlost.elder.game.tw',
+        github: 'https://www.github.com/bestian/imlost',
+        description:
+          '迷路聯絡卡是給老人或小孩使用的，在迷路時可以展示出主要照顧者的聯絡方式。',
       },
     ],
   }),
