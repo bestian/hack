@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     h1.white Bestian的作品
-    .ui.cards.container
+    .ui.four.doubling.cards.container
       .ui.card(v-for="i in items", :key="i.title")
         h2.ui.header {{i.title}}
         a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
@@ -39,6 +39,24 @@ export default {
         href: 'https://math.alearn.org.tw',
         github: 'https://www.github.com/bestian/freemath/',
         description: '自由數學是自由的開放教材，有學習地圖和小學三年級到國中三年級中各個重要的數學單元的形成性教材，適合自學使用。',
+      },
+      {
+        from: new Date(2019, 8),
+        title: '知識棋盤',
+        img: './img/goban.png',
+        href: 'https://goban.tw/#/',
+        github: 'https://www.github.com/g0v/goban/',
+        description:
+          '知識棋盤是網址匯集和分享的好工具，有無限的空間可以發揮。',
+      },
+      {
+        from: new Date(2020, 6),
+        title: '自學地圖',
+        img: './img/automap.png',
+        href: 'https://map.alearn.org.tw',
+        github: 'https://www.github.com/3dw/automap/',
+        description:
+          '自學地圖是給自學家庭的入口頁，有許多資訊和諮詢專線的服務。',
       },
     ],
   }),
