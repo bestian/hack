@@ -292,6 +292,12 @@ p {
   100% {transform: scale(1); -webkit-transform: scale(1)}
 }
 
+@keyframes turn {
+  0%   {transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+  50%  {transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+  100% {transform: rotate(360deg); -webkit-transform: rotate(360deg);}
+}
+
 .logo {
   position: relative;
   top: 0;
@@ -304,6 +310,12 @@ p {
   position: relative;
   top: 0;
   animation: haha 1s 2;
+}
+
+.turn {
+  position: relative;
+  top: 0;
+  animation: turn 2s 1;
 }
 
 .router-link-exact-active.router-link-active {

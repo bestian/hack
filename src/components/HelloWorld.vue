@@ -12,7 +12,7 @@
           br
           | 按
           router-link(to="/course")
-            img.ui.mini.inline.image.haha(src="../assets/logo.png", alt="vue")
+            img.ui.mini.inline.image.turn(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
         h2
          router-link(to="/work") Bestian的作品
