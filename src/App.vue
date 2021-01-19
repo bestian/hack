@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="7" inverted="")
+    sui-menu#nav-bar.no-print(:widths="6" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -21,7 +21,7 @@
         router-link(to="/faq")
           sui-icon(name="question")
           span.fat-only 問答
-      sui-menu-item
+      // sui-menu-item
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
@@ -31,12 +31,8 @@
     footer.ui.container.tada#ad
       .ui.list
         // .item 試課學費: 500元
-        .item 目前尚可預約課程時間:
-        .item 週一下午，週四上午，週六上午，週日上午。
         a.item(href="mailto:bestian@gmail.com?subject=我想瞭解Bestian的程式課", target="_blank", @click="track('e-mail', 60)")
           | 洽詢: bestian@gmail.com
-        .item
-        a.item(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank", @click="track('viewform', 100)", rel="noopener noreferrer") 報名: 請按此填表
         a.item.fat-only#src(href="http://www.github.com/bestian/hack", target="_blank", @click="track('github', 10)", rel="noopener noreferrer")
           i.github.icon
           | 原始碼

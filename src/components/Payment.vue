@@ -8,6 +8,10 @@
         sui-header(size="large") 要怎麼付費呢?
           .sub.header 以轉帳的方式，先試課一次，之後e-mail詳談~
           .sub.header 也歡迎換工而不是付費喔~
+          .sub.header 目前尚可預約課程時間:
+          .sub.header 週一下午，週四上午，週六上午，週日上午。
+        h3
+          a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank", @click="track('viewform', 100)", rel="noopener noreferrer") 報名: 請按此填表
         br
         br
         sui-grid(:columns="2" divided stackable)
