@@ -28,7 +28,7 @@
       sui-menu-item.fat-only
         iframe(src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fhack.bestian.tw&layout=button_count&size=small&appId=485195848253155&width=71&height=20", width="110", height="20", style="border:none;overflow:hidden", scrolling="no", frameborder="0" allowTransparency="true", allow="encrypted-media")
     router-view(:likes = "likes", :chats = "chats", @submit = "submit")
-    footer.ui.container.tada#ad
+    footer.ui.container#ad
       .ui.list
         // .item 試課學費: 500元
         a.item(href="mailto:bestian@gmail.com?subject=我想瞭解Bestian的程式課", target="_blank", @click="track('e-mail', 60)")

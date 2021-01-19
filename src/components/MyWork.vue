@@ -5,10 +5,11 @@
       input(v-model = "key", placeholder="關鍵字查詢")
     br
     .ui.four.doubling.stackable.cards.container
-      .ui.card(v-for="i in has(items, key)", :key="i.title")
-        h2.ui.header {{i.title}}
+      .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
+        h2.ui.header {{idx + 1}}：{{i.title}}
         a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
           img(:src="i.img")
+        .ui.divider
         p.description {{i.description}}
         .ui.two.bottom.attached.fluid.buttons
           a.ui.huge.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
@@ -120,6 +121,132 @@ export default {
         github: 'https://www.github.com/bestian/imlost',
         description:
           '迷路聯絡卡是給老人或小孩使用的，在迷路時可以展示出主要照顧者的聯絡方式。',
+      },
+      {
+        from: new Date(2019, 2),
+        title: '公民記者證',
+        img: './img/reporter.png',
+        href: 'https://g0v.github.io/reporter/',
+        github: 'https://www.github.com/g0v/reporter/',
+        description:
+          '公民記者證產生器可以讓使用者上傳自己的照片和名字，產生出專屬 的公民記者證，再列印下來到社運現場採訪。',
+      },
+      {
+        from: new Date(2020, 9),
+        title: '射飛碟',
+        img: './img/ufo.png',
+        href: 'https://bestian.github.io/vue_svg_game/',
+        github: 'https://www.github.com/bestian/vue_svg_game/',
+        description:
+          '射飛碟遊戲中，會有很多飛碟從上方出現往下移動，要在它們落地前擊落它們。有四種難度等級可以選擇。',
+      },
+      {
+        from: new Date(2020, 8),
+        title: '迷宮遊戲',
+        img: './img/maze.png',
+        href: 'https://bestian.github.io/maze/',
+        github: 'https://www.github.com/bestian/maze/',
+        description:
+          '迷宮遊戲是用3D模組做的迷宮，有三個關卡，可以開啟神模式就能穿牆。',
+      },
+      {
+        from: new Date(2020, 7),
+        title: '我愛玩學校',
+        img: './img/ilove.png',
+        href: 'https://3dw.github.io/ilove/',
+        github: 'https://www.github.com/3dw/ilove/',
+        description:
+          '我愛玩學校是一個很特別的學習團體，時常辦一些有趣的活動，為新小孩創造新經驗。',
+      },
+      {
+        from: new Date(2020, 3),
+        title: 'BMI試算機',
+        img: './img/bmi.png',
+        href: 'https://bestian.github.io/bmi/',
+        github: 'https://www.github.com/bestian/bmi/',
+        description:
+          'BMI試算機可以幫你做體重的試算，具有體重控制的輔助作用。',
+      },
+      {
+        from: new Date(2019, 3),
+        title: 'Playback形式備忘',
+        img: './img/freemath.png',
+        href: 'https://3dw.github.io/playback/',
+        github: 'https://www.github.com/3dw/playback/',
+        description:
+          'Playback形式備忘是用動畫的形式，記錄Playback同理心劇理的各種演出形式，可以當成備忘使用。',
+      },
+      {
+        from: new Date(2018, 2),
+        title: '自然美食DIY',
+        img: './img/food.png',
+        href: 'https://food.bestian.tw/#/',
+        github: 'https://www.github.com/bestian/food/',
+        description:
+          'Ｈi 這裡用來存放Hsinyi的煮食紀錄。我們家的料理，蔬食比例較多，沒有特別標素不素，料理靈感來自大地、靈感乍現，以及許多人分享的經驗與智慧。飲食區打食材關鍵字（如：紅豆）可以找到相關的料理，祝大家食在喜悅、自然~',
+      },
+      {
+        from: new Date(2017, 2),
+        title: '量子催眠回溯',
+        img: './img/qhht.png',
+        href: 'https://bestian.github.io/qhht/',
+        github: 'https://www.github.com/bestian/qhht/',
+        description:
+          '這裡存放著三篇量子催眠回溯的記錄，還有量子催眠回溯的簡介。',
+      },
+      {
+        from: new Date(2017, 0),
+        title: '小道小報',
+        img: './img/xikxik.png',
+        href: 'https://xikxik.bestian.tw/#/',
+        github: 'https://www.github.com/bestian/xikxik/',
+        description:
+          '小道小報是隨機的搞笑新聞產生器，會用隨機的元素組合成假新聞，讓人會心一笑。',
+      },
+      {
+        from: new Date(2018, 0),
+        title: '字卡產生器',
+        img: './img/word.png',
+        href: 'https://word.bestian.tw/#/',
+        github: 'https://www.github.com/bestian/word/',
+        description:
+          '字卡產生器可以讓使用者自己打子，產生出鏤空的大字，讓人練習書寫。',
+      },
+      {
+        from: new Date(2017, 5),
+        title: '湊12',
+        img: './img/play12.png',
+        href: 'https://bestian.github.io/q-play12/',
+        github: 'https://www.github.com/bestian/q-play12/',
+        description:
+          '湊12是一個數字遊戲，用四張1~6的卡牌，用加減乘除四則運算要湊出12的結果。',
+      },
+      {
+        from: new Date(2020, 5),
+        title: '打籃球',
+        img: './img/ball.png',
+        href: 'https://bestian.github.io/basketball/',
+        github: 'https://www.github.com/bestian/basketball/',
+        description:
+          '這是一個投籃的小遊戲，可以上下左右描準並射籃。',
+      },
+      {
+        from: new Date(2016, 6),
+        title: '湊10釣魚',
+        img: './img/fish.png',
+        href: 'https://bestian.github.io/fishing-10/',
+        github: 'https://www.github.com/bestian/fishing-10/',
+        description:
+          '湊10釣魚是一個記憶遊戲，要記得牌卡的位置才能配對。',
+      },
+      {
+        from: new Date(2020, 6),
+        title: '學習風格自我測驗',
+        img: './img/styletest.png',
+        href: 'https://bestian.github.io/q-styletest/',
+        github: 'https://www.github.com/bestian/q-styletest/',
+        description:
+          '學習風格自我測驗，可以用視聽讀作四方向的架構，協助您測出最適合您的學習方法。',
       },
     ],
   }),
