@@ -248,6 +248,14 @@ export default {
         description:
           '學習風格自我測驗，可以用視聽讀作四方向的架構，協助您測出最適合您的學習方法。',
       },
+      {
+        from: new Date(2008, 0),
+        title: '倍數著色',
+        img: './img/colormath.png',
+        href: 'https://bestian.github.io/q-colormath/',
+        github: 'https://www.github.com/bestian/q-colormath/',
+        description: '倍數著色是用著色的方式，突顯出數學上倍數的規律。'
+      }
     ],
   }),
 };
