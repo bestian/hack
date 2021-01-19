@@ -254,8 +254,8 @@ export default {
         img: './img/colormath.png',
         href: 'https://bestian.github.io/q-colormath/',
         github: 'https://www.github.com/bestian/q-colormath/',
-        description: '倍數著色是用著色的方式，突顯出數學上倍數的規律。'
-      }
+        description: '倍數著色是用著色的方式，突顯出數學上倍數的規律。',
+      },
     ],
   }),
 };
