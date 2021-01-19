@@ -6,6 +6,7 @@ import Flow from '@/components/Flow.vue';
 import Payment from '@/components/Payment.vue';
 import FAQ from '@/components/Faq.vue';
 import Chat from '@/components/Chat.vue';
+import MyWork from '@/components/MyWork.vue';
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/chat',
       name: 'Chat',
       component: Chat,
+    },
+    {
+      path: '/work',
+      name: 'MyWork',
+      component: MyWork,
     },
   ],
 });
