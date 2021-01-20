@@ -256,6 +256,22 @@ export default {
         github: 'https://www.github.com/bestian/q-colormath/',
         description: '倍數著色是用著色的方式，突顯出數學上倍數的規律。',
       },
+      {
+        from: new Date(2020, 3),
+        title: '解方程式機',
+        img: './img/equation.png',
+        href: 'https://github.com/bestian/equation',
+        github: 'https://github.com/bestian/equation',
+        description: '解方程式機用Haskell撰寫，可以解一元一次和一元二次方程式。',
+      },
+      {
+        from: new Date(2020, 3),
+        title: '數學出題機',
+        img: './img/quiz.png',
+        href: 'https://github.com/bestian/mathquiz',
+        github: 'https://github.com/bestian/mathquiz',
+        description: '數學出題機用Haskell撰寫，可以自動出題和確認答案，有不同的難度可以選則。',
+      },
     ],
   }),
 };
