@@ -2,10 +2,14 @@
   .hello
     h1.white Bestian的作品
     .ui.form.container
-      input(v-model = "key", placeholder="關鍵字查詢")
+      .ui.left.icon.input
+        input(type="text",v-model = "key", placeholder="關鍵字查詢", clearable, @click="key=''")
+        i.search.icon
     br
     .ui.four.doubling.stackable.cards.container
       .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
+        .ui.top.right.attached.label
+          a.tag(v-for = "t in i.tags", :key="t", @click="key = t") {{t}}
         h2.ui.header {{idx + 1}}：{{i.title}}
         a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
           img(:src="i.img")
@@ -27,7 +31,7 @@ export default {
   props: ['likes'],
   methods: {
     has(items, k) {
-      return items.filter((o) => (o.title + o.description).indexOf(k) > -1);
+      return items.filter((o) => (o.title + o.description + o.tags.join('')).indexOf(k) > -1);
     },
   },
   data: () => ({
@@ -36,6 +40,7 @@ export default {
       {
         from: new Date(2021, 0),
         title: '萌典',
+        tags: ['中文', '字典', 'App'],
         img: './img/moe.png',
         href: 'https://bestian.github.io/q-moedict',
         github: 'https://www.github.com/bestian/q-moedict',
@@ -45,6 +50,7 @@ export default {
       {
         from: new Date(2020, 5),
         title: '自由數學',
+        tags: ['數學', '教材', '自學'],
         img: './img/freemath.png',
         href: 'https://math.alearn.org.tw',
         github: 'https://www.github.com/bestian/freemath/',
@@ -53,6 +59,7 @@ export default {
       {
         from: new Date(2019, 8),
         title: '知識棋盤',
+        tags: ['教材', '知識', '自學'],
         img: './img/goban.png',
         href: 'https://goban.tw/#/',
         github: 'https://www.github.com/g0v/goban/',
@@ -62,6 +69,7 @@ export default {
       {
         from: new Date(2020, 6),
         title: '自學地圖',
+        tags: ['自學', '入口', '諮詢'],
         img: './img/automap.png',
         href: 'https://map.alearn.org.tw',
         github: 'https://www.github.com/3dw/automap/',
@@ -71,6 +79,7 @@ export default {
       {
         from: new Date(2020, 6),
         title: '自學2.0',
+        tags: ['自學', '交友', '地圖'],
         img: './img/auto20.png',
         href: 'https://we.alearn.org.tw',
         github: 'https://www.github.com/3dw/auto20/',
@@ -80,6 +89,7 @@ export default {
       {
         from: new Date(2020, 6),
         title: '自主公民樸克牌',
+        tags: ['知識', 'QR碼', '樸克牌'],
         img: './img/poker.png',
         href: 'https://poker.bestian.tw',
         github: 'https://www.github.com/bestian/pokercard/',
@@ -89,6 +99,7 @@ export default {
       {
         from: new Date(2020, 11),
         title: '認字遊戲',
+        tags: ['中文', '認字', '遊戲'],
         img: 'https://www.moedict.tw/%E5%AD%97.png',
         href: 'https://bestian.github.io/q-write',
         github: 'https://www.github.com/bestian/q-write/',
@@ -98,6 +109,7 @@ export default {
       {
         from: new Date(2020, 11),
         title: '自由數學閃卡',
+        tags: ['數學', '心算', '遊戲'],
         img: './img/flash.png',
         href: 'https://bestian.github.io/q-flashcard',
         github: 'https://www.github.com/bestian/q-flashcard/',
@@ -107,6 +119,7 @@ export default {
       {
         from: new Date(2019, 11),
         title: '認照片遊戲',
+        tags: ['老人', '認知', '遊戲'],
         img: './img/eldergame.png',
         href: 'https://www.elder.game.tw/#/',
         github: 'https://github.com/bestian/elder/',
@@ -116,6 +129,7 @@ export default {
       {
         from: new Date(2020, 2),
         title: '迷路聯絡卡',
+        tags: ['老人', '幼兒', '列印'],
         img: './img/lost.png',
         href: 'https://imlost.elder.game.tw',
         github: 'https://www.github.com/bestian/imlost',
@@ -125,6 +139,7 @@ export default {
       {
         from: new Date(2019, 2),
         title: '公民記者證',
+        tags: ['公民', '記者', '列印'],
         img: './img/reporter.png',
         href: 'https://g0v.github.io/reporter/',
         github: 'https://www.github.com/g0v/reporter/',
@@ -134,6 +149,7 @@ export default {
       {
         from: new Date(2020, 9),
         title: '射飛碟',
+        tags: ['SVG', '遊戲'],
         img: './img/ufo.png',
         href: 'https://bestian.github.io/vue_svg_game/',
         github: 'https://www.github.com/bestian/vue_svg_game/',
@@ -143,6 +159,7 @@ export default {
       {
         from: new Date(2020, 8),
         title: '迷宮遊戲',
+        tags: ['迷宮', '遊戲'],
         img: './img/maze.png',
         href: 'https://bestian.github.io/maze/',
         github: 'https://www.github.com/bestian/maze/',
@@ -152,6 +169,7 @@ export default {
       {
         from: new Date(2020, 7),
         title: '我愛玩學校',
+        tags: ['學校', '入口'],
         img: './img/ilove.png',
         href: 'https://3dw.github.io/ilove/',
         github: 'https://www.github.com/3dw/ilove/',
@@ -161,6 +179,7 @@ export default {
       {
         from: new Date(2020, 3),
         title: 'BMI試算機',
+        tags: ['體重', '試算'],
         img: './img/bmi.png',
         href: 'https://bestian.github.io/bmi/',
         github: 'https://www.github.com/bestian/bmi/',
@@ -170,6 +189,7 @@ export default {
       {
         from: new Date(2019, 3),
         title: 'Playback形式備忘',
+        tags: ['Playback', '備忘', '動畫'],
         img: './img/freemath.png',
         href: 'https://3dw.github.io/playback/',
         github: 'https://www.github.com/3dw/playback/',
@@ -179,6 +199,7 @@ export default {
       {
         from: new Date(2018, 2),
         title: '自然美食DIY',
+        tags: ['食物', '備忘'],
         img: './img/food.png',
         href: 'https://food.bestian.tw/#/',
         github: 'https://www.github.com/bestian/food/',
@@ -188,6 +209,7 @@ export default {
       {
         from: new Date(2017, 2),
         title: '量子催眠回溯',
+        tags: ['催眠', '備忘'],
         img: './img/qhht.png',
         href: 'https://bestian.github.io/qhht/',
         github: 'https://www.github.com/bestian/qhht/',
@@ -197,6 +219,7 @@ export default {
       {
         from: new Date(2017, 0),
         title: '小道小報',
+        tags: ['隨機', '文學', '遊戲'],
         img: './img/xikxik.png',
         href: 'https://xikxik.bestian.tw/#/',
         github: 'https://www.github.com/bestian/xikxik/',
@@ -206,6 +229,7 @@ export default {
       {
         from: new Date(2018, 0),
         title: '字卡產生器',
+        tags: ['中文', '認知'],
         img: './img/word.png',
         href: 'https://word.bestian.tw/#/',
         github: 'https://www.github.com/bestian/word/',
@@ -215,6 +239,7 @@ export default {
       {
         from: new Date(2017, 5),
         title: '湊12',
+        tags: ['數學', '遊戲', 'App'],
         img: './img/play12.png',
         href: 'https://bestian.github.io/q-play12/',
         github: 'https://www.github.com/bestian/q-play12/',
@@ -224,6 +249,7 @@ export default {
       {
         from: new Date(2020, 5),
         title: '打籃球',
+        tags: ['遊戲'],
         img: './img/ball.png',
         href: 'https://bestian.github.io/basketball/',
         github: 'https://www.github.com/bestian/basketball/',
@@ -233,6 +259,7 @@ export default {
       {
         from: new Date(2016, 6),
         title: '湊10釣魚',
+        tags: ['數學', '遊戲', 'App'],
         img: './img/fish.png',
         href: 'https://bestian.github.io/fishing-10/',
         github: 'https://www.github.com/bestian/fishing-10/',
@@ -242,6 +269,7 @@ export default {
       {
         from: new Date(2020, 6),
         title: '學習風格自我測驗',
+        tags: ['自學', '測驗', 'App'],
         img: './img/styletest.png',
         href: 'https://bestian.github.io/q-styletest/',
         github: 'https://www.github.com/bestian/q-styletest/',
@@ -251,6 +279,7 @@ export default {
       {
         from: new Date(2008, 0),
         title: '倍數著色',
+        tags: ['數學', '遊戲', 'App'],
         img: './img/colormath.png',
         href: 'https://bestian.github.io/q-colormath/',
         github: 'https://www.github.com/bestian/q-colormath/',
@@ -259,6 +288,7 @@ export default {
       {
         from: new Date(2020, 3),
         title: '解方程式機',
+        tags: ['數學', '遊戲'],
         img: './img/equation.png',
         href: 'https://github.com/bestian/equation',
         github: 'https://github.com/bestian/equation',
@@ -267,6 +297,7 @@ export default {
       {
         from: new Date(2020, 3),
         title: '數學出題機',
+        tags: ['數學', '遊戲'],
         img: './img/quiz.png',
         href: 'https://github.com/bestian/mathquiz',
         github: 'https://github.com/bestian/mathquiz',
@@ -296,7 +327,7 @@ input {
 }
 
 h2 {
-  margin: .3em 0 !important;
+  padding-top: .6em !important;
 }
 
 .ui.attached.buttons {
@@ -304,6 +335,10 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.tag {
+  margin: 0 1em;
 }
 
 </style>
