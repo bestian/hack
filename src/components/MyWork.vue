@@ -5,8 +5,17 @@
       .ui.left.icon.input
         input(type="text",v-model = "key", placeholder="關鍵字查詢", clearable, @click="key=''")
         i.search.icon
+      .inline.fields
+        label 顯示模式：
+        .field
+          .ui.radio.checkbox
+            input(type="radio" ,v-model="mode", name="mode", checked="checked", value="list")
+            label 清單
+          .ui.radio.checkbox
+            input(type="radio",v-model="mode", name="mode",value="cards")
+            label 卡片
     br
-    .ui.four.doubling.stackable.cards.container
+    .ui.four.doubling.stackable.cards.container(v-if = "mode == 'cards'")
       .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
         .ui.top.right.attached.label
           a.tag(v-for = "t in i.tags", :key="t", @click="key = t") {{t}}
@@ -22,6 +31,19 @@
           a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
             i.github.icon
             | 專案
+    .ui.list.container(v-if = "mode == 'list'")
+      .item(v-for="(i, idx) in has(items, key)", :key="i.title")
+        h2.ui.header.white {{idx + 1}}：{{i.title}}
+        a.ui.avatar(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
+          img(:src="i.img")
+        p.description {{i.description}}
+          .ui.two.buttons
+            a.ui.huge.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
+              i.globe.icon
+              | 前往
+            a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
+              i.github.icon
+              | 專案
 </template>
 
 <script>
@@ -35,6 +57,7 @@ export default {
     },
   },
   data: () => ({
+    mode: 'list',
     key: '',
     items: [
       {
@@ -315,7 +338,7 @@ input {
   width: 300px !important;
 }
 
-.white {
+h2.ui.header.white {
   color: white !important;
 }
 
@@ -327,7 +350,7 @@ input {
 }
 
 h2 {
-  padding-top: .6em !important;
+  padding-top: 1.6em !important;
 }
 
 .ui.attached.buttons {
@@ -339,6 +362,21 @@ h2 {
 
 .tag {
   margin: 0 1em;
+}
+
+.ui.radio.checkbox label {
+  color: white;
+}
+
+.ui.list .list>.item .description, .ui.list>.item .description {
+  color: white !important;
+  margin-top: 1em;
+}
+
+.avatar img {
+  width: 100px;
+  float: left;
+  margin-right: 2em;
 }
 
 </style>
