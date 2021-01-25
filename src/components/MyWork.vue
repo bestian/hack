@@ -14,6 +14,9 @@
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="cards")
             label 卡片
+          .ui.radio.checkbox
+            input(type="radio",v-model="mode", name="mode",value="small")
+            label 小清單
     br
     .ui.four.doubling.stackable.cards.container(v-if = "mode == 'cards'")
       .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
@@ -33,15 +36,27 @@
             | 專案
     .ui.list.container(v-if = "mode == 'list'")
       .item(v-for="(i, idx) in has(items, key)", :key="i.title")
-        h2.ui.header.white {{idx + 1}}：{{i.title}}
+        h2.white {{idx + 1}}：{{i.title}}
         a.ui.avatar(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
           img(:src="i.img")
         p.description {{i.description}}
-          .ui.two.buttons
+          .ui.buttons
             a.ui.huge.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
               i.globe.icon
               | 前往
             a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
+              i.github.icon
+              | 專案
+    .ui.divided.list.container(v-if = "mode == 'small'")
+      .item(v-for="(i, idx) in has(items, key)", :key="i.title")
+        a.ui.mini.avatar(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
+          img(:src="i.img")
+        p.description {{idx + 1}}、{{i.title}}： {{i.description}}
+          .ui.float.right.buttons
+            a.ui.small.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
+              i.globe.icon
+              | 前往
+            a.ui.small.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
               i.github.icon
               | 專案
 </template>
@@ -338,7 +353,7 @@ input {
   width: 300px !important;
 }
 
-h2.ui.header.white {
+.white {
   color: white !important;
 }
 
@@ -377,6 +392,20 @@ h2 {
   width: 100px;
   float: left;
   margin-right: 2em;
+}
+
+.mini.avatar img {
+  width: 4em;
+  float: left;
+  margin: 0 .5em;
+}
+
+.ui.radio.checkbox {
+  margin-left: 2em;
+}
+
+.float.right {
+  float: right;
 }
 
 </style>
