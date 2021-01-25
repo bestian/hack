@@ -34,17 +34,17 @@
           a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
             i.github.icon
             | 專案
-    .ui.list.container(v-if = "mode == 'list'")
+    .ui.divided.list.container(v-if = "mode == 'list'")
       .item(v-for="(i, idx) in has(items, key)", :key="i.title")
         h2.white {{idx + 1}}：{{i.title}}
         a.ui.avatar(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
           img(:src="i.img")
         p.description {{i.description}}
-          .ui.buttons
-            a.ui.huge.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
+          .ui.float.right.buttons
+            a.ui.small.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
               i.globe.icon
               | 前往
-            a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
+            a.ui.small.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
               i.github.icon
               | 專案
     .ui.divided.list.container(v-if = "mode == 'small'")
@@ -406,6 +406,10 @@ h2 {
 
 .float.right {
   float: right;
+}
+
+.ui.form .inline.fields {
+  margin-top: 1em;
 }
 
 </style>
