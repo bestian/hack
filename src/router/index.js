@@ -1,12 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue';
-import Course from '@/components/Course.vue';
-import Flow from '@/components/Flow.vue';
-import Payment from '@/components/Payment.vue';
-import FAQ from '@/components/Faq.vue';
-import Chat from '@/components/Chat.vue';
-import MyWork from '@/components/MyWork.vue';
 
 Vue.use(Router);
 
@@ -15,37 +8,37 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld,
+      component: () => import('@/components/HelloWorld.vue'),
     },
     {
       path: '/course',
       name: 'Course',
-      component: Course,
+      component: () => import('@/components/Course.vue'),
     },
     {
       path: '/flow',
       name: 'Flow',
-      component: Flow,
+      component: () => import('@/components/Flow.vue'),
     },
     {
       path: '/payment',
       name: 'Payment',
-      component: Payment,
+      component: () => import('@/components/Payment.vue'),
     },
     {
       path: '/faq',
       name: 'FAQ',
-      component: FAQ,
+      component: () => import('@/components/Faq.vue'),
     },
     {
       path: '/chat',
       name: 'Chat',
-      component: Chat,
+      component: () => import('@/components/Chat.vue'),
     },
     {
       path: '/work',
       name: 'MyWork',
-      component: MyWork,
+      component: () => import('@/components/MyWork.vue'),
     },
   ],
 });
