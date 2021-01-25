@@ -412,4 +412,9 @@ h2 {
   margin-top: 1em;
 }
 
+.ui.two.bottom.attached.fluid.buttons {
+  position: absolute;
+  bottom: -1px;
+}
+
 </style>
