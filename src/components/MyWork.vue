@@ -344,6 +344,15 @@ export default {
         github: 'https://github.com/bestian/mathquiz',
         description: '數學出題機用Haskell撰寫，可以自動出題和確認答案，有不同的難度可以選則。',
       },
+      {
+        from: new Date(2021, 0),
+        title: '打地鼠遊戲',
+        tags: ['遊戲'],
+        img: './img/mole.png',
+        href: 'https://bestian.github.io/mole/',
+        github: 'https://github.com/bestian/mole/',
+        description: '打地鼠遊戲是一個簡單輕鬆的小遊戲。',
+      },
     ],
   }),
 };
