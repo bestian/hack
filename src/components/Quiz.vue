@@ -31,6 +31,7 @@ export default {
         { q: '請問vue的依條件決定顯示與否要寫什麼？', as: ['v-show', 'v-for', 'v-model', 'v-bind'] },
         { q: '請問vue的類型綁定要寫什麼？', as: [':class', 'v-class', 'v-bind-class', '@class'] },
         { q: '請問vue的樣式綁定要寫什麼？', as: [':style', 'v-style', 'v-bind-style', '@style'] },
+        { q: '請問vue的HTML碼綁定要寫什麼？', as: ['v-html', ':html', 'bind-html', '@html'] },
         { q: '請問vue的事件觸發要寫什麼？', as: ['@', '#', '%', ':'] },
         { q: '請問vue的屬性輸入要寫什麼？', as: [':', '#', '%', '@'] },
         { q: '請問vue的路由導航鈕要寫什麼？', as: ['router-link', 'route-link', 'router', 'route'] },
