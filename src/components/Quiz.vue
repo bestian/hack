@@ -3,7 +3,7 @@
     .ui.segment.container
       h1 小測驗
       h3 Q: {{ myQuiz.q }}
-      .ui.buttons
+      .ui.vertical.buttons
         a.ui.huge.green.button(v-for="a in rand(myQuiz.as)", @click="ans(a)") {{ a }}
       h1.win(v-if="win == 1") 答對了!
       h1.win(v-if="win == 0") 答錯了!
