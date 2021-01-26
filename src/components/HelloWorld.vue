@@ -23,6 +23,7 @@
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B9%8B%E4%B8%80-4d57f8d1b3d1", target="_blank" rel="noopener noreferrer") Vue簡介一：迴圈
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer") Vue簡介二：樣式綁定
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B8%89-1e3167063a67", target="_blank" rel="noopener noreferrer") Vue簡介三：雙向資料綁定
+              a.item(href="https://vuejs.org/", target="_blank" rel="noopener noreferrer") Vue官網
     h3.white 創發軌跡：
     Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
 
@@ -155,7 +156,7 @@ export default {
 }
 
 .light-red.column .ui.list {
-  height: 5em;
+  height: 6em;
   min-height: 0;
 }
 </style>
