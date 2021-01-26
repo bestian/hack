@@ -8,6 +8,8 @@ import router from './router';
 import 'semantic-ui-css/semantic.min.css';
 import App from './App.vue';
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css';
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
 
 Vue.use(VueGtag, {
   config: { id: 'UA-26178243-11' },

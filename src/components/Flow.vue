@@ -41,6 +41,9 @@
 <script>
 export default {
   name: 'Flow',
+  metaInfo: {
+    title: '上課流程',
+  },
   data() {
     return {
       links: [

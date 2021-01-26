@@ -19,6 +19,9 @@
 export default {
   name: 'Quiz',
   props: ['units'],
+  metaInfo: {
+    title: '小測驗',
+  },
   data() {
     return {
       win: null,

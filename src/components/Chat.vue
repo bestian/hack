@@ -36,6 +36,9 @@
 export default {
   name: 'Chat',
   props: ['likes', 'chats'],
+  metaInfo: {
+    title: '留言版',
+  },
   data() {
     return {
       msg: '留言版',

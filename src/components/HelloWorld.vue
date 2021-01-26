@@ -36,6 +36,9 @@ export default {
   components: {
     Timeline,
   },
+  metaInfo: {
+    title: '歡迎',
+  },
   props: ['likes'],
   data: () => ({
     messageWhenNoItems: '歡迎學習寫網站',

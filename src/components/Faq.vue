@@ -131,6 +131,9 @@
 export default {
   name: 'FAQ',
   props: ['likes'],
+  metaInfo: {
+    title: '常見問題',
+  },
   data() {
     return {
       msg: '常見問題',

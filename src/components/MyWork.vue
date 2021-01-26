@@ -66,6 +66,9 @@
 export default {
   name: 'MyWork',
   props: ['likes'],
+  metaInfo: {
+    title: '作品集',
+  },
   methods: {
     has(items, k) {
       return items.filter((o) => (o.title + o.description + o.tags.join('')).indexOf(k) > -1);

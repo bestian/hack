@@ -34,6 +34,9 @@
 <script>
 export default {
   name: 'Payment',
+  metaInfo: {
+    title: '收費標準',
+  },
   data() {
     return {
       msg: '收費標準',

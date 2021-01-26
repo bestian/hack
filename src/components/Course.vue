@@ -57,6 +57,9 @@
 <script>
 export default {
   name: 'Course',
+  metaInfo: {
+    title: '課程說明',
+  },
   data() {
     return {
       links: [
