@@ -1,6 +1,6 @@
 <template lang="pug">
   .hello
-    .ui.segment.container
+    .ui.segment.container(:class="{dark: dark}")
       h1 小測驗
       h3 Q: {{ myQuiz.q }}
       .ui.vertical.buttons
@@ -18,7 +18,7 @@
 
 export default {
   name: 'Quiz',
-  props: ['units'],
+  props: ['likes', 'dark'],
   metaInfo: {
     title: '小測驗',
   },

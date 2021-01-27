@@ -31,7 +31,7 @@
           span.fat-only 留言
       sui-menu-item.fat-only
         iframe(src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fhack.bestian.tw&layout=button_count&size=small&appId=485195848253155&width=71&height=20", width="110", height="20", style="border:none;overflow:hidden", scrolling="no", frameborder="0" allowTransparency="true", allow="encrypted-media")
-    router-view(:likes = "likes", :chats = "chats", @submit = "submit")
+    router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark")
     footer.ui.container#ad
       .ui.list
         // .item 試課學費: 500元
@@ -40,6 +40,8 @@
         a.item.fat-only#src(href="http://www.github.com/bestian/hack", target="_blank", @click="track('github', 10)", rel="noopener noreferrer")
           i.github.icon
           | 原始碼
+
+        sui-checkbox#dark.fat-only(toggle, label = "黑暗模式", v-model="dark")
 
     //a.attr(href="http://www.freepik.com", target="_blank") Designed by Ydlabs / Freepik
   </div>
@@ -62,6 +64,7 @@ export default {
   },
   data() {
     return {
+      dark: false,
       likes: [
         {
           n: '某人',
@@ -70,6 +73,8 @@ export default {
         }],
       chats: undefined,
     };
+  },
+  mounted() {
   },
   methods: {
     track(t, v) {
@@ -189,9 +194,14 @@ p {
 }
 
 .ui.segment {
- background-color: hsla(120, 100%, 96%, 1) !important;
+  background-color: hsla(120, 100%, 96%, 1) !important;
   font-size: 1.2em !important;
 /*  box-shadow: 6px 5px 2px 1px hsla(251, 84%, 80%, 0.8) !important; */
+}
+
+.ui.segment.dark {
+  background-color: black !important;
+  color: white !important;
 }
 
 /*
@@ -282,6 +292,20 @@ p {
   z-index: 10;
   background-color: #333;
   padding: .2em;
+  text-decoration: none;
+}
+
+#dark {
+  position: fixed;
+  bottom: 3em;
+  left: 0;
+  z-index: 10;
+  background-color: #333;
+  padding: .2em;
+}
+
+.ui.toggle.checkbox .box, .ui.toggle.checkbox label {
+  color: white;
 }
 
 .tada {

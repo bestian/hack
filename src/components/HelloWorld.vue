@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      .ui.piled.segment.sunflower
+      .ui.piled.segment.sunflower(:class="{dark: dark}")
         router-link(to="/course")
           img.logo(src="../assets/logo.png", alt="vue")
         sui-header(size="large") 歡迎和Bestian學習寫網站
@@ -40,7 +40,7 @@ export default {
   metaInfo: {
     title: '歡迎',
   },
-  props: ['likes'],
+  props: ['likes', 'dark'],
   data: () => ({
     messageWhenNoItems: '歡迎學習寫網站',
     timelineItems: [

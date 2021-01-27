@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      .ui.piled.segment.ranged
+      .ui.piled.segment.ranged(:class="{dark: dark}")
         sui-header(size="large") 上課流程
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
@@ -44,6 +44,7 @@ export default {
   metaInfo: {
     title: '上課流程',
   },
+  props: ['likes', 'dark'],
   data() {
     return {
       links: [

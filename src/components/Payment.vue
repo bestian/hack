@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      .ui.piled.segment.heart
+      .ui.piled.segment.heart(:class="{dark: dark}")
         sui-header(size="large") {{ msg }}
         router-link(to="/faq")
           img.logo(src="../assets/logo.png")
@@ -37,6 +37,7 @@ export default {
   metaInfo: {
     title: '收費標準',
   },
+  props: ['likes', 'dark'],
   data() {
     return {
       msg: '收費標準',

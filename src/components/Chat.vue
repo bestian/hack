@@ -1,6 +1,6 @@
 <template lang="pug">
   .chats
-    .ui.left.aligned.segment.container
+    .ui.left.aligned.segment.container(:class="{dark: dark}")
       div.fluid
         sui-header(size="large") {{ msg }}
         router-link(to="/")
@@ -35,7 +35,7 @@
 
 export default {
   name: 'Chat',
-  props: ['likes', 'chats'],
+  props: ['likes', 'chats', 'dark'],
   metaInfo: {
     title: '留言版',
   },

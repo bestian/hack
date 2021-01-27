@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello
     .ui.container
-      .ui.piled.segment.code
+      .ui.piled.segment.code(:class="{dark: dark}")
         sui-header(size="large") 想學寫網站嗎?
         router-link(to="/flow")
           img.logo(src="../assets/logo.png")
@@ -60,6 +60,7 @@ export default {
   metaInfo: {
     title: '課程說明',
   },
+  props: ['likes', 'dark'],
   data() {
     return {
       links: [

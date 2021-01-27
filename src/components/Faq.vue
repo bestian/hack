@@ -130,7 +130,7 @@
 <script>
 export default {
   name: 'FAQ',
-  props: ['likes'],
+  props: ['likes', 'dark'],
   metaInfo: {
     title: '常見問題',
   },
