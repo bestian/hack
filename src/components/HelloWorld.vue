@@ -6,7 +6,7 @@
           img.logo(src="../assets/logo.png", alt="vue")
         sui-header(size="large") 歡迎和Bestian學習寫網站
         h3 以一對1~2人的小規模視訊教學，量身打造合適的學習進程。
-        p.left 激發主動創發的自學精神，培養「彷」、「創」、「改」的良好學習習慣。
+        p.left 激發主動創發的自學精神，培養「摹彷」、「創作」、「改良」的良好學習習慣。
           br
           | Vue.js是目前最夯的前端框架之一，簡捷、有力、架構清楚。
           br
