@@ -17,6 +17,9 @@
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="small")
             label 小清單
+          .ui.radio.checkbox
+            input(type="radio",v-model="mode", name="mode",value="frame")
+            label 預覽
     br
     .ui.four.doubling.stackable.cards.container(v-if = "mode == 'cards'")
       .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
@@ -59,6 +62,14 @@
             a.ui.small.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
               i.github.icon
               | 專案
+    .ui.grid(v-if = "mode == 'frame'")
+      .ui.row(v-for="(i, idx) in has(items, key)", :key="i.title")
+        .four.wide.column
+          a.ui.mini.avatar(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
+            img(:src="i.img")
+          p.description {{idx + 1}}、{{i.title}}： {{i.description}}
+        .twelve.wide.column
+          iframe(width="90%", height="420" :src = "i.href")
 </template>
 
 <script>
@@ -142,8 +153,8 @@ export default {
         title: '認字遊戲',
         tags: ['中文', '認字', '遊戲'],
         img: 'https://www.moedict.tw/%E5%AD%97.png',
-        href: 'https://bestian.github.io/q-write',
-        github: 'https://www.github.com/bestian/q-write/',
+        href: 'https://3dw.github.io/q-words/',
+        github: 'https://www.github.com/3dw/q-word/',
         description:
           '認字遊戲是給小朋友學習認字的工具，有多種遊戲模式，可自訂字庫。',
       },
@@ -427,6 +438,10 @@ h2 {
 .ui.two.bottom.attached.fluid.buttons {
   position: absolute;
   bottom: -1px;
+}
+
+iframe {
+  background-color: white;
 }
 
 </style>
