@@ -14,15 +14,20 @@
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="cards")
             label 卡片
+          br
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="small")
             label 小清單
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="frame")
             label 預覽
+          br
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="block")
             label 方塊
+          .ui.radio.checkbox
+            input(type="radio",v-model="mode", name="mode",value="horse")
+            label 跑馬
     br
     .ui.four.doubling.stackable.cards.container(v-if = "mode == 'cards'")
       .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
@@ -76,6 +81,22 @@
     .ui.segment.container(v-if = "mode == 'block'")
       a.block(v-for="(i, idx) in has(items, key)", :key="i.title", :href="i.href", target="_blank", rel="noopener noreferrer")
         img(:src="i.img", :title = "idx + '、' + i.title + '：' + i.description", :alt = "i.title")
+    .ui.segment.container(v-if = "mode == 'horse'")
+      .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title", v-show="idx == index")
+        .ui.top.right.attached.label
+          a.tag(v-for = "t in i.tags", :key="t", @click="key = t") {{t}}
+        h2.ui.header {{idx + 1}}：{{i.title}}
+        a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
+          img(:src="i.img")
+        .ui.divider
+        p.description {{i.description}}
+        .ui.two.bottom.attached.fluid.buttons
+          a.ui.huge.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
+            i.globe.icon
+            | 前往
+          a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
+            i.github.icon
+            | 專案
 </template>
 
 <script>
@@ -90,8 +111,19 @@ export default {
     has(items, k) {
       return items.filter((o) => (o.title + o.description + o.tags.join('')).indexOf(k) > -1);
     },
+    go() {
+      this.index += 1;
+      if (this.index >= this.items.length) {
+        this.index = 0;
+      }
+      this.$forceUpdate();
+    },
+  },
+  mounted() {
+    setInterval(this.go, 2000);
   },
   data: () => ({
+    index: 0,
     mode: 'list',
     key: '',
     items: [
