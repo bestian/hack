@@ -20,6 +20,9 @@
           .ui.radio.checkbox
             input(type="radio",v-model="mode", name="mode",value="frame")
             label 預覽
+          .ui.radio.checkbox
+            input(type="radio",v-model="mode", name="mode",value="block")
+            label 方塊
     br
     .ui.four.doubling.stackable.cards.container(v-if = "mode == 'cards'")
       .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title")
@@ -70,6 +73,9 @@
           p.description {{idx + 1}}、{{i.title}}： {{i.description}}
         .twelve.wide.column
           iframe(width="90%", height="420" :src = "i.href")
+    .ui.segment.container(v-if = "mode == 'block'")
+      a.block(v-for="(i, idx) in has(items, key)", :key="i.title", :href="i.href", target="_blank", rel="noopener noreferrer")
+        img(:src="i.img", :title = "idx + '、' + i.title + '：' + i.description", :alt = "i.title")
 </template>
 
 <script>
@@ -373,7 +379,6 @@ export default {
 <style scoped>
 
 input {
-  width: 300px !important;
 }
 
 .white {
@@ -442,6 +447,14 @@ h2 {
 
 iframe {
   background-color: white;
+}
+
+.ui.segment.container {
+  text-align: left;
+}
+
+.block img {
+  height: 3.2em;
 }
 
 </style>
