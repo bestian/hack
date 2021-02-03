@@ -24,6 +24,7 @@
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer") Vue簡介二：樣式綁定
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B8%89-1e3167063a67", target="_blank" rel="noopener noreferrer") Vue簡介三：雙向資料綁定
               a.item(href="https://vuejs.org/", target="_blank" rel="noopener noreferrer") Vue官網
+              a.item(href="https://www.tenlong.com.tw/products/9789864345687", target="_blank" rel="noopener noreferrer") 參考書《重新認識 Vue.js》
     h3.white 創發軌跡：
     Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
 
@@ -156,7 +157,7 @@ export default {
 }
 
 .light-red.column .ui.list {
-  height: 6em;
+  height: 8em;
   min-height: 0;
 }
 </style>
