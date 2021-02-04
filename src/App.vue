@@ -170,7 +170,7 @@ body {
 }
 
 .ui.header {
-  color: hsla(230, 86%, 30%, 1) !important;
+  color: hsla(230, 86%, 30%, 1);
 }
 
 #nav-bar {
@@ -201,6 +201,10 @@ p {
 
 .ui.segment.dark {
   background-color: black !important;
+  color: white !important;
+}
+
+.ui.segment.dark .sub.header {
   color: white !important;
 }
 
