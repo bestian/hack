@@ -82,19 +82,19 @@
       a.block(v-for="(i, idx) in has(items, key)", :key="i.title", :href="i.href", target="_blank", rel="noopener noreferrer")
         img(:src="i.img", :title = "idx + '、' + i.title + '：' + i.description", :alt = "i.title")
     .ui.segment.container(v-if = "mode == 'horse'")
-      .ui.card(v-for="(i, idx) in has(items, key)", :key="i.title", v-show="idx == index")
+      .ui.card.fixed(@click="next()", :style="{left: left + 'px', top: top + 'px'}")
         .ui.top.right.attached.label
-          a.tag(v-for = "t in i.tags", :key="t", @click="key = t") {{t}}
-        h2.ui.header {{idx + 1}}：{{i.title}}
-        a.image(v-if="i.img", :href="i.href", target="_blank", rel="noopener noreferrer")
-          img(:src="i.img")
+          a.tag(v-for = "t in items[idx].tags", :key="t", @click="key = t") {{t}}
+        h2.ui.header {{idx + 1}}：{{items[idx].title}}
+        a.image(v-if="items[idx].img", :href="items[idx].href", target="_blank", rel="noopener noreferrer")
+          img(:src="items[idx].img")
         .ui.divider
-        p.description {{i.description}}
+        p.description {{items[idx].description}}
         .ui.two.bottom.attached.fluid.buttons
-          a.ui.huge.green.button(:href="i.href", target="_blank", rel="noopener noreferrer")
+          a.ui.huge.green.button(:href="items[idx].href", target="_blank", rel="noopener noreferrer")
             i.globe.icon
             | 前往
-          a.ui.huge.teal.button(:href="i.github", target="_blank", rel="noopener noreferrer")
+          a.ui.huge.teal.button(:href="items[idx].github", target="_blank", rel="noopener noreferrer")
             i.github.icon
             | 專案
 </template>
@@ -118,12 +118,36 @@ export default {
       }
       this.$forceUpdate();
     },
+    next() {
+      this.idx += 1;
+      if (this.idx === this.items.length) {
+        this.idx = 0;
+      }
+    },
+    move() {
+      this.top += 1 * this.dir2;
+      this.left += 1 * this.dir;
+      if (this.left === window.innerWidth - 300 || this.left === 0) {
+        this.dir *= -1;
+        this.next();
+      }
+      if (this.top === window.innerHeight - 200 || this.top === 0) {
+        this.dir2 *= -1;
+        this.next();
+      }
+    },
   },
   mounted() {
     setInterval(this.go, 2000);
+    setInterval(this.move, 15);
   },
   data: () => ({
     index: 0,
+    idx: 0,
+    top: 0,
+    left: 0,
+    dir: 1,
+    dir2: 1,
     mode: 'list',
     key: '',
     items: [
@@ -487,6 +511,13 @@ iframe {
 
 .block img {
   height: 3.2em;
+}
+
+.fixed {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 </style>
