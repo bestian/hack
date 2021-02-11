@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="7" inverted="")
+    sui-menu#nav-bar.no-print(:widths="8" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -17,6 +17,10 @@
         router-link(to="/payment")
           sui-icon(name="payment")
           span.fat-only 學費
+      sui-menu-item
+        router-link(to="/gift")
+          sui-icon(name="gift")
+          span.fat-only 禮物
       sui-menu-item
         router-link(to="/faq")
           sui-icon(name="question")
@@ -171,6 +175,7 @@ body {
 
 .ui.header {
   color: hsla(230, 86%, 30%, 1);
+  white-space: pre-line;
 }
 
 #nav-bar {

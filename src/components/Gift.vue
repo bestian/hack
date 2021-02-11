@@ -2,14 +2,17 @@
   .hello
     .ui.container
       .ui.piled.segment.heart(:class="{dark: dark}")
-        sui-header(size="large")
-          router-link(to="/gift")
-            | {{ msg }}
-        router-link(to="/gift")
+        sui-header(size="large") {{ msg }}
+        router-link(to="/faq")
           img.logo(src="../assets/logo.png")
-        sui-header(size="large") 要怎麼付費呢?
-          .sub.header 以轉帳的方式，先試課一次，之後e-mail詳談~
-          .sub.header 也歡迎換工而不是付費喔~
+        sui-header(size="large") 在禮物經濟的邏輯中，
+          br
+          | 相互分享有餘，隨喜不訂價
+          .sub.header 自2021.04.04起Be的所有服務將改為隨喜不定價
+          .sub.header 詳細說明如下~
+          .sub.header 隨喜不訂價並不是完全免費，但是您可以衡量您的經濟狀況和從課程中得到的與付出的流動，自行決定給予多少的金錢回饋
+          .sub.header 先試課一次，之後e-mail詳談~
+          br
           .sub.header 目前尚可預約課程時間:
           .sub.header 週一下午，週四上午，週六上午，週日上午。
         h3
@@ -22,27 +25,23 @@
               .light-green
                 sui-header(size="large") 一對一
                   .ui.sub.header
-                    | $NT1000 / 時。試課500元。
-                    br
-                    | 也歡迎換工而不是付費喔~
+                    | 隨喜不訂價。試課也是隨喜不訂價。
             sui-grid-column
               .light-yellow
                 sui-header(size="large") 一對二
                   .ui.sub.header
-                    | $NT600 / 人時。試課400元。
-                    br
-                    | 也歡迎換工而不是付費喔~
+                    | 隨喜不訂價。試課也是隨喜不訂價。
 </template>
 <script>
 export default {
   name: 'Payment',
   metaInfo: {
-    title: '收費標準',
+    title: '禮物經濟',
   },
   props: ['likes', 'dark'],
   data() {
     return {
-      msg: '自2021.04.04起\nBe的所有服務將改為隨喜不定價\n詳細說明見此~',
+      msg: '禮物經濟-自2021.04.04起',
     };
   },
 };

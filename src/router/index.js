@@ -26,6 +26,11 @@ export default new Router({
       component: () => import('@/components/Payment.vue'),
     },
     {
+      path: '/gift',
+      name: 'Payment',
+      component: () => import('@/components/Gift.vue'),
+    },
+    {
       path: '/faq',
       name: 'FAQ',
       component: () => import('@/components/Faq.vue'),
