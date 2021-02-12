@@ -24,11 +24,11 @@
       sui-menu-item
         router-link(to="/faq")
           sui-icon(name="question")
-          span.fat-only 問答
+          span.fat-only FAQ
       sui-menu-item
         router-link(to="/quiz")
           sui-icon(name="info")
-          span.fat-only 小測驗
+          span.fat-only 測驗
       // sui-menu-item
         router-link(to="/chat")
           sui-icon(name="file")
