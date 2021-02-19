@@ -15,7 +15,7 @@
           | 和
           a(href="https://cli.vuejs.org/", target="_blank") Vue-Cli官網
           | 和
-          a(href="http://goban.tw/#see/vue/0/0", target="_blank") Vue棋盤
+          a(href="http://goban.tw/#see/vue/0/0", target="_blank") Vue黑板
         sui-header(size="large") Vue的程式碼有多簡潔呢？
         p.ans 很簡潔，可以參考看看這個
           a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
