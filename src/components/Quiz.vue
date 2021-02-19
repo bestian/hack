@@ -40,6 +40,7 @@ export default {
         { q: '請問vue元件初始時要執行的函式要寫進哪裡？', as: ['mounted', 'methods', 'props', 'data'] },
         { q: '請問vue元件從父元件得到的資料要寫進哪裡？', as: ['props', 'componets', 'methods', 'data'] },
         { q: '請問vue元件使用的導入元件要寫進哪裡？', as: ['componets', 'props', 'methods', 'data'] },
+        { q: '請問用vue CLI創建一個專案要打什麼指令？', as: ['vue create', 'vue add', 'vue new', 'vue init'] },
       ],
       myQuiz: {},
     };
