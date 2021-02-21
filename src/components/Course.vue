@@ -47,11 +47,12 @@
                     | {{ b.n }}
             sui-grid-column
               .light-yellow
-                sui-header(size="medium") 學生作品
+                sui-header(size="medium") 學生檔案與作品
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
-                    | {{ s.n }} - by {{ s.a }}
+                    | {{ s.n }}
+                    spen(v-if="s.a") - by {{ s.a }}
 </template>
 
 <script>
@@ -85,6 +86,10 @@ export default {
         { n: 'Be@github', h: 'https://www.github.com/bestian' },
       ],
       students: [
+        { n: 'Hans-lee-2006', h: 'https://www.github.com/hans-lee-2006/' },
+        { n: 'Jinglunt', h: 'https://www.github.com/jinglunt/' },
+        { n: 'Jungleft', h: 'https://www.github.com/jungleft/' },
+        { n: 'Kingston0420', h: 'https://www.github.com/kingston0420/' },
         { n: 'Minecraft介紹網站', h: 'https://hans-lee-2006.github.io/minecraft/#/', a: 'Hans-lee-2006' },
         { n: '自製模型介紹網站', h: 'https://jinglunt.github.io/model/#/', a: 'jinglunT' },
         { n: 'BMI計算機', h: 'https:/bestian.github.io/bmi/#/', a: '共同創作' },
