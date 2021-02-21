@@ -4,7 +4,7 @@
       .ui.piled.segment.sunflower(:class="{dark: dark}")
         router-link(to="/course")
           img.logo(src="../assets/logo.png", alt="vue")
-        sui-header(size="large") 歡迎和Bestian學習寫網站
+        sui-header(size="large") 和Bestian一起寫網站
         h3 以一對1~2人的小規模視訊教學，量身打造合適的學習進程。
         p.left 激發主動創發的自學精神，培養「摹彷」、「創作」、「改良」的良好學習習慣。
           br
