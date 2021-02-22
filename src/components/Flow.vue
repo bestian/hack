@@ -6,7 +6,9 @@
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 視訊上課，不用交通
-          .sub.header 透過視訊上課，以及Gitgub協作平台，大家可以遠距協作開發程式。
+          .sub.header 透過視訊上課，以及
+            a(href="https://www.github.com/", target="_blank" rel="noopener noreferrer") Gitgub協作平台
+            | ，大家可以方便地協作開發程式。
         sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
