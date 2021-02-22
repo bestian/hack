@@ -426,6 +426,15 @@ export default {
         github: 'https://github.com/bestian/mole/',
         description: '打地鼠遊戲是一個簡單輕鬆的小遊戲。',
       },
+      {
+        from: new Date(2021, 1),
+        title: '浩克打怪',
+        tags: ['遊戲'],
+        img: './img/hulk.png',
+        href: 'https://bestian.github.io/hulk/',
+        github: 'https://github.com/bestian/hulk/',
+        description: '浩克打怪是一個簡單輕鬆的小遊戲。',
+      },
     ],
   }),
 };
