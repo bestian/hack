@@ -76,7 +76,7 @@ export default {
         { n: '自由數學', h: 'https://math.alearn.org.tw' },
         { n: '自學地圖', h: 'https://map.alearn.org.tw' },
         { n: '自學2.0', h: 'https://we.alearn.org.tw' },
-        { n: '知識棋盤', h: 'https://goban.tw' },
+        { n: '零時黑板', h: 'https://goban.tw' },
         { n: '認照片遊戲', h: 'https://elder.game.tw' },
         { n: '自製的手機App', h: 'https://goban.tw/#/see/bestian_apps/0/0' },
         { n: '自製的其他網站', h: 'https://goban.tw/#/see/bestian_apps/1/0' },
