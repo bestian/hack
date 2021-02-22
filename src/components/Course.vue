@@ -52,7 +52,7 @@
                   a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
                     | {{ s.n }}
-                    spen(v-if="s.a") - by {{ s.a }}
+                    span(v-if="s.a") - by {{ s.a }}
 </template>
 
 <script>
