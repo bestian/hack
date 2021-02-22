@@ -49,73 +49,73 @@ export default {
         from: new Date(2021, 1),
         title: '浩克打怪',
         description:
-          '<img class="history" src="./img/hulk.png"/>這個月創建了浩克打怪的小遊戲。<a href = "https://bestian.github.io/hulk/" target="blank" rel="noopener noreferrer">https://bestian.github.io/hulk/</a>',
+          '<img class="history" src="./img/hulk.png" alt="hulk"/>這個月創建了浩克打怪的小遊戲。<a href = "https://bestian.github.io/hulk/" target="blank" rel="noopener noreferrer">https://bestian.github.io/hulk/</a>',
       },
       {
         from: new Date(2021, 0),
         title: '萌典、自主公民樸克牌',
         description:
-          '<img class="history" src="./img/moe.png"/>這個月重新構造了萌典、自主公民樸克牌<br/>萌典是教育部字典民間版，有許多不同的查詢功能，方便好用。<a href = "https://bestian.github.io/q-moedict" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-moedict</a><br/>自主公民樸克牌是用QR-Code做的樸克牌，可以讓使用者自訂52個連結並印出。<a href = "https://poker.bestian.tw" target="blank" rel="noopener noreferrer">https://poker.bestian.tw</a>',
+          '<img class="history" src="./img/moe.png" alt="moe"/>這個月重新構造了萌典、自主公民樸克牌<br/>萌典是教育部字典民間版，有許多不同的查詢功能，方便好用。<a href = "https://bestian.github.io/q-moedict" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-moedict</a><br/>自主公民樸克牌是用QR-Code做的樸克牌，可以讓使用者自訂52個連結並印出。<a href = "https://poker.bestian.tw" target="blank" rel="noopener noreferrer">https://poker.bestian.tw</a>',
       },
       {
         from: new Date(2020, 11),
         title: '認字遊戲、閃卡',
         description:
-          '<img class="history" src="./img/flash.png"/>這個月做了認字遊戲，還有更新了自由數學閃卡<br/>認字遊戲是給小朋友學習認字的工具，有多種遊戲模式，可自訂字庫。<a href = "https://bestian.github.io/q-write" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-write</a><br/>閃卡是練習心算的工具，有多種功能，可以自訂數字範圍。<a href = "https://bestian.github.io/q-flashcard" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-flashcard</a>',
+          '<img class="history" src="./img/flash.png" alt="flash"/>這個月做了認字遊戲，還有更新了自由數學閃卡<br/>認字遊戲是給小朋友學習認字的工具，有多種遊戲模式，可自訂字庫。<a href = "https://bestian.github.io/q-write" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-write</a><br/>閃卡是練習心算的工具，有多種功能，可以自訂數字範圍。<a href = "https://bestian.github.io/q-flashcard" target="blank" rel="noopener noreferrer">https://bestian.github.io/q-flashcard</a>',
       },
       {
         from: new Date(2020, 9),
         title: '射飛碟',
         description:
-          '<img class="history" src="./img/ufo.png"/>這個月做了射飛碟的小遊戲<br/>射飛碟遊戲會有很多飛碟從上方出現往下移動，要在它們落地前擊落它們。<a href = "https://bestian.github.io/vue_svg_game" target="blank" rel="noopener noreferrer">https://bestian.github.io/vue_svg_game</a>',
+          '<img class="history" src="./img/ufo.png" alt="ufo"/>這個月做了射飛碟的小遊戲<br/>射飛碟遊戲會有很多飛碟從上方出現往下移動，要在它們落地前擊落它們。<a href = "https://bestian.github.io/vue_svg_game" target="blank" rel="noopener noreferrer">https://bestian.github.io/vue_svg_game</a>',
       },
       {
         from: new Date(2020, 8),
         title: '迷宮遊戲',
         description:
-          '<img class="history" src="./img/maze.png"/>這個月做了迷宮遊戲<br/>迷宮遊戲是用3D模組做的迷宮，有三個關卡，可以開啟神模式就能穿牆。<a href = "https://bestian.github.io/maze" target="blank" rel="noopener noreferrer">https://bestian.github.io/maze</a>',
+          '<img class="history" src="./img/maze.png" alt="maze"/>這個月做了迷宮遊戲<br/>迷宮遊戲是用3D模組做的迷宮，有三個關卡，可以開啟神模式就能穿牆。<a href = "https://bestian.github.io/maze" target="blank" rel="noopener noreferrer">https://bestian.github.io/maze</a>',
       },
       {
         from: new Date(2020, 7),
         title: '我愛玩學校',
         description:
-          '<img class="history" src="./img/ilove.png"/>這個月做了我愛玩學校網站<br/>我愛玩學校是一個很特別的學習團體，時常辦一些有趣的活動，為新小孩創造新經驗。<a href = "https://3dw.github.io/ilove" target="blank" rel="noopener noreferrer">https://3dw.github.io/ilove</a>',
+          '<img class="history" src="./img/ilove.png" alt="ilove"/>這個月做了我愛玩學校網站<br/>我愛玩學校是一個很特別的學習團體，時常辦一些有趣的活動，為新小孩創造新經驗。<a href = "https://3dw.github.io/ilove" target="blank" rel="noopener noreferrer">https://3dw.github.io/ilove</a>',
       },
       {
         from: new Date(2020, 6),
         title: '自學地圖',
         description:
-          '<img class="history" src="./img/automap.png"/>這個月更新了自學地圖<br/>自學地圖是給自學家庭的入口頁，有許多資訊和諮詢專線的服務。<a href = "https://map.alearn.org.tw" target="blank" rel="noopener noreferrer">https://map.alearn.org.tw</a>',
+          '<img class="history" src="./img/automap.png" alt="automap"/>這個月更新了自學地圖<br/>自學地圖是給自學家庭的入口頁，有許多資訊和諮詢專線的服務。<a href = "https://map.alearn.org.tw" target="blank" rel="noopener noreferrer">https://map.alearn.org.tw</a>',
       },
       {
         from: new Date(2020, 5),
         title: '自由數學',
         description:
-          '<img class="history" src="./img/freemath.png"/>這個月更新了自由數學<br/>自由數學是自由的開放教材，有學習地圖和小學三年級到國中三年級中各個重要的數學單元的形成性教材，適合自學使用。<a href = "https://math.alearn.org.tw" target="blank" rel="noopener noreferrer">https://math.alearn.org.tw</a>',
+          '<img class="history" src="./img/freemath.png" alt="freemath"/>這個月更新了自由數學<br/>自由數學是自由的開放教材，有學習地圖和小學三年級到國中三年級中各個重要的數學單元的形成性教材，適合自學使用。<a href = "https://math.alearn.org.tw" target="blank" rel="noopener noreferrer">https://math.alearn.org.tw</a>',
       },
       {
         from: new Date(2020, 3),
         title: 'BMI試算機',
         description:
-          '<img class="history" src="./img/bmi.png"/>這個月做了BMI試算機<br/>BMI試算機可以幫你做體重的試算，具有體重控制的輔助作用。<a href = "https://bestian.github.io/bmi" target="blank" rel="noopener noreferrer">https://bestian.github.io/bmi</a>',
+          '<img class="history" src="./img/bmi.png" alt="bmi"/>這個月做了BMI試算機<br/>BMI試算機可以幫你做體重的試算，具有體重控制的輔助作用。<a href = "https://bestian.github.io/bmi" target="blank" rel="noopener noreferrer">https://bestian.github.io/bmi</a>',
       },
       {
         from: new Date(2020, 2),
         title: '迷路聯絡卡',
         description:
-          '<img class="history" src="./img/lost.png"/>這個月做了迷路聯絡卡<br/>迷路聯絡卡是給老人或小孩使用的，在迷路時可以展示出主要照顧者的聯絡方式。<a href = "http://imlost.elder.game.tw" target="blank" rel="noopener noreferrer">http://imlost.elder.game.tw</a>',
+          '<img class="history" src="./img/lost.png" alt="lost"/>這個月做了迷路聯絡卡<br/>迷路聯絡卡是給老人或小孩使用的，在迷路時可以展示出主要照顧者的聯絡方式。<a href = "http://imlost.elder.game.tw" target="blank" rel="noopener noreferrer">http://imlost.elder.game.tw</a>',
       },
       {
         from: new Date(2019, 8),
         title: '知識棋盤',
         description:
-          '<img class="history" src="./img/goban.png"/>這個月更新了知識棋盤<br/>知識棋盤是網址匯集和分享的好工具，有無限的空間可以發揮。<a href = "https://goban.tw/#/" target="blank" rel="noopener noreferrer">https://goban.tw/#/</a>',
+          '<img class="history" src="./img/goban.png" alt="goban"/>這個月更新了知識棋盤<br/>知識棋盤是網址匯集和分享的好工具，有無限的空間可以發揮。<a href = "https://goban.tw/#/" target="blank" rel="noopener noreferrer">https://goban.tw/#/</a>',
       },
       {
         from: new Date(2019, 0),
         title: '更多',
         description:
-          '<img class="history" src="https://avatars1.githubusercontent.com/u/109048?s=460&u=3df3fdbf63cf583fe2675156f62624124fdcca9a&v=4"/>更多記錄。請參考我的Github頁面。<br/><a href = "https://github.com/bestian" target="blank" rel="noopener noreferrer">https://github.com/bestian</a>',
+          '<img class="history" src="https://avatars1.githubusercontent.com/u/109048?s=460&u=3df3fdbf63cf583fe2675156f62624124fdcca9a&v=4" alt="github"/>更多記錄。請參考我的Github頁面。<br/><a href = "https://github.com/bestian" target="blank" rel="noopener noreferrer">https://github.com/bestian</a>',
       },
     ],
   }),
