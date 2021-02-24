@@ -214,15 +214,18 @@ p {
 }
 
 img.float.left {
+  border-radius: 50%;
   position: absolute;
   top: 0;
   left: 2em;
   height: 10em;
 }
 
-img.small.float.left {
-    height: 5em;
+img.small {
+  border-radius: 50%;
+  height: 6em;
 }
+
 
 @media screen and (max-width:600px) {
   img.float.left {
