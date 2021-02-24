@@ -306,7 +306,7 @@ p {
 
 #dark {
   position: fixed;
-  bottom: 2em;
+  bottom: 1.6em;
   left: 0;
   z-index: 10;
   background-color: #333;
