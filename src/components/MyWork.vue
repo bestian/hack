@@ -1,5 +1,7 @@
 <template lang="pug">
   .hello
+    router-link(to="/faq")
+      img.float.left(src="/img/elf.png", alt="elf")
     h1.white Bestian的作品
     .ui.form.container
       .ui.left.icon.input

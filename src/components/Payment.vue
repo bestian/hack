@@ -2,6 +2,8 @@
   .hello
     .ui.container
       .ui.piled.segment.heart(:class="{dark: dark}")
+        router-link(to="/faq")
+          img.float.left(src="/img/elf.png", alt="elf")
         sui-header(size="large")
           router-link(to="/gift")
             | {{ msg }}
@@ -42,7 +44,7 @@ export default {
   props: ['likes', 'dark'],
   data() {
     return {
-      msg: '自2021.04.04起\nBe的所有服務將改為隨喜不定價\n詳細說明見此~',
+      msg: '自2021.04.04起\n服務將改為隨喜不定價\n詳細說明見此~',
     };
   },
 };

@@ -2,6 +2,8 @@
   .hello
     .ui.container
       .ui.piled.segment.heart(:class="{dark: dark}")
+        router-link(to="/faq")
+          img.float.left(src="/img/elf.png", alt="elf")
         sui-header(size="large") {{ msg }}
         router-link(to="/faq")
           img.logo(src="../assets/logo.png")

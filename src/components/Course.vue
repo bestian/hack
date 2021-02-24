@@ -2,6 +2,8 @@
   .hello
     .ui.container
       .ui.piled.segment.code(:class="{dark: dark}")
+        router-link(to="/faq")
+          img.float.left(src="/img/elf.png", alt="elf")
         sui-header(size="large") 想學寫網站嗎?
         router-link(to="/flow")
           img.logo(src="../assets/logo.png")

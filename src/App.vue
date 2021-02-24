@@ -213,6 +213,24 @@ p {
   color: white !important;
 }
 
+img.float.left {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  height: 10em;
+}
+
+img.small.float.left {
+    height: 5em;
+}
+
+@media screen and (max-width:600px) {
+  img.float.left {
+    left: 0;
+    height: 5em;
+  }
+}
+
 /*
 .sunflower::before {
   content: "";

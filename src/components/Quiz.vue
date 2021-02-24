@@ -1,6 +1,8 @@
 <template lang="pug">
   .hello
     .ui.segment.container(:class="{dark: dark}")
+      router-link(to="/faq")
+        img.float.left(src="/img/elf.png", alt="elf")
       h1 小測驗
       h3 Q: {{ myQuiz.q }}
       .ui.vertical.buttons

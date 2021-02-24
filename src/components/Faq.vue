@@ -1,6 +1,8 @@
 <template lang="pug">
   .hello.ui.container
     sui-segment(raised='', padded='', align='left')
+      router-link(to="/faq")
+        img.small.float.left(src="/img/elf.png", alt="elf")
       div.fluid
         sui-header(size="large") {{ msg }}
         router-link(to="/chat")

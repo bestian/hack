@@ -2,6 +2,8 @@
   .hello
     .ui.container
       .ui.piled.segment.ranged(:class="{dark: dark}")
+        router-link(to="/faq")
+          img.float.left(src="/img/elf.png", alt="elf")
         sui-header(size="large") 上課流程
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
