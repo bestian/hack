@@ -226,6 +226,11 @@ img.small.float.left {
   height: 6em;
 }
 
+img.small {
+  border-radius: 50%;
+  height: 6em;
+}
+
 @media screen and (max-width:600px) {
   img.float.left {
     left: 0;
