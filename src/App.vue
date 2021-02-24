@@ -226,7 +226,6 @@ img.small {
   height: 6em;
 }
 
-
 @media screen and (max-width:600px) {
   img.float.left {
     left: 0;
