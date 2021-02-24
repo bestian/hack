@@ -7,6 +7,7 @@
         a.ui.huge.green.button(v-for="a in rand(myQuiz.as)", @click="ans(a)") {{ a }}
       h1.win(v-if="win == 1") 答對了!
       h1.win(v-if="win == 0") 答錯了!
+      h1.win(v-if="win == null")
       br
       br
       a.ui.huge.green.button(@click="next()") 下一題

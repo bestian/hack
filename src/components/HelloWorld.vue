@@ -18,7 +18,7 @@
          router-link(to="/work") Bestian的作品
         h2 Vue簡介
         .ui.row
-          .light-red.column
+          .light-blue.column
             .ui.bulleted.list
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B9%8B%E4%B8%80-4d57f8d1b3d1", target="_blank" rel="noopener noreferrer") Vue簡介一：迴圈
               a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer") Vue簡介二：樣式綁定
@@ -162,7 +162,7 @@ export default {
   margin-left: 15vw;
 }
 
-.light-red.column .ui.list {
+.column .ui.list {
   height: 8em;
   min-height: 0;
 }

@@ -117,7 +117,7 @@ export default {
 
 .column .ui.list {
     text-align: left;
-    height: 300px;
+    height: 350px;
 }
 
 @media screen and (max-width: 767px) {
@@ -306,7 +306,7 @@ p {
 
 #dark {
   position: fixed;
-  bottom: 3em;
+  bottom: 2em;
   left: 0;
   z-index: 10;
   background-color: #333;
