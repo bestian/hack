@@ -1,7 +1,7 @@
 <template lang="pug">
   .hello.ui.container
     sui-segment(raised='', padded='', align='left')
-      router-link(to="/faq")
+      router-link(to="/quiz")
         img.small.float.left(src="/img/elf.png", alt="elf")
       div.fluid
         sui-header(size="large") {{ msg }}

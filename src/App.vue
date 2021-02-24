@@ -221,7 +221,7 @@ img.float.left {
   height: 10em;
 }
 
-img.small {
+img.small.float.left {
   border-radius: 50%;
   height: 6em;
 }
