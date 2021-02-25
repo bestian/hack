@@ -219,16 +219,34 @@ img.float.left {
   top: 0;
   left: 2em;
   height: 10em;
+  opacity: 0.8;
+  transition: all .3s ease;
+}
+
+img.float.left:hover {
+  opacity: 1
 }
 
 img.small.float.left {
   border-radius: 50%;
   height: 6em;
+  opacity: 0.8;
+  transition: all .3s ease;
+}
+
+img.small.float.left:hover {
+  opacity: 1
 }
 
 img.small {
   border-radius: 50%;
   height: 6em;
+  opacity: 0.8;
+  transition: all .3s ease;
+}
+
+img.small:hover {
+  opacity: 1
 }
 
 @media screen and (max-width:600px) {
