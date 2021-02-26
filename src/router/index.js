@@ -50,5 +50,10 @@ export default new Router({
       name: 'Quiz',
       component: () => import('@/components/Quiz.vue'),
     },
+    {
+      path: '/drawing',
+      name: 'Drawing',
+      component: () => import('@/components/Drawing.vue'),
+    },
   ],
 });

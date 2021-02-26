@@ -53,7 +53,9 @@
 
 <script>
 
-import { chatsRef } from './firebase/db';
+import { db2 } from './db';
+
+const chatsRef = db2.ref('chats');
 
 export default {
   name: 'App',
