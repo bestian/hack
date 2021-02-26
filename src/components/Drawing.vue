@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <canvas id="canvas" @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw"></canvas>
+    <canvas id="canvas" @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw" @touchstart="startTouchPainting" @touchmove="drawTouch" @touchend="finishedPainting"></canvas>
     <div id ="c">
       <color-picker v-model="color"></color-picker>
       <p>
@@ -47,11 +47,30 @@ export default {
       console.log(this.painting);
       this.draw(e);
     },
+    startTouchPainting(e) {
+      e.preventDefault();
+      this.painting = true;
+      console.log(this.painting);
+      this.drawTouch(e);
+    },
     finishedPainting() {
       this.painting = false;
       console.log(this.painting);
       this.ctx.beginPath();
       this.toBlob();
+    },
+    drawTouch(e) {
+      e.preventDefault();
+      console.log(e);
+      if (!this.painting) return;
+      this.ctx.lineWidth = 10;
+      this.ctx.fillStyle = this.color;
+      this.ctx.strokeStyle = this.color;
+      this.ctx.lineCap = 'round';
+      this.ctx.lineTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY - 53);
+      this.ctx.stroke();
+      this.ctx.beginPath();
+      this.ctx.moveTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY - 53);
     },
     draw(e) {
       if (!this.painting) return;
@@ -59,10 +78,10 @@ export default {
       this.ctx.fillStyle = this.color;
       this.ctx.strokeStyle = this.color;
       this.ctx.lineCap = 'round';
-      this.ctx.lineTo(e.clientX, e.clientY);
+      this.ctx.lineTo(e.clientX, e.clientY - 53);
       this.ctx.stroke();
       this.ctx.beginPath();
-      this.ctx.moveTo(e.clientX, e.clientY);
+      this.ctx.moveTo(e.clientX, e.clientY - 53);
     },
   },
   mounted() {
