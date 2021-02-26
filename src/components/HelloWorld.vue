@@ -20,6 +20,8 @@
          router-link(to="/work") Bestian的作品
         h2
          router-link(to="/drawing") 圖鴨板
+        h2
+         router-link(to="/chat") 留言版
         h2 Vue簡介
         .ui.row
           .light-blue.column
