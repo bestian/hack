@@ -54,6 +54,12 @@ export default {
     messageWhenNoItems: '歡迎學習寫網站',
     timelineItems: [
       {
+        from: new Date(2021, 2),
+        title: '質因數分解、畢氏三組數',
+        description:
+          '<img class="history" src="./img/prime.png" alt="moe"/>這個月構造了質因數分解、畢氏三組數<br/><a href = "https://bestian.github.io/prime/" target="blank" rel="noopener noreferrer">https://bestian.github.io/prime/</a><br/>畢氏三組數產生器也很有趣。<a href = https://bestian.github.io/pytha/" target="blank" rel="noopener noreferrer">https://bestian.github.io/pytha/</a>',
+      },
+      {
         from: new Date(2021, 1),
         title: '浩克打怪',
         description:
