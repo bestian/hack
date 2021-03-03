@@ -1,31 +1,31 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="8" inverted="")
+    sui-menu#nav-bar.no-print(:widths="6" inverted="")
       sui-menu-item
         router-link(to="/")
-          sui-icon(name="home")
-          span.fat-only 首頁
+          sui-icon.fat-only(name="home")
+          span 首頁
       sui-menu-item
         router-link(to="/course")
-          sui-icon(name="users")
-          span.fat-only 課程
+          sui-icon.fat-only(name="users")
+          span 課程
       sui-menu-item
         router-link(to="/flow")
-          sui-icon(name="sync")
-          span.fat-only 流程
+          sui-icon.fat-only(name="sync")
+          span 流程
       sui-menu-item
         router-link(to="/payment")
-          sui-icon(name="payment")
-          span.fat-only 學費
-      sui-menu-item
+          sui-icon.fat-only(name="payment")
+          span 學費
+      // sui-menu-item
         router-link(to="/gift")
           sui-icon(name="gift")
           span.fat-only 禮物
       sui-menu-item
         router-link(to="/faq")
-          sui-icon(name="question")
-          span.fat-only FAQ
-      sui-menu-item
+          sui-icon.fat-only(name="question")
+          span FAQ
+      // sui-menu-item
         router-link(to="/quiz")
           sui-icon(name="info")
           span.fat-only 測驗

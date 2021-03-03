@@ -16,12 +16,14 @@
           router-link(to="/course")
             img.ui.mini.inline.image.turn(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
-        h2
+        h3
          router-link(to="/work") Bestian的作品
-        h2
+        h3
          router-link(to="/drawing") 圖鴨板
-        h2
+        h3
          router-link(to="/chat") 留言版
+        h3
+         router-link(to="/quiz") 小測驗
         h2 Vue簡介
         .ui.row
           .light-blue.column
