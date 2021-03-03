@@ -2,6 +2,7 @@
   <div class="hello">
     <canvas id="canvas" @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw" @touchstart="startTouchPainting" @touchmove="drawTouch" @touchend="finishedPainting"></canvas>
     <div id ="c">
+      <a id ="clear" @click="clear()">清空</a>
       <color-picker v-model="color"></color-picker>
       <p>
           Color:
@@ -58,6 +59,10 @@ export default {
       console.log(this.painting);
       this.ctx.beginPath();
       this.toBlob();
+    },
+    clear() {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.finishedPainting();
     },
     drawTouch(e) {
       e.preventDefault();
@@ -133,6 +138,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+a#clear {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  background-color: yellow;
+  padding: 3px;
+  border-radius: 5px;
+  color: black;
+}
 
 #canvas {
     border: 3px solid black;
