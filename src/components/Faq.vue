@@ -30,7 +30,7 @@
         p.ans 透過螢幕分享，可以即時和學生協作
         p.ans 在意學生每個好奇點，盡量回答每一個提問。
         p.ans 搭配
-          a(href="http://goban.tw", target="_blank") 知識棋盤
+          a(href="http://goban.tw", target="_blank") 零時黑板
           | 教材，培養學生自學的習慣。
         sui-header(size="large") 跟Bestian遠距學習需要交通嗎？
         p.ans 省去交通勞頓，在家即可學習。
