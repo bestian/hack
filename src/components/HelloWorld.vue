@@ -16,23 +16,51 @@
           router-link(to="/course")
             img.ui.mini.inline.image.turn(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
-        h3
-         router-link(to="/work") Bestian的作品
-        h3
-         router-link(to="/drawing") 圖鴨板
-        h3
-         router-link(to="/chat") 留言版
-        h3
-         router-link(to="/quiz") 小測驗
-        h2 Vue簡介
+        .ui.grid.container
+          .ui.two.column.stackable.row
+            .column
+              router-link(to="/work")
+                img.be(src="/img/be.jpg", alt="bestian")
+                | Bestian的作品
+            .column
+              router-link(to="/drawing")
+                img.be(src="https://firebasestorage.googleapis.com/v0/b/hack-84e1c.appspot.com/o/drawing.jpg?alt=media&token=b3f19954-b830-4a25-b8ed-0ba6aa7f9602", alt="drawing")
+                | 圖鴨板
+            .column
+              router-link(to="/chat")
+                img.be(src="/img/board.png", alt="board")
+                | 留言版
+            .column
+              router-link(to="/quiz")
+                img.be(src="/img/quiz123.png", alt="quiz")
+                | 小測驗
+        h2
+          router-link(to="/course")
+            img.logo(src="../assets/logo.png", alt="vue")
+          | Vue簡介
         .ui.row
           .light-blue.column
             .ui.bulleted.list
-              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B9%8B%E4%B8%80-4d57f8d1b3d1", target="_blank" rel="noopener noreferrer") Vue簡介一：迴圈
-              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer") Vue簡介二：樣式綁定
-              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B8%89-1e3167063a67", target="_blank" rel="noopener noreferrer") Vue簡介三：雙向資料綁定
-              a.item(href="https://vuejs.org/", target="_blank" rel="noopener noreferrer") Vue官網
-              a.item(href="https://www.tenlong.com.tw/products/9789864345687", target="_blank" rel="noopener noreferrer") 參考書《重新認識 Vue.js》
+              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B9%8B%E4%B8%80-4d57f8d1b3d1", target="_blank" rel="noopener noreferrer")
+                router-link(to="/course")
+                  img.mini(src="../assets/logo.png", alt="vue")
+                | Vue簡介一：迴圈
+              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%BA%8C-13a551d14f7f", target="_blank" rel="noopener noreferrer")
+                router-link(to="/course")
+                  img.mini(src="../assets/logo.png", alt="vue")
+                | Vue簡介二：樣式綁定
+              a.item(href="https://bestian.medium.com/vue%E7%B0%A1%E4%BB%8B%E4%B8%89-1e3167063a67", target="_blank" rel="noopener noreferrer")
+                router-link(to="/course")
+                  img.mini(src="../assets/logo.png", alt="vue")
+                | Vue簡介三：雙向資料綁定
+              a.item(href="https://vuejs.org/", target="_blank" rel="noopener noreferrer")
+                router-link(to="/course")
+                  img.mini(src="../assets/logo.png", alt="vue")
+                | Vue官網
+              a.item(href="https://www.tenlong.com.tw/products/9789864345687", target="_blank" rel="noopener noreferrer")
+                router-link(to="/course")
+                  img.mini(src="../assets/logo.png", alt="vue")
+                | 參考書《重新認識 Vue.js》
     h3.white 創發軌跡：
     Timeline(:timeline-items="timelineItems", :message-when-no-items="messageWhenNoItems")
 
@@ -168,6 +196,11 @@ export default {
   }
 }
 
+.be {
+  height: 4em;
+  border-radius: 30px;
+}
+
 .white {
   color: white;
 }
@@ -179,5 +212,9 @@ export default {
 .column .ui.list {
   height: 8em;
   min-height: 0;
+}
+
+.mini {
+  height: 1em;
 }
 </style>
