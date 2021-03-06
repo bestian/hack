@@ -216,5 +216,6 @@ export default {
 
 .mini {
   height: 1em;
+  margin: 0 .2em;
 }
 </style>
