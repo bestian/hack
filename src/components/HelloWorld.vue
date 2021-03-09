@@ -21,18 +21,22 @@
             .column
               router-link(to="/work")
                 img.be(src="/img/be.jpg", alt="bestian")
+                br
                 | Bestian的作品
             .column
               router-link(to="/drawing")
                 img.be(src="https://firebasestorage.googleapis.com/v0/b/hack-84e1c.appspot.com/o/drawing.jpg?alt=media&token=b3f19954-b830-4a25-b8ed-0ba6aa7f9602", alt="drawing")
+                br
                 | 圖鴨板
-            .column
+            .column.down
               router-link(to="/chat")
                 img.be(src="/img/board.png", alt="board")
+                br
                 | 留言版
-            .column
+            .column.down
               router-link(to="/quiz")
                 img.be(src="/img/quiz123.png", alt="quiz")
+                br
                 | 小測驗
         h2
           router-link(to="/course")
@@ -212,6 +216,10 @@ export default {
 .column .ui.list {
   height: 8em;
   min-height: 0;
+}
+
+.column.down {
+  padding-top: 2em;
 }
 
 .mini {
