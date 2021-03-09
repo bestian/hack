@@ -66,7 +66,7 @@ export default {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: '歡迎',
     // all titles will be injected into this template
-    titleTemplate: '%s | 跟Bestian一起架網站',
+    titleTemplate: '%s | 和Bestian一起架網站',
   },
   data() {
     return {
