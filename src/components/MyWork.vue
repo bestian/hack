@@ -174,13 +174,13 @@ export default {
       },
       {
         from: new Date(2019, 8),
-        title: '知識棋盤',
+        title: '零時黑板',
         tags: ['教材', '知識', '自學'],
         img: './img/goban.png',
         href: 'https://goban.tw/#/',
         github: 'https://www.github.com/g0v/goban/',
         description:
-          '知識棋盤是網址匯集和分享的好工具，有無限的空間可以發揮。',
+          '零時黑板是網址匯集和分享的好工具，有無限的空間可以發揮。',
       },
       {
         from: new Date(2020, 6),

@@ -153,9 +153,9 @@ export default {
       },
       {
         from: new Date(2019, 8),
-        title: '知識棋盤',
+        title: '零時黑板',
         description:
-          '<img class="history" src="./img/goban.png" alt="goban"/>這個月更新了知識棋盤<br/>知識棋盤是網址匯集和分享的好工具，有無限的空間可以發揮。<a href = "https://goban.tw/#/" target="blank" rel="noopener noreferrer">https://goban.tw/#/</a>',
+          '<img class="history" src="./img/goban.png" alt="goban"/>這個月更新了零時黑板<br/>零時黑板是網址匯集和分享的好工具，有無限的空間可以發揮。<a href = "https://goban.tw/#/" target="blank" rel="noopener noreferrer">https://goban.tw/#/</a>',
       },
       {
         from: new Date(2019, 0),
