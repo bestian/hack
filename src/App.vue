@@ -459,7 +459,7 @@ p {
 }
 
 img.history {
-  width: 180px !important;
+  width: 120px !important;
   float: left !important;
   margin-right: 1em !important;
   background-color: white !important;
@@ -467,7 +467,7 @@ img.history {
 
 @media screen and (max-width: 420px) {
   img.history {
-    width: 100px !important;
+    width: 80px !important;
   }
 }
 
