@@ -163,6 +163,10 @@ export default {
   width:100%;
 }
 
+.ui.large.header {
+  padding: 1em 0.3em;
+}
+
 p.ans::before {
   content: '*'
 }
