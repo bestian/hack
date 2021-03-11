@@ -3,7 +3,7 @@
     <canvas id="canvas" @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw" @touchstart="startTouchPainting" @touchmove="drawTouch" @touchend="finishedPainting"></canvas>
     <div id ="c">
       <a id ="clear" @click="clear()">清空</a>
-      <color-picker v-model="color"></color-picker>
+      <color-picker :width="150" :height="150" v-model="color"></color-picker>
       <p>
           Color:
           <input v-model="color" type="text">
