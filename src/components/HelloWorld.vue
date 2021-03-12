@@ -5,7 +5,8 @@
         router-link(to="/course")
           img.logo(src="../assets/logo.png", alt="vue")
         router-link(to="/faq")
-          img.float.left(src="/img/elf.png", alt="elf")
+          img.float.left(src="/img/elf.png", alt="elf", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
+          img.float.left(src="/img/be.jpg", alt="bestian", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
         sui-header(size="large") 和Bestian一起寫網站
         h3 小規模視訊教學，量身打造合適的學習進程。
         p.left 激發主動創發的自學精神，培養「摹彷」、「創作」、「改良」的良好學習習慣。
@@ -20,7 +21,8 @@
           .ui.two.column.stackable.row
             .column
               router-link(to="/work")
-                img.be(src="/img/be.jpg", alt="bestian")
+                img.be(src="/img/be.jpg", alt="bestian", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
+                img.be(src="/img/elf.png", alt="elf", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
                 br
                 | Bestian的作品
             .column
@@ -83,6 +85,7 @@ export default {
   },
   props: ['likes', 'dark'],
   data: () => ({
+    hover: false,
     messageWhenNoItems: '歡迎學習寫網站',
     timelineItems: [
       {
