@@ -222,7 +222,7 @@ img.float.left {
   position: absolute;
   top: 0;
   left: 2em;
-  height: 10em;
+  height: 8em;
   opacity: 0.8;
   transition: all .3s ease;
 }

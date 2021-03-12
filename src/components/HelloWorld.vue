@@ -223,7 +223,7 @@ export default {
 }
 
 .mini {
-  height: 1em;
+  height: .8em;
   margin: 0 .2em;
 }
 </style>
