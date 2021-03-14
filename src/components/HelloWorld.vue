@@ -20,23 +20,23 @@
         .ui.grid.container
           .ui.two.column.stackable.row
             .column
-              router-link(to="/work")
+              router-link.d(to="/work")
                 img.be(src="/img/be.jpg", alt="bestian", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
                 img.be(src="/img/elf.png", alt="elf", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
                 br
                 | Bestian的作品
             .column
-              router-link(to="/drawing")
+              router-link.d(to="/drawing")
                 img.be(src="https://firebasestorage.googleapis.com/v0/b/hack-84e1c.appspot.com/o/drawing.jpg?alt=media&token=b3f19954-b830-4a25-b8ed-0ba6aa7f9602", alt="drawing")
                 br
                 | 圖鴨板
             .column.down
-              router-link(to="/chat")
+              router-link.d(to="/chat")
                 img.be(src="/img/board.png", alt="board")
                 br
                 | 留言版
             .column.down
-              router-link(to="/quiz")
+              router-link.d(to="/quiz")
                 img.be(src="/img/quiz123.png", alt="quiz")
                 br
                 | 小測驗
@@ -228,5 +228,9 @@ export default {
 .mini {
   height: .8em;
   margin: 0 .2em;
+}
+
+a.d {
+  color: #00c;
 }
 </style>

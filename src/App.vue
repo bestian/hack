@@ -147,6 +147,10 @@ export default {
   background-color: hsla(60, 50%, 85%, 1)
 }
 
+a {
+  color: #61c3f4
+}
+
 a.attr {
   position: fixed;
   z-index: 9;
