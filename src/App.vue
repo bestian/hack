@@ -462,11 +462,16 @@ p {
   font-weight: normal !important;
 }
 
+.sh {
+  box-shadow: 0px 5px 5px 0px #9B8F99;
+}
+
 img.history {
   width: 120px !important;
   float: left !important;
   margin-right: 1em !important;
   background-color: white !important;
+  box-shadow: 5px 5px 5px 0px #9B8F99;
 }
 
 @media screen and (max-width: 420px) {

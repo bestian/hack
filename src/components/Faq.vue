@@ -3,11 +3,11 @@
     sui-segment(raised='', padded='', align='left')
       router-link(to="/quiz")
         img.small.float.left(src="/img/elf.png", alt="elf")
-      div.fluid
+      div.fluid.sh(:class="{dark: dark}")
         sui-header(size="large") {{ msg }}
         router-link(to="/chat")
           img.logo(src="../assets/logo.png")
-      .light-blue
+      .light-blue.sh(:class="{dark: dark}")
         sui-header(size="large")
           | Vue是什麼？
         p vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript
@@ -22,7 +22,7 @@
         p.ans 很簡潔，可以參考看看這個
           a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
           | 就會有個概念了。
-      .light-green
+      .light-green.sh(:class="{dark: dark}")
         sui-header(size="large") 跟Bestian遠距學習有什麼好呢？
         p.ans 以個別化的教育方法，量身打造合適的學習進程。
         p.ans 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
@@ -35,7 +35,7 @@
         sui-header(size="large") 跟Bestian遠距學習需要交通嗎？
         p.ans 省去交通勞頓，在家即可學習。
         p.ans 只要有網路，各地都能上課。
-      .light-yellow
+      .light-yellow.sh(:class="{dark: dark}")
         sui-header(size="large") 怎樣的學生適合此課程？
         p.ans 小五以上(10+歲)、有學習意願、能夠自律的學生。
         p.ans (遠距課沒辦法伸手去管秩序，學生要能自律才能好好進行)
@@ -44,7 +44,7 @@
         sui-header(size="large") 家長可以看到學生的作品嗎？
         p.ans 可以，在進行中，可以請學生在家用近端瀏覽器展示。
         p.ans 如果未來正式發佈上網，就會有一個正式的網址可以連結。
-      .light-blue
+      .light-blue.sh(:class="{dark: dark}")
         sui-header(size="large") 大人也可以參加嗎？
         p.ans 當然歡迎報名
         sui-header(size="large") 如果是微創工作者，有明確目標，課程的內容可以量身打造嗎？
@@ -53,7 +53,7 @@
         p.ans 當然可以，例如在
           a(href = "http://myname.pchome.com.tw/", target="_blank") pchome買網址
           | 買一個域名，再連結到github pages就行了。
-      .light-red
+      .light-red.sh(:class="{dark: dark}")
         sui-header(size="large") 為什麼要上課，不是自學程式就好？
         p.ans 現在網上資源很多，當然可以自學。
         p.ans 但是有經驗的先行者帶領，比較事半功倍。
@@ -85,7 +85,7 @@
         p 是的，我們用免費的
           a(href = "https://www.github.com/", target = "_blank") Github
           | 帳號創建的專案都是公開的。
-      .light-green
+      .light-green.sh(:class="{dark: dark}")
         sui-header(size="large") 如果設定比較簡單的目標呢？比方說前10堂課可能會學習到什麼？
         p.ans 1. 如何用Vue創建網站
         p.ans 2. 放超連結與放圖片
@@ -102,7 +102,7 @@
         p.ans 13. 互動功能與函式
         p.ans 14. 使用google分析追蹤使用者流量
         p.ans 這些不是每堂課教一樣東西，而是邊做邊學，學生作品的主題有別，學到的東西也會不一樣。
-      .light-blue
+      .light-blue.sh(:class="{dark: dark}")
         sui-header(size="large") 如果設定比較難的目標呢？比方說再10堂課可能會學習到什麼？
         p.ans 1. 取得遠端資料
         p.ans 2. 資料剖析與呈現
@@ -118,11 +118,11 @@
         p.ans 12. pug語法
         p.ans 13. UI框架，例如Semantic-UI
         p.ans 這些不是每堂課教一樣東西，而是邊做邊學。最重要的是，程式碼太多學不完，過程中陪養學生的自學能力，可以自己查資料解決問題。
-      .light-yellow
+      .light-yellow.sh(:class="{dark: dark}")
         sui-header(size="large") 學費怎麼算？
         p.ans 參見
           router-link(to="/payment") 學費
-      .light-red
+      .light-red.sh(:class="{dark: dark}")
         sui-header(size="large") 其他問題？
         p.ans
           a(href="mailto:bestian@gmail.com", target="_blank")
@@ -169,6 +169,11 @@ export default {
 
 p.ans::before {
   content: '*'
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
 
 </style>

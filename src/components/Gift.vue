@@ -24,12 +24,12 @@
         sui-grid(:columns="2" divided stackable)
           sui-grid-row
             sui-grid-column
-              .light-green
+              .light-green.sh
                 sui-header(size="large") 一對一
                   .ui.sub.header
                     | 隨喜不訂價。試課也是隨喜不訂價。
             sui-grid-column
-              .light-yellow
+              .light-yellow.sh
                 sui-header(size="large") 一對二
                   .ui.sub.header
                     | 隨喜不訂價。試課也是隨喜不訂價。
@@ -60,4 +60,8 @@ export default {
   font-size: 18px !important;
 }
 
+.light-green, .light-yellow {
+  height: 10em;
+  padding: 2em 0;
+}
 </style>

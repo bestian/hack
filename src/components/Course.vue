@@ -17,21 +17,21 @@
         sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
-              .light-red
+              .light-red.sh
                 sui-header(size="medium") 資源匯整
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
                     | {{ l.n }}
             sui-grid-column
-              .light-blue
+              .light-blue.sh
                 sui-header(size="medium") Bestian作品
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
                     | {{ w.n }}
             sui-grid-column
-              .light-green
+              .light-green.sh
                 sui-header(size="medium") 程式歷程
                 sui-list(ordered)
                   div Bestian寫過純html+css+js的網站
@@ -48,7 +48,7 @@
                     img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
                     | {{ b.n }}
             sui-grid-column
-              .light-yellow
+              .light-yellow.sh
                 sui-header(size="medium") 學生檔案與作品
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")

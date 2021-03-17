@@ -21,14 +21,14 @@
         sui-grid(:columns="2" divided stackable)
           sui-grid-row
             sui-grid-column
-              .light-green
+              .light-green.sh
                 sui-header(size="large") 一對一
                   .ui.sub.header
                     | $NT1000 / 時。試課500元。
                     br
                     | 也歡迎換工而不是付費喔~
             sui-grid-column
-              .light-yellow
+              .light-yellow.sh
                 sui-header(size="large") 一對二
                   .ui.sub.header
                     | $NT600 / 人時。試課400元。
@@ -59,6 +59,11 @@ export default {
 
 .ui.sub.header {
   font-size: 18px !important;
+}
+
+.light-green, .light-yellow {
+  height: 10em;
+  padding: 2em 0;
 }
 
 </style>
