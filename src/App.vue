@@ -280,6 +280,10 @@ img.small:hover {
   z-index: 9;
   border-radius: 15px;
 }
+
+.ui.header .icon:only-child {
+  margin-right: 0;
+}
 /*
 .sunflower::before {
   content: "";
