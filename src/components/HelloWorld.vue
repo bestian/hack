@@ -2,8 +2,6 @@
   .hello
     .ui.container
       .ui.piled.segment.sunflower(:class="{dark: dark}")
-        router-link(to="/course")
-          img.logo(src="../assets/logo.png", alt="vue")
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
           img.float.left(src="/img/be.jpg", alt="bestian", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
