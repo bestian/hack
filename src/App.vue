@@ -266,6 +266,9 @@ img.small:hover {
 
 .left {
   text-align: left;
+  max-width: 40vmax;
+  margin: 0 auto !important;
+  display: inline-block;
 }
 
 .ui.large.header.main {
