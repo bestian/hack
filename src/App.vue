@@ -264,6 +264,12 @@ img.small:hover {
   }
 }
 
+.ui.large.header.main {
+  background-color: white;
+  position: relative;
+  z-index: 9;
+  border-radius: 15px;
+}
 /*
 .sunflower::before {
   content: "";

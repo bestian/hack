@@ -4,7 +4,7 @@
       .ui.piled.segment.heart(:class="{dark: dark}")
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf")
-        sui-header(size="large")
+        sui-header(size="large", class="main")
           router-link(to="/gift")
             | {{ msg }}
         router-link(to="/gift")
