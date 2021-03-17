@@ -8,7 +8,7 @@
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 視訊上課，不用交通
-          .sub.header 透過視訊上課，以及
+          .sub.header.left 透過視訊上課，以及
             a(href="https://www.github.com/", target="_blank" rel="noopener noreferrer")
               i.github.icon
               | Gitgub協作平台

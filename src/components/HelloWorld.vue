@@ -178,10 +178,6 @@ export default {
   margin-left: 33vw !important;
 }
 
-.left {
-  text-align: left;
-}
-
 .timeline {
   max-width: 720px !important;
   color: white !important;

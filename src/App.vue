@@ -264,6 +264,10 @@ img.small:hover {
   }
 }
 
+.left {
+  text-align: left;
+}
+
 .ui.large.header.main {
   background-color: white;
   position: relative;

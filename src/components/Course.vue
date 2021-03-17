@@ -8,8 +8,8 @@
         router-link(to="/flow")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 用Vue.js架網站吧
-          .sub.header Vue是很適合初學者上手的一個前端框架，功能齊全，簡單好用。
-          .sub.header Vue很簡潔，可以參考看看這個
+          .sub.header.left Vue是很適合初學者上手的一個前端框架，功能齊全，簡單好用。
+          .sub.header.left Vue很簡潔，可以參考看看這個
             a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
             | 就會有個概念了。
         br
