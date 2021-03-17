@@ -273,6 +273,9 @@ img.small:hover {
 
 .ui.large.header.main {
   background-color: white;
+  max-width: 50vmax;
+  margin: 0 auto !important;
+  display: block;
   position: relative;
   z-index: 9;
   border-radius: 15px;
