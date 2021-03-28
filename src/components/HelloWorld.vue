@@ -15,6 +15,8 @@
           router-link(to="/course")
             img.ui.mini.inline.image.turn(src="../assets/logo.png", alt="vue")
           | 可以跳到下一頁喔~
+        p _
+        p _
         .ui.grid.container
           .ui.two.column.stackable.row
             .sh.column
