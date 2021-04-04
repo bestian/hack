@@ -5,7 +5,9 @@
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
           img.float.left(src="/img/be.jpg", alt="bestian", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
-        sui-header(size="large", class="main") 和Bestian一起寫網站
+        sui-header(size="large", class="main")
+          span.fat-only 和Bestian
+          span 一起寫網站
         h3 小規模視訊教學，量身打造合適的學習進程。
         p.left 激發主動創發的自學精神，培養「摹彷」、「創作」、「改良」的良好學習習慣。
           br
@@ -173,6 +175,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.main {
+  padding: 0;
+  max-width: 50vw;
+}
 
 .ui.list {
   display: block;
