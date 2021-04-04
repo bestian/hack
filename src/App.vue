@@ -121,7 +121,7 @@ export default {
 
 .column .ui.list {
     text-align: left;
-    height: 450px;
+    height: 500px;
 }
 
 @media screen and (max-width: 767px) {

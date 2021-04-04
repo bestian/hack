@@ -100,6 +100,7 @@ export default {
         { n: '射飛碟', h: 'https://bestian.github.io/vue_svg_game/#/', a: '共同創作' },
         { n: '個人網站', h: 'https://kingston0420.github.io/mywebsite/#/', a: 'Kingston0420' },
         { n: '個人網站', h: 'https://jungleft.github.io/jungho/', a: 'Jungleft' },
+        { n: '抽卡小遊戲', h: 'https://kingston0420.github.io/dhgame/#/', a: 'Kingston0420' },
       ],
     };
   },
