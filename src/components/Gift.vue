@@ -5,18 +5,19 @@
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf")
         sui-header(size="large", class="main") {{ msg }}
-        router-link(to="/faq")
+        router-link(to="/payment")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 在禮物經濟的邏輯中，
           br
           | 相互分享有餘，隨喜不訂價
-          .sub.header.left 自2021.04.04起Be的所有服務將改為隨喜不定價
-          .sub.header.left 詳細說明如下~
           .sub.header.left 隨喜不訂價並不是完全免費，但是您可以衡量您的經濟狀況和從課程中得到的與付出的流動，自行決定給予多少的金錢回饋
           .sub.header.left 先試課一次，之後e-mail詳談~
+          .sub.header.left
+            router-link(to="/payment")
+              | 可參考以前的收費標準
           br
           .sub.header.left 目前尚可預約課程時間:
-          .sub.header.left 週一下午，週四上午，週六上午，週日上午。
+          .sub.header.left 週一下午，週六上午，週日上午。
         h3
           a(href="https://forms.gle/bifRYSf24UNfx8Te6", target="_blank", @click="track('viewform', 100)", rel="noopener noreferrer") 報名: 請按此填表
         br
@@ -43,7 +44,7 @@ export default {
   props: ['likes', 'dark'],
   data() {
     return {
-      msg: '禮物經濟-自2021.04.04起',
+      msg: '禮物經濟',
     };
   },
 };

@@ -13,11 +13,11 @@
         router-link(to="/flow")
           sui-icon.fat-only(name="sync")
           span 流程
-      sui-menu-item
+      //sui-menu-item
         router-link(to="/payment")
           sui-icon.fat-only(name="payment")
           span 學費
-      // sui-menu-item
+      sui-menu-item
         router-link(to="/gift")
           sui-icon(name="gift")
           span.fat-only 禮物

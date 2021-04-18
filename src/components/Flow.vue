@@ -5,7 +5,7 @@
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf")
         sui-header(size="large") 上課流程
-        router-link(to="/payment")
+        router-link(to="/gift")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 視訊上課，不用交通
           .sub.header.left 透過視訊上課，以及
