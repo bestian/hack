@@ -19,8 +19,8 @@
           span 學費
       sui-menu-item
         router-link(to="/gift")
-          sui-icon(name="gift")
-          span.fat-only 禮物
+          sui-icon.fat-only(name="gift")
+          span 禮物
       sui-menu-item
         router-link(to="/faq")
           sui-icon.fat-only(name="question")
