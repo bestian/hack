@@ -5,7 +5,7 @@
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
           img.float.left(src="/img/be.jpg", alt="bestian", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
-        sui-header(size="large", class="main")
+        sui-header(size="large")
           span.fat-only 和Bestian
           span 一起寫網站
         h3 小規模視訊教學，量身打造合適的學習進程。

@@ -4,7 +4,7 @@
       .ui.piled.segment.heart(:class="{dark: dark}")
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf")
-        sui-header(size="large", class="main") {{ msg }}
+        sui-header(size="large") {{ msg }}
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
         sui-header(size="large") 在禮物經濟的邏輯中，
