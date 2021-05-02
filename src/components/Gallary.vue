@@ -1,21 +1,18 @@
 <template>
-  <div class="hello">
-    <canvas id="canvas" @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw" @touchstart="startTouchPainting" @touchmove="drawTouch" @touchend="finishedPainting"></canvas>
-    <div id ="c">
-      <a id ="save" @click="save()">存檔</a>
-      <a id ="clear" @click="clear()">清空</a>
-      <color-picker :width="150" :height="150" v-model="color"></color-picker>
-      <p>
-          Color:
-          <input v-model="color" type="text">
-      </p>
+  <div class="gallary">
+    <div class = "inline" v-for="t in test" :key="t.src">
+      <img class ="g" :src="t.src"/>
+    </div>
+    <div>
+      <h1>
+        <router-link to="/drawing">畫畫</router-link>
+      </h1>
     </div>
   </div>
 </template>
 
 <script>
 
-import ColorPicker from 'vue-color-picker-wheel';
 import firebase from 'firebase';
 import { db } from '../db';
 
@@ -25,10 +22,7 @@ export default {
     msg: String,
   },
   metaInfo: {
-    title: '圖鴨板',
-  },
-  components: {
-    ColorPicker,
+    title: '畫廊',
   },
   firestore: {
     test: db.collection('img'),
@@ -98,37 +92,6 @@ export default {
     },
   },
   mounted() {
-    this.canvas = document.getElementById('canvas');
-    this.ctx = this.canvas.getContext('2d');
-
-    // Resize canvas
-    this.canvas.height = window.innerHeight;
-    this.canvas.width = window.innerWidth;
-
-    function toDataURL(url, callback) {
-      const xhr = new XMLHttpRequest();
-      xhr.open('get', url);
-      xhr.responseType = 'blob';
-      xhr.onload = () => {
-        const fr = new FileReader();
-        // eslint-disable-next-line
-        fr.onload = function () {
-          callback(this.result);
-        };
-        fr.readAsDataURL(xhr.response); // async call
-      };
-      xhr.send();
-    }
-    toDataURL('https://firebasestorage.googleapis.com/v0/b/hack-84e1c.appspot.com/o/drawing.jpg?alt=media&token=b3f19954-b830-4a25-b8ed-0ba6aa7f9602', (dataURL) => {
-      const result = new Image();
-      result.src = dataURL;
-      result.onload = () => {
-        const canvas = document.getElementById('canvas');
-        canvas.getContext('2d').drawImage(result, 0, 0);
-      };
-    });
-    // console.log(dataURL);
-    // now just to show that passing to a canvas doesn't hold the same results
   },
   data() {
     return {
@@ -176,5 +139,13 @@ a#clear {
   position: fixed;
   bottom: 0;
   right: 0;
+}
+
+.g {
+  width: 45vw;
+}
+
+.inline {
+  display: inline-block;
 }
 </style>

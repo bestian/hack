@@ -55,5 +55,10 @@ export default new Router({
       name: 'Drawing',
       component: () => import('@/components/Drawing.vue'),
     },
+    {
+      path: '/gallary',
+      name: 'Gallary',
+      component: () => import('@/components/Gallary.vue'),
+    },
   ],
 });

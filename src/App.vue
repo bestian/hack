@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="6" inverted="")
+    sui-menu#nav-bar.no-print(:widths="7" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon.fat-only(name="home")
@@ -25,6 +25,10 @@
         router-link(to="/faq")
           sui-icon.fat-only(name="question")
           span FAQ
+      sui-menu-item
+        router-link(to="/gallary")
+          sui-icon.fat-only(name="question")
+          span 畫廊
       // sui-menu-item
         router-link(to="/quiz")
           sui-icon(name="info")
