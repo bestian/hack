@@ -2,6 +2,7 @@
   <div class="hello">
     <canvas id="canvas" @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw" @touchstart="startTouchPainting" @touchmove="drawTouch" @touchend="finishedPainting"></canvas>
     <div id ="c">
+      <a id ="save" @click="save()">存檔</a>
       <a id ="clear" @click="clear()">清空</a>
       <color-picker :width="150" :height="150" v-model="color"></color-picker>
       <p>
@@ -16,7 +17,7 @@
 
 import ColorPicker from 'vue-color-picker-wheel';
 import firebase from 'firebase';
-// import db from '../db'
+import { db } from '../db';
 
 export default {
   name: 'HelloWorld',
@@ -28,6 +29,9 @@ export default {
   },
   components: {
     ColorPicker,
+  },
+  firestore: {
+    test: db.collection('img'),
   },
   methods: {
     toBlob() {
@@ -42,6 +46,10 @@ export default {
           console.log('Uploaded a blob or file!');
         });
       });
+    },
+    save() {
+      const canvas = document.getElementById('canvas');
+      this.$firestoreRefs.test.add({ src: canvas.toDataURL() });
     },
     startPainting(e) {
       this.painting = true;
@@ -138,6 +146,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+a#save {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  background-color: #3f3;
+  padding: 3px;
+  border-radius: 5px;
+  color: black;
+}
 
 a#clear {
   cursor: pointer;
