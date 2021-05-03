@@ -1,7 +1,8 @@
 <template>
   <div class="gallary">
-    <div class = "inline" v-for="t in test" :key="t.src">
+    <div class = "inline" v-for="(t,idx) in test" :key="t.src">
       <img class ="g" :src="t.src"/>
+      <a @click="del(idx)">x</a>
     </div>
     <div>
       <h1>
@@ -28,6 +29,18 @@ export default {
     test: db.collection('img'),
   },
   methods: {
+    del(i) {
+      db.collection('img').onSnapshot((snapshot) => {
+        snapshot.docs.forEach((doc, idx) => {
+          console.log(idx);
+          if (idx === i) {
+            db.collection('img').doc(doc.id).delete().catch((error) => {
+              console.log(error);
+            });
+          }
+        });
+      });
+    },
     toBlob() {
       const storageRef = firebase.storage().ref();
       const mountainsRef = storageRef.child('drawing.jpg');
@@ -142,7 +155,7 @@ a#clear {
 }
 
 .g {
-  width: 45vw;
+  height: 20vmin;
   border: 3px gold ridge;
   border-radius: 15px;
 }

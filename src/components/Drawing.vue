@@ -50,6 +50,7 @@ export default {
     save() {
       const canvas = document.getElementById('canvas');
       this.$firestoreRefs.test.add({ src: canvas.toDataURL() });
+      this.$router.push('/gallary');
     },
     startPainting(e) {
       this.painting = true;
