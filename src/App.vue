@@ -27,7 +27,7 @@
           span FAQ
       sui-menu-item
         router-link(to="/gallary")
-          sui-icon.fat-only(name="question")
+          sui-icon.fat-only(name="pencil alternate")
           span 畫廊
       // sui-menu-item
         router-link(to="/quiz")
