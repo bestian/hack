@@ -143,6 +143,8 @@ a#clear {
 
 .g {
   width: 45vw;
+  border: 3px gold ridge;
+  border-radius: 15px;
 }
 
 .inline {
