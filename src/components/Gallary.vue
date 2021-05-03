@@ -40,6 +40,7 @@ export default {
           }
         });
       });
+      window.location.reload();
     },
     toBlob() {
       const storageRef = firebase.storage().ref();
@@ -158,6 +159,10 @@ a#clear {
   height: 20vmin;
   border: 3px gold ridge;
   border-radius: 15px;
+}
+
+a {
+  cursor: pointer;
 }
 
 .inline {
