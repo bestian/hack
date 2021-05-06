@@ -38,7 +38,7 @@
           sui-icon(name="file")
           span.fat-only 留言
       sui-menu-item
-        a(href = "https://www.facebook.com/sharer/sharer.php?u=https://hack.bestian.tw/", target="_blank", rel="noopener noreferrer")
+        a(:href = "'https://www.facebook.com/sharer/sharer.php?u=https://hack.bestian.tw/#/' + $router.currentRoute.path", target="_blank", rel="noopener noreferrer")
           sui-icon.fat-only(name="facebook")
           span 分享
     router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark")
