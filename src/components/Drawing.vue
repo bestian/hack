@@ -34,6 +34,14 @@ export default {
     test: db.collection('img'),
   },
   methods: {
+    use(s) {
+      const canvas = document.getElementById('canvas');
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.finishedPainting();
+      const result = new Image();
+      result.src = s;
+      canvas.getContext('2d').drawImage(result, 0, 0);
+    },
     toBlob() {
       const storageRef = firebase.storage().ref();
       const mountainsRef = storageRef.child('drawing.jpg');
@@ -99,6 +107,7 @@ export default {
     },
   },
   mounted() {
+    var use = this.use
     this.canvas = document.getElementById('canvas');
     this.ctx = this.canvas.getContext('2d');
 
@@ -126,8 +135,14 @@ export default {
       result.onload = () => {
         const canvas = document.getElementById('canvas');
         canvas.getContext('2d').drawImage(result, 0, 0);
+        if (localStorage.src) {
+          use(localStorage.src)
+        }
       };
     });
+    if (localStorage.src) {
+      this.use(localStorage.src)
+    }
     // console.log(dataURL);
     // now just to show that passing to a canvas doesn't hold the same results
   },
