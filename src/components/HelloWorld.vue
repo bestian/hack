@@ -42,6 +42,11 @@
                 img.be(src="/img/quiz123.png", alt="quiz")
                 br
                 | 小測驗
+            .sh.column.down
+              a(href="https://math.bestian.tw/簡介與學經歷/抱親女童事件澄清", target="_blank", rel="noopener noreferrer")
+                img.be(src="/img/be.jpg", alt="be")
+                br
+                | 抱親女童事件澄清
         h2
           router-link(to="/course")
             img.logo(src="../assets/logo.png", alt="vue")
