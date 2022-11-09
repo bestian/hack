@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="5" inverted="")
+    sui-menu#nav-bar.no-print(:widths="6" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -12,11 +12,26 @@
       sui-menu-item
         router-link(to="/comments")
           sui-icon.fat-only(name="comments")
-          span 案主好評
+          span.fat-only 案主
+          span 好評
       sui-menu-item
         router-link(to="/course")
           sui-icon.fat-only(name="users")
           span 課程
+      sui-menu-item
+        a(:href = "'https://www.facebook.com/sharer/sharer.php?u=https://hack.bestian.tw/#/' + $router.currentRoute.path", target="_blank", rel="noopener noreferrer")
+          sui-icon.fat-only(name="facebook")
+          span 分享
+      sui-menu-item.clickable(v-if="!uid && !isInApp", @click="loginGoogle()")
+        sui-icon.fat-only(name="google")
+        span 登入
+      sui-menu-item(v-if="uid")
+        img.ui.avatar(:src="photoURL", referrerpolicy="no-referrer")
+        sui-dropdown(icon="angle down")
+          sui-dropdown-menu(button, inverted="true")
+            sui-dropdown-divider
+            sui-dropdown-item
+              a.ui(@click="logout()") 登出
       //sui-menu-item
         router-link(to="/flow")
           sui-icon.fat-only(name="sync")
@@ -45,10 +60,6 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-      sui-menu-item
-        a(:href = "'https://www.facebook.com/sharer/sharer.php?u=https://hack.bestian.tw/#/' + $router.currentRoute.path", target="_blank", rel="noopener noreferrer")
-          sui-icon.fat-only(name="facebook")
-          span 分享
     router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark")
     //footer.ui.container#ad
       .ui.list
@@ -70,7 +81,7 @@
 import InApp from 'detect-inapp'
 import { auth, db } from './db'
 import { signInWithRedirect, getRedirectResult, GoogleAuthProvider } from 'firebase/auth'
-import { ref } from 'firebase/database'
+import { ref, onValue } from 'firebase/database'
 
 const provider = new GoogleAuthProvider()
 provider.addScope('https://www.googleapis.com/auth/userinfo.email')
@@ -79,9 +90,6 @@ const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera)
 
 export default {
   name: 'App',
-  firebase: {
-    chats: chatsRef,
-  },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: '歡迎',
@@ -89,20 +97,30 @@ export default {
     titleTemplate: '%s | Bestian的網路工坊',
   },
   data() {
-    return {      
+    return {
+      email: null,
+      token: null,
+      chats: [],
       isInApp: inapp.isInApp,
+      photoURL: null,
+      uid: null,
+      user: null,
       dark: false,
       likes: [
         {
           n: '某人',
           r: '某人的媽媽',
           q: '某句好話',
-        }],
-      chats: undefined,
+        }]
     };
   },
   mounted() {
     const vm = this
+    onValue(chatsRef, (snapshot) => {
+      const data = snapshot.val()
+      // console.log(data)
+      vm.chats = data
+    })
     console.log(vm.isInApp)
     getRedirectResult(auth).then((result) => {
         // console.log(result)
@@ -121,7 +139,8 @@ export default {
         vm.token = token
         // The signed-in user info.
         vm.uid = result.user.uid
-        vm.photoURL = decodeURI(result.user.photoURL)
+        // console.log(user)
+        vm.photoURL = decodeURI(user.photoURL)
         // console.log(vm.photoURL)
         // console.log(user)
 
@@ -144,6 +163,14 @@ export default {
       } else {
         signInWithRedirect(auth, provider)
       }
+    },
+    logout () {
+      const vm = this
+      auth.signOut().then(function() {
+        vm.user = null
+        vm.uid = null
+        vm.photoURL = null
+      })
     },
     track(t, v) {
       this.$gtag.event('action', {
@@ -343,6 +370,10 @@ img.small:hover {
 .ui.header .icon:only-child {
   margin-right: 0;
 }
+
+.clickable {
+  cursor: pointer;
+}
 /*
 .sunflower::before {
   content: "";
@@ -451,6 +482,28 @@ p {
   position: relative;
   animation: tada 2s ease-in 1;
 }
+
+.ui.avatar {
+  width: 1em;
+  margin: 0;
+}
+
+.ui.dropdown .menu {
+  position: fixed;
+  top: 3em;
+  left: auto;
+  right: 2em;
+  width: 20%;
+  min-width: 100px;
+  min-height: 300px;
+}
+
+.ui.small {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+
 /*
 
 @keyframes tada {
