@@ -1,29 +1,69 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(Router);
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
-
-export default router
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: () => import('@/components/Home.vue'),
+    },
+    {
+      path: '/comments',
+      name: 'Comments',
+      component: () => import('@/components/Comments.vue'),
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: () => import('@/components/About.vue'),
+    },
+    {
+      path: '/course',
+      name: 'Course',
+      component: () => import('@/components/Course.vue'),
+    },
+    {
+      path: '/flow',
+      name: 'Flow',
+      component: () => import('@/components/Flow.vue'),
+    },
+    {
+      path: '/payment',
+      name: 'Payment',
+      component: () => import('@/components/Payment.vue'),
+    },
+    {
+      path: '/gift',
+      name: 'Payment',
+      component: () => import('@/components/Gift.vue'),
+    },
+    {
+      path: '/faq',
+      name: 'FAQ',
+      component: () => import('@/components/Faq.vue'),
+    },
+    {
+      path: '/chat',
+      name: 'Chat',
+      component: () => import('@/components/Chat.vue'),
+    },
+    {
+      path: '/work',
+      name: 'MyWork',
+      component: () => import('@/components/MyWork.vue'),
+    },
+    {
+      path: '/quiz',
+      name: 'Quiz',
+      component: () => import('@/components/Quiz.vue'),
+    },
+    {
+      path: '/gallary',
+      name: 'Gallary',
+      component: () => import('@/components/Gallary.vue'),
+    },
+  ],
+});
