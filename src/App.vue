@@ -29,9 +29,15 @@
         img.ui.avatar(:src="photoURL", referrerpolicy="no-referrer")
         sui-dropdown(icon="angle down")
           sui-dropdown-menu(button, inverted="true")
+            sui-dropdown-item
+              router-link#black(to="/chat")
+                sui-icon(name="file")
+                span 留言
             sui-dropdown-divider
             sui-dropdown-item
-              a.ui(@click="logout()") 登出
+              a.ui(@click="logout()")
+                sui-icon(name="user")
+                span 登出
       //sui-menu-item
         router-link(to="/flow")
           sui-icon.fat-only(name="sync")
@@ -60,7 +66,7 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-    router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark")
+    router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark", :email = "email")
     //footer.ui.container#ad
       .ui.list
          .item 試課學費: 500元
@@ -81,7 +87,7 @@
 import InApp from 'detect-inapp'
 import { auth, db } from './db'
 import { signInWithRedirect, getRedirectResult, GoogleAuthProvider } from 'firebase/auth'
-import { ref, onValue } from 'firebase/database'
+import { ref, set, onValue } from 'firebase/database'
 
 const provider = new GoogleAuthProvider()
 provider.addScope('https://www.googleapis.com/auth/userinfo.email')
@@ -188,9 +194,10 @@ export default {
         time: (new Date()).getTime(),
       };
       if (t) {
-        this.$firebaseRefs.chats.push(o);
-        window.alert('留言已送出');
-        this.track('chat', 20);
+        this.chats.push(o);
+        set(ref(db, 'chats'), this.chats).then(() => {
+          window.alert('留言已送出')
+        })
       } else {
         window.alert('請輸入留言');
       }
@@ -236,6 +243,10 @@ export default {
 
 a {
   color: #61c3f4
+}
+
+#black {
+  color: black !important;
 }
 
 a.attr {

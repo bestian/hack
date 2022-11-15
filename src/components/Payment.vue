@@ -21,14 +21,14 @@
               .light-green.sh
                 sui-header(size="large") 一對一
                   .ui.sub.header
-                    | $NT1000 / 時。試課500元。
+                    | $NT1500 / 時。試課500元。
                     br
                     | 也歡迎換工而不是付費喔~
             sui-grid-column
               .light-yellow.sh
                 sui-header(size="large") 一對二
                   .ui.sub.header
-                    | $NT600 / 人時。試課400元。
+                    | $NT800 / 人時。試課400元。
                     br
                     | 也歡迎換工而不是付費喔~
 </template>

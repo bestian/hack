@@ -4,7 +4,7 @@
       .ui.segment
         h2
           i.thumbs.up.icon
-          | 關於Bestian
+          | 關於Bestian(唐宗浩)
         h3
           img.logo(src="/logo.png")
           br
@@ -20,6 +20,21 @@
                 .item 手機App設計5年
                 .item 自主學習促進會資訊長2年
                 .item 網站設計教師5年
+          .ui.card
+            .image
+              i.time.icon
+            .description
+              h3 我的著作
+              .ui.bulleted.list
+                a.item(href="https://www.books.com.tw/products/0010759330", target="_blank", rel="noopener noreferrer")
+                  i.book.icon
+                  | 普格碼島的法師-歡樂自學寫程式/網路與書出版
+                a.item(href="https://www.books.com.tw/products/0010687205", target="_blank", rel="noopener noreferrer")
+                  i.book.icon
+                  | 跟孩子一起玩數學/遠流出版
+                a.item(href="https://www.books.com.tw/products/0010335877", target="_blank", rel="noopener noreferrer")
+                  i.book.icon
+                  | 另類教育在台灣/唐山出版
           .ui.card
             .image
               i.globe.icon
@@ -64,7 +79,7 @@ export default {
     Timeline,
   },
   metaInfo: {
-    title: '歡迎',
+    title: '關於我',
   },
   props: ['likes', 'dark'],
   data: () => ({

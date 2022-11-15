@@ -7,7 +7,7 @@
           img.logo(src="../assets/logo.png")
       .ui.comments
         h3.ui.dividing.header 歡迎留言
-        .comment(v-for="(c, idx, order) in chats" :key="c.time")
+        .comment(v-for="(c, idx, order) in chats", :key="c.time")
           a.avatar
             i.user.icon
           .content(:class = "bgColors[order % 4]")
@@ -21,12 +21,9 @@
             label 您的大名:
             input(type='text' v-model="myName")
           .required.field
-            label Email:
-            input(type='email' v-model="myEmail")
-          .required.field
             label 請留言:
             input(type='text' v-model="myText" placeholder="您想說什麼？")
-        .ui.submit.huge.green.button(@click="submit(myName, myEmail, myText)") 留言
+        .ui.submit.huge.green.button(@click="submit(myName, email, myText)") 留言
       br
       br
 
@@ -35,7 +32,7 @@
 
 export default {
   name: 'ChAt',
-  props: ['likes', 'chats', 'dark'],
+  props: ['likes', 'chats', 'dark', 'email'],
   metaInfo: {
     title: '留言版',
   },
@@ -43,7 +40,6 @@ export default {
     return {
       msg: '留言版',
       myName: '訪客',
-      myEmail: '',
       myText: '',
       bgColors: ['light-blue', 'light-green', 'light-yellow', 'light-red'],
     };
@@ -60,7 +56,6 @@ export default {
         return;
       }
       this.myName = '訪客';
-      this.myEmail = '';
       this.myText = '';
       this.$emit('submit', n, email, t);
     },

@@ -2,9 +2,6 @@
   .hello
     .ui.container
       .ui.piled.segment.sunflower(:class="{dark: dark}")
-        // a(href="https://p.ecpay.com.tw/25CE4A0")
-          | 點此贊助Bestian1000元
-          img(width="100" height="100" src="../assets/綠界pay.png")
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf", v-show="!hover", @mouseover="hover=true", @mouseout="hover=false")
           img.float.left(src="/img/be.jpeg", alt="bestian", v-show="hover", @mouseover="hover=true", @mouseout="hover=false")
