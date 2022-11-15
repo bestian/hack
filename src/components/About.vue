@@ -66,7 +66,6 @@
                 a.item(href="https://www.tasker.com.tw/workroom/aaRdK2", target="_blank", rel="noopener noreferrer") Tasker ID: bestian
                 a.item(href="mailto:bestian@gmail.com") Email: bestian@gmail.com
                 a.item(href="https://www.github.com/bestian/", target="_blank", rel="noopener noreferrer") Github ID: bestian
-                a.item(href="tel:0975202717") mobile Phone: 0975202717
 
 </template>
 
