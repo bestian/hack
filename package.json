@@ -21,8 +21,7 @@
     "vue-gtag": "^1.16.1",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.5.1",
-    "vue-simple-markdown": "^1.1.5",
-    "vuefire": "^2.2.5"
+    "vue-simple-markdown": "^1.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
