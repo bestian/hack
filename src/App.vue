@@ -1,30 +1,35 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="6" inverted="")
+    sui-menu#nav-bar.no-print(:widths="7" inverted="")
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
-          span.fat-only 首頁
+          span.fat-only {{ $t('home') }}
       sui-menu-item
         router-link(to="/about")
           sui-icon.fat-only(name="user")
-          span 關於我
+          span {{ $t('about_me') }}
       sui-menu-item
         router-link(to="/comments")
           sui-icon.fat-only(name="comments")
-          span.fat-only 案主
-          span 好評
+          span.fat-only {{ $t('clients') }}
+          span {{ $t('comments') }}
       sui-menu-item
         router-link(to="/course")
           sui-icon.fat-only(name="users")
-          span 課程
+          span {{ $t('courses') }}
       sui-menu-item
         a(:href = "'https://www.facebook.com/sharer/sharer.php?u=https://hack.bestian.tw/#/' + $router.currentRoute.path", target="_blank", rel="noopener noreferrer")
           sui-icon.fat-only(name="facebook")
-          span 分享
+          span {{ $t('share') }}
+      sui-menu-item
+        sui-dropdown(icon="world") {{$t(locale)}}
+          sui-dropdown-menu(button, inverted="true")
+            sui-dropdown-item(@click="locale = 'zh-TW'") 中文
+            sui-dropdown-item(@click="locale = 'en'") English
       sui-menu-item.clickable(v-if="!uid && !isInApp", @click="loginGoogle()")
         sui-icon.fat-only(name="google")
-        span 登入
+        span {{ $t('login') }}
       sui-menu-item(v-if="uid")
         img.ui.avatar(:src="photoURL", referrerpolicy="no-referrer")
         sui-dropdown(icon="angle down")
@@ -32,12 +37,12 @@
             sui-dropdown-item
               router-link#black(to="/chat")
                 sui-icon(name="file")
-                span 留言
+                span {{ $t('comment') }}
             sui-dropdown-divider
             sui-dropdown-item
               a.ui(@click="logout()")
                 sui-icon(name="user")
-                span 登出
+                span {{ $t('logout') }}
       //sui-menu-item
         router-link(to="/flow")
           sui-icon.fat-only(name="sync")
@@ -66,7 +71,7 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-    router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark", :email = "email")
+    router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark", :email = "email", :locale="locale")
     //footer.ui.container#ad
       .ui.list
          .item 試課學費: 500元
@@ -83,6 +88,15 @@
 </template>
 
 <script>
+
+const messages = {
+  "en": {
+    "home": "Home"
+  },
+  "zh-TW": {
+    "home": "首頁"
+  }
+}
 
 import InApp from 'detect-inapp'
 import { auth, db } from './db'
@@ -104,6 +118,8 @@ export default {
   },
   data() {
     return {
+      messages: messages,
+      locale: 'zh-TW',
       email: null,
       token: null,
       chats: [],
@@ -161,6 +177,11 @@ export default {
       console.log(errorCode);
       console.log(errorMessage);
     })
+  },
+  watch: {
+    locale (val) {
+      this.$i18n.locale = val
+    }
   },
   methods: {
     loginGoogle: function () {

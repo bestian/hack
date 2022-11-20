@@ -4,11 +4,11 @@
       .ui.segment
         h2
           i.thumbs.up.icon
-          | Bestian的網路工坊
+          | Bestian {{$t('\'s_Web_Workshop')}}
         h3
           img.logo(src="/logo.png")
           br
-          | 不只工作，更是工藝
+          | {{$t('slogan')}}
         .ui.two.stackable.cards
           .ui.card
             .image

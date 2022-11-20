@@ -5,10 +5,10 @@ import VueSimpleMarkdown from 'vue-simple-markdown';
 import VueGtag from 'vue-gtag';
 import VueMeta from 'vue-meta';
 import router from './router';
+import i18n from './i18n'
 import App from './App.vue';
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css';
 import './db';
-
 
 Vue.use(VueMeta);
 
@@ -25,5 +25,6 @@ Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
   router,
+  i18n,
   render: (h) => h(App),
 }).$mount('#app');
