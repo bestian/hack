@@ -23,12 +23,20 @@
           sui-icon.fat-only(name="facebook")
           span {{ $t('share') }}
       sui-menu-item
-        sui-dropdown(icon="world") {{$t(locale)}}
+        sui-dropdown(icon="world")
+          img.flag(:src="$t('flag')")
+          | {{$t(locale)}}
           i.angle.down.icon
           sui-dropdown-menu(button, inverted="true")
-            sui-dropdown-item(@click="locale = 'zh-TW'") 正體中文
-            sui-dropdown-item(@click="locale = 'zh-CN'") 簡体中文
-            sui-dropdown-item(@click="locale = 'en'") English
+            sui-dropdown-item(@click="locale = 'zh-TW'") 
+              img.flag(src="https://00.ifreesite.com/world-i/taiwan_flag.png")
+              | 正體中文
+            sui-dropdown-item(@click="locale = 'zh-CN'")
+              img.flag(src="https://00.ifreesite.com/world-i/china_flag.png")
+              | 簡体中文
+            sui-dropdown-item(@click="locale = 'en'")
+              img.flag(src="https://00.ifreesite.com/world-i/united_states_of_america_flag.png")
+              | English
       sui-menu-item.clickable(v-if="!uid && !isInApp", @click="loginGoogle()")
         sui-icon.fat-only(name="google")
         span {{ $t('login') }}
@@ -644,6 +652,12 @@ img.history {
 .timeline .wrapper-item .section-year .year {
   font-size: 20px !important;
   color: white !important;
+}
+
+.flag {
+  height: 1em;
+  position: relative;
+  top: .2em;
 }
 
 a {
