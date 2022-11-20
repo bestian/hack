@@ -4,7 +4,7 @@
       .ui.segment
         h2
           i.thumbs.up.icon
-          | 關於Bestian(唐宗浩)
+          | {{$t('about_intro')}}
         h3
           img.logo(src="/logo.png")
           br
@@ -73,12 +73,14 @@
 import Timeline from 'timeline-vuejs';
 
 export default {
-  name: 'HelloWorld',
+  name: 'AbOut',
   components: {
     Timeline,
   },
-  metaInfo: {
-    title: '關於我',
+  metaInfo () { 
+    return {
+      title: this.$t('about_me')
+    }
   },
   props: ['likes', 'dark'],
   data: () => ({

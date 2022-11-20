@@ -24,8 +24,10 @@
           span {{ $t('share') }}
       sui-menu-item
         sui-dropdown(icon="world") {{$t(locale)}}
+          i.angle.down.icon
           sui-dropdown-menu(button, inverted="true")
-            sui-dropdown-item(@click="locale = 'zh-TW'") 中文
+            sui-dropdown-item(@click="locale = 'zh-TW'") 正體中文
+            sui-dropdown-item(@click="locale = 'zh-CN'") 簡体中文
             sui-dropdown-item(@click="locale = 'en'") English
       sui-menu-item.clickable(v-if="!uid && !isInApp", @click="loginGoogle()")
         sui-icon.fat-only(name="google")
@@ -89,15 +91,6 @@
 
 <script>
 
-const messages = {
-  "en": {
-    "home": "Home"
-  },
-  "zh-TW": {
-    "home": "首頁"
-  }
-}
-
 import InApp from 'detect-inapp'
 import { auth, db } from './db'
 import { signInWithRedirect, getRedirectResult, GoogleAuthProvider } from 'firebase/auth'
@@ -110,15 +103,14 @@ const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera)
 
 export default {
   name: 'App',
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: '歡迎',
-    // all titles will be injected into this template
-    titleTemplate: '%s | Bestian的網路工坊',
+  metaInfo () { 
+    return {
+      title: this.$t('title'),
+      titleTemplate: this.$t('%s') + ' | ' + 'Bestian' + this.$t('\'s_Web_Workshop'),
+    } 
   },
   data() {
     return {
-      messages: messages,
       locale: 'zh-TW',
       email: null,
       token: null,

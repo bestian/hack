@@ -14,54 +14,54 @@
             .image
               i.google.icon
             .description
-              h3.ui.header Google Site設計
-                .sub.header 作品集
+              h3.ui.header {{$t('Google_Sites_Designs')}}
+                .sub.header {{$t('works')}}
               .ui.bulleted.list
                 a.item(v-for="s in gsites", :key="s.n", :href="s.h", target="_blank", rel="noopener noreferrer")
                   img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
-                  | {{s.n}}
+                  | {{$t(s.n)}}
           .ui.card
             .image
               i.globe.icon
             .description
-              h3.ui.header 網路App設計
-                .sub.header 作品集
+              h3.ui.header 網路App設計{{$t('Web_App_Designs')}}
+                .sub.header {{$t('works')}}
               .ui.bulleted.list
                 a.item(v-for="s in wsites", :key="s.n", :href="s.h", target="_blank", rel="noopener noreferrer")
                   img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
-                  | {{s.n}} ({{s.d}})
+                  | {{$t(s.n)}} ({{$t(s.d)}})
           .ui.card
             .image
               i.mobile.icon
             .description
-              h3.ui.header 手機App設計
-                .sub.header 作品集
+              h3.ui.header {{$t('Moblie_App_Designs')}}
+                .sub.header {{$t('works')}}
               .ui.bulleted.list
                 a.item(v-for="s in msites", :key="s.n", :href="s.h", target="_blank", rel="noopener noreferrer")
                   img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
-                  | {{s.n}} ({{s.d}})
+                  | {{$t(s.n)}} {{$t(s.d)}}
           .ui.card
             .image
               i.edit.icon
             .description
-              h3.ui.header 樣品
-                .sub.header 樣品的css是用semantic UI製作，但正式版本的css可以自行增修
+              h3.ui.header {{$t('Demo')}}
+                .sub.header {{$t('Demo_Intro')}}
               .ui.bulleted.list
                 a.item(href="https://bestian.github.io/demo1/", target="_blank", rel="noopener noreferrer")
                   img(src="https://www.google.com/s2/favicons?domain=https://bestian.github.io/demo1/")
-                  | 公司形象RWD網站
+                  | {{$t('公司形象RWD網站')}}
                 a.item(href="https://bestian.github.io/pet-demo/", target="_blank", rel="noopener noreferrer")
                   img(src="https://www.google.com/s2/favicons?domain=https://bestian.github.io/pet-demo/")
-                  | 寵物網站Demo
+                  | {{$t('寵物網站Demo')}}
                 a.item(href="https://weave.pages.dev/", target="_blank", rel="noopener noreferrer")
                   img(src="https://www.google.com/s2/favicons?domain=https://weave.pages.dev/")
-                  | 紡織動畫
-        h2 聯絡方式
+                  | {{$t('紡織動畫')}}
+        h2 {{$t('Connect_Me')}}
         h3
           a(href="mailto:bestian@gmail.com")
             img.is(src="../assets/gmail.png")
             | besian@gmail.com
-        h2 Github主頁
+        h2 {{$t('Github_Profile')}}
         .ui.divider
         h3
           a(href="https://www.github.com/bestian/", target="_blank", rel="noopener noreferrer")
@@ -77,8 +77,10 @@ export default {
   components: {
     Timeline,
   },
-  metaInfo: {
-    title: '歡迎',
+  metaInfo () { 
+    return {
+      title: this.$t('title')
+    }
   },
   props: ['likes', 'dark'],
   data: () => ({
@@ -91,7 +93,7 @@ export default {
       { n: '自由數學', d: '數學開放教材和小工具', h: 'https://math.alearn.org.tw/' },
       { n: '萌典', d: '教育部字典民間版', h: 'https://bestian.github.io/q-moedict/' },
       { n: '自學地圖', d: '自學家庭入口網站', h: 'https://map.alearn.org.tw/' },
-      { n: '自學2.0', d: '自學社群互認地圖', h: 'https://bestian.github.io/q-moedict/' },
+      { n: '自主學習2.0', d: '自學社群互認地圖', h: 'https://bestian.github.io/q-moedict/' },
       { n: '念佛號', d: '佛號共修登錄網站', h: 'https://bestian.github.io/number/' },
       { n: '佛門咒文集', d: '咒文意譯查詢', h: 'https://bestian.github.io/q-spell/' },
       { n: '李雅卿的隨緣自強', d: '個人網站', h: 'https://life3.pages.dev/' },
