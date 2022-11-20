@@ -128,7 +128,12 @@ export default {
         }]
     };
   },
-  mounted() {
+  mounted () {
+    console.log(navigator.languages[0])
+    this.locale = navigator.languages[0] || 'zh-TW'
+    if (this.locale.indexOf('en') > -1) {
+      this.locale = 'en'
+    }
     const vm = this
     onValue(chatsRef, (snapshot) => {
       const data = snapshot.val()
