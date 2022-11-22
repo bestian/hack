@@ -29,10 +29,10 @@
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
-                    | {{ w.n }}
+                    | {{ $t(w.n) }}
             sui-grid-column
               .light-green.sh
-                sui-header(size="medium") {{$t('(程式歷程')}}
+                sui-header(size="medium") {{$t('程式歷程')}}
                 sui-list(ordered)
                   div {{$t('Bestian寫過純html+css+js的網站')}}
                     br
@@ -43,7 +43,7 @@
                     | {{$t('之後用AngularJS')}}
                     br
                     br
-                    | {{$t('最後專注於Vue框架的應用上。")}}
+                    | {{$t('最後專注於Vue框架的應用上。')}}
                   a(is="sui-list-item" v-for="b in bestians", :key="b.n", :href="b.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
                     | {{ b.n }}
@@ -60,8 +60,10 @@
 <script>
 export default {
   name: 'CourSe',
-  metaInfo: {
-    title: '課程說明',
+  metaInfo () { 
+    return {
+      title: this.$t('課程說明')
+    }
   },
   props: ['likes', 'dark'],
   data() {
@@ -77,7 +79,7 @@ export default {
         { n: '自然美食DIY', h: 'https://food.bestian.tw' },
         { n: '自由數學', h: 'https://math.alearn.org.tw' },
         { n: '自學地圖', h: 'https://map.alearn.org.tw' },
-        { n: '自學2.0', h: 'https://we.alearn.org.tw' },
+        { n: '自主學習2.0', h: 'https://we.alearn.org.tw' },
         { n: '零時黑板', h: 'https://goban.tw' },
         { n: '認照片遊戲', h: 'https://www.elder.game.tw/#/' },
         { n: '自製的手機App', h: 'https://goban.tw/#/see/bestian_apps/0/0' },
