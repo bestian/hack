@@ -4,57 +4,57 @@
       .ui.piled.segment.code(:class="{dark: dark}")
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf")
-        sui-header(size="large") 想學寫網站嗎?
+        sui-header(size="large") {{$t('想學寫網站嗎?')}}
         router-link(to="/flow")
           img.logo(src="../assets/logo.png")
-        sui-header(size="large") 用Vue.js架網站吧
-          .sub.header.left Vue是很適合初學者上手的一個前端框架，功能齊全，簡單好用。
-          .sub.header.left Vue很簡潔，可以參考看看這個
-            a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
-            | 就會有個概念了。
+        sui-header(size="large") {{$t('用Vue.js架網站吧')}}
+          .sub.header.left {{$t('Vue是很適合初學者上手的一個前端框架，功能齊全，簡單好用。')}}
+          .sub.header.left {{$t('Vue很簡潔，可以參考看看這個')}}
+            a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") {{$t('99乘法表的範例')}}
+            | {{$t('就會有個概念了。')}}
         br
         br
         sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
               .light-red.sh
-                sui-header(size="medium") 資源匯整
+                sui-header(size="medium") {{$t('資源匯整')}}
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
                     | {{ l.n }}
             sui-grid-column
               .light-blue.sh
-                sui-header(size="medium") Bestian作品
+                sui-header(size="medium") {{$t('Bestian作品')}}
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
                     | {{ w.n }}
             sui-grid-column
               .light-green.sh
-                sui-header(size="medium") 程式歷程
+                sui-header(size="medium") {{$t('(程式歷程')}}
                 sui-list(ordered)
-                  div Bestian寫過純html+css+js的網站
+                  div {{$t('Bestian寫過純html+css+js的網站')}}
                     br
                     br
-                    | 後來學習jQuery
+                    | {{$t('後來學習jQuery')}}
                     br
                     br
-                    | 之後用AngularJS
+                    | {{$t('之後用AngularJS')}}
                     br
                     br
-                    | 最後專注於Vue框架上。
+                    | {{$t('最後專注於Vue框架的應用上。")}}
                   a(is="sui-list-item" v-for="b in bestians", :key="b.n", :href="b.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
                     | {{ b.n }}
             sui-grid-column
               .light-yellow.sh
-                sui-header(size="medium") 學生檔案與作品
+                sui-header(size="medium") {{$t('學生檔案與作品')}}
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="s in students", :key="s.n", :href="s.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + s.h")
-                    | {{ s.n }}
-                    span(v-if="s.a") - by {{ s.a }}
+                    | {{ $t(s.n) }}
+                    span(v-if="s.a") - by {{ $t(s.a) }}
 </template>
 
 <script>
