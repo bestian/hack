@@ -46,7 +46,7 @@
                     | {{$t('最後專注於Vue框架的應用上。')}}
                   a(is="sui-list-item" v-for="b in bestians", :key="b.n", :href="b.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + b.h")
-                    | {{ b.n }}
+                    | {{ $t(b.n) }}
             sui-grid-column
               .light-yellow.sh
                 sui-header(size="medium") {{$t('學生檔案與作品')}}

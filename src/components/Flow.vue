@@ -4,51 +4,53 @@
       .ui.piled.segment.ranged(:class="{dark: dark}")
         router-link(to="/faq")
           img.float.left(src="/img/elf.png", alt="elf")
-        sui-header(size="large") 上課流程
+        sui-header(size="large") {{$t('上課流程')}}
         router-link(to="/payment")
           img.logo(src="../assets/logo.png")
-        sui-header(size="large") 視訊上課，不用交通
-          .sub.header.left 透過視訊上課，以及
+        sui-header(size="large") {{$t('視訊上課，不用交通')}}
+          .sub.header.left {{$t('透過視訊上課，以及')}}
             a(href="https://www.github.com/", target="_blank" rel="noopener noreferrer")
               i.github.icon
-              | Gitgub協作平台
-            | ，大家可以方便地協作開發程式。
+              | {{$t('Gitgub協作平台')}}
+            | {{$t('，大家可以方便地協作開發程式。')}}
         sui-grid(:columns="4" stackable)
           sui-grid-row
             sui-grid-column
               .light-blue.sh
-                sui-header(size="medium") 視訊連線
+                sui-header(size="medium") {{$t('視訊連線')}}
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="l in links", :key="l.n", :href="l.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + l.h")
-                    | {{ l.n }}
+                    | {{ $t(l.n) }}
             sui-grid-column
               .light-green.sh
-                sui-header(size="medium") 工具下載
+                sui-header(size="medium") {{$t('工具下載')}}
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="w in works", :key="w.n", :href="w.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + w.h")
-                    | {{ w.n }}
+                    | {{ $t(w.n) }}
             sui-grid-column
               .light-yellow.sh
-                sui-header(size="medium") 進行方式
+                sui-header(size="medium") {{$t('進行方式')}}
                 sui-list(ordered)
                   a(is="sui-list-item" v-for="f in flows", :key="f.n", :href="f.h", target="_blank")
                     img(:src="'https://www.google.com/s2/favicons?domain=' + f.h")
-                    | {{ f.n }}
+                    | {{ $t(f.n) }}
             sui-grid-column
               .light-red.sh
-                sui-header(size="medium") 補充說明
+                sui-header(size="medium") {{$t('補充說明')}}
                 sui-list(ordered)
-                  div(is="sui-list-item" v-for = "d in des", :key = "d") {{ d }}
+                  div(is="sui-list-item" v-for = "d in des", :key = "d") {{ $t(d) }}
 
 </template>
 
 <script>
 export default {
   name: 'FlOw',
-  metaInfo: {
-    title: '上課流程',
+  metaInfo () { 
+    return {
+      title: this.$t('上課流程')
+    }
   },
   props: ['likes', 'dark'],
   data() {

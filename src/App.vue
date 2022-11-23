@@ -7,25 +7,25 @@
           span.fat-only {{ $t('home') }}
       sui-menu-item
         router-link(to="/about")
-          sui-icon.fat-only(name="user")
-          span {{ $t('about_me') }}
+          sui-icon(name="user")
+          span.fat-only {{ $t('about_me') }}
       sui-menu-item
         router-link(to="/comments")
-          sui-icon.fat-only(name="comments")
+          sui-icon(name="comments")
           span.fat-only {{ $t('clients') }}
-          span {{ $t('comments') }}
+          span.fat-only {{ $t('comments') }}
       sui-menu-item
         router-link(to="/course")
-          sui-icon.fat-only(name="users")
-          span {{ $t('courses') }}
+          sui-icon(name="users")
+          span.fat-only {{ $t('courses') }}
       sui-menu-item
         a(:href = "'https://www.facebook.com/sharer/sharer.php?u=https://hack.bestian.tw/#/' + $router.currentRoute.path", target="_blank", rel="noopener noreferrer")
-          sui-icon.fat-only(name="facebook")
-          span {{ $t('share') }}
+          sui-icon(name="facebook")
+          span.fat-only {{ $t('share') }}
       sui-menu-item
         sui-dropdown(icon="world")
-          img.flag(:src="$t('flag')")
-          | {{$t(locale)}}
+          img.flag.fat-only(:src="$t('flag')")
+          span.fat-only {{$t(locale)}}
           i.angle.down.icon
           sui-dropdown-menu(button, inverted="true")
             sui-dropdown-item(@click="locale = 'zh-TW'") 
@@ -242,6 +242,7 @@ export default {
 .column .ui.list {
     text-align: left;
     height: 500px;
+    overflow: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -273,6 +274,10 @@ a {
 
 #black {
   color: black !important;
+}
+
+.ui.sub.header {
+  text-transform: none !important;
 }
 
 a.attr {
@@ -533,6 +538,13 @@ p {
   width: 20%;
   min-width: 100px;
   min-height: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .ui.dropdown .menu {
+  right: 0;
+  width: 40%;
+  }
 }
 
 .ui.small {
