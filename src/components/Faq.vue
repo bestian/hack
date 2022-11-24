@@ -22,7 +22,7 @@
       .light-green.sh(:class="{dark: dark}")
         sui-header(size="large") {{$t('跟Bestian遠距學習有什麼好呢？')}}
         p.ans {{$t('以個別化的教育方法，量身打造合適的學習進程。')}}
-        p.ans 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
+        p.ans {{$t('不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。')}}
         sui-header(size="large") 跟Bestian遠距學習怎麼互動？
         p.ans 透過螢幕分享，可以即時和學生協作
         p.ans 在意學生每個好奇點，盡量回答每一個提問。
