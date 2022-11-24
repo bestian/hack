@@ -2,6 +2,12 @@
   .hello
     .ui.container
       .ui.segment
+        h2 {{$t('News')}}
+        .ui.divided.list
+          .item(v-for="n in news", :key="n.md")
+            | {{n.date}}:
+            vue-simple-markdown(:source="$t(n.md)")
+      .ui.segment
         h2
           i.thumbs.up.icon
           | Bestian {{$t('\'s_Web_Workshop')}}
@@ -82,7 +88,7 @@ export default {
       title: this.$t('title')
     }
   },
-  props: ['likes', 'dark'],
+  props: ['likes', 'dark', 'news'],
   data: () => ({
     gsites: [
       { n: '自主學習促進會', h: 'https://sites.google.com/view/autoalearn' },

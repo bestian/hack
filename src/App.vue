@@ -81,7 +81,7 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-    router-view(:likes = "likes", :chats = "chats", @submit = "submit", :dark="dark", :email = "email", :locale="locale")
+    router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale")
     //footer.ui.container#ad
       .ui.list
          .item 試課學費: 500元
@@ -120,6 +120,10 @@ export default {
   data() {
     return {
       locale: 'zh-TW',
+      news: [
+        { date: '2022-11-24', type: 'log', md: '將部份FAQ翻成簡體字和英文' },
+        { date: '2022-11-23', type: 'log', md: '將首頁和介紹頁翻成簡體字和英文' }
+      ],
       email: null,
       token: null,
       chats: [],

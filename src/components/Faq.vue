@@ -4,27 +4,24 @@
       router-link(to="/quiz")
         img.small.float.left(src="/img/elf.png", alt="elf")
       div.fluid.sh(:class="{dark: dark}")
-        sui-header(size="large") {{ msg }}
+        sui-header(size="large") {{ $t(msg) }}
         router-link(to="/chat")
           img.logo(src="../assets/logo.png")
       .light-blue.sh(:class="{dark: dark}")
         sui-header(size="large")
-          | Vue是什麼？
-        p vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript
-        p 簡而言之，框架(framework)就是一套規範或者規則（思想），大家（程式設計師）在該規範或者規則（思想）下工作。
-        p 參考
-          a(href="http://vuejs.org", target="_blank") Vue官網
-          | 和
-          a(href="https://cli.vuejs.org/", target="_blank") Vue-Cli官網
-          | 和
-          a(href="http://goban.tw/#see/vue/0/0", target="_blank") Vue黑板
-        sui-header(size="large") Vue的程式碼有多簡潔呢？
-        p.ans 很簡潔，可以參考看看這個
-          a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") 99乘法表的範例
-          | 就會有個概念了。
+          | {{$t('Vue是什麼？')}}
+        p {{$t('vue是一個網站設計的框架(framework)。目前十分流行。學習vue的同時，也可以同步學到html, css和javascript')}}
+        p {{$t('簡而言之，框架(framework)就是一套規範或者規則（思想），大家（程式設計師）在該規範或者規則（思想）下工作。')}}
+        p {{$t('參考')}}
+          a(href="http://vuejs.org", target="_blank") {{$t('Vue官網')}}
+        sui-header(size="large") 
+          | {{$t('Vue有多簡潔呢？')}}
+        p.ans {{$t('Vue很簡潔，可以參考看看這個')}}
+          a(href="https://jsbin.com/rahuhoj/edit?html,js,output", target="_blank") {{$t('99乘法表的範例')}}
+          | {{$t('就會有個概念了。')}}
       .light-green.sh(:class="{dark: dark}")
-        sui-header(size="large") 跟Bestian遠距學習有什麼好呢？
-        p.ans 以個別化的教育方法，量身打造合適的學習進程。
+        sui-header(size="large") {{$t('跟Bestian遠距學習有什麼好呢？')}}
+        p.ans {{$t('以個別化的教育方法，量身打造合適的學習進程。')}}
         p.ans 不只教知識，更在激發主動創發的自學精神，培養良好的學習習慣。
         sui-header(size="large") 跟Bestian遠距學習怎麼互動？
         p.ans 透過螢幕分享，可以即時和學生協作

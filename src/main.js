@@ -7,6 +7,7 @@ import VueMeta from 'vue-meta';
 import router from './router';
 import i18n from './i18n'
 import App from './App.vue';
+import 'vue-simple-markdown/dist/vue-simple-markdown.css'
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css';
 import './db';
 
