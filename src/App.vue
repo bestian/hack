@@ -121,6 +121,7 @@ export default {
     return {
       locale: 'zh-TW',
       news: [
+        { date: '2022-11-5', type: 'log', md: '將所有FAQ翻成簡體字和英文' },
         { date: '2022-11-24', type: 'log', md: '將部份FAQ翻成簡體字和英文' },
         { date: '2022-11-23', type: 'log', md: '將首頁和介紹頁翻成簡體字和英文' }
       ],
