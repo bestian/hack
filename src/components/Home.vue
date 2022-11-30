@@ -113,6 +113,12 @@ export default {
       { n: '因數與倍數', d: '數學遊戲App', h: 'https://play.google.com/store/apps/details?id=tw.bestian.colormath' },
     ],
   }),
+  mounted () {
+    console.log(this.$route.params.lang)
+    if (this.$route.params.lang) {
+      this.$emit('changeLang', this.$route.params.lang)
+    }
+  }
 };
 </script>
 

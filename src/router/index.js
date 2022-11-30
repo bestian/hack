@@ -11,6 +11,11 @@ export default new Router({
       component: () => import('@/components/Home.vue'),
     },
     {
+      path: '/lang/:lang',
+      name: 'Home',
+      component: () => import('@/components/Home.vue'),
+    },
+    {
       path: '/comments',
       name: 'Comments',
       component: () => import('@/components/Comments.vue'),

@@ -81,7 +81,7 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-    router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale")
+    router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale", @changeLang="changeLang")
     //footer.ui.container#ad
       .ui.list
          .item 試課學費: 500元
@@ -194,7 +194,10 @@ export default {
     }
   },
   methods: {
-    loginGoogle: function () {
+    changeLang (l) {
+      this.locale = l
+    },
+    loginGoogle () {
       if (this.isInApp) {
         window.alert('本系統不支援facebook, link等app內部瀏覽，請用一般瀏覽器開啟，方可登入，謝謝')
       } else {
