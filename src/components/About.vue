@@ -18,9 +18,9 @@
               .ui.bulleted.list
                 .item {{$t('前端網站設計7年')}}
                 .item {{$t('手機App設計5年')}}
-                .item {{$t('自主學習促進會資訊長2年')}}
+                // .item {{$t('自主學習促進會資訊長2年')}}
                 .item {{$t('網站設計教師5年')}}
-          .ui.card
+          // .ui.card
             .image
               i.time.icon
             .description
