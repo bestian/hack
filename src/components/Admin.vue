@@ -22,7 +22,7 @@
           </a>
         </div>
         <div
-          v-for="(k, idx) in r(docs)"
+          v-for="(k, idx) in r(news)"
           :key="idx"
           class="item"
         >
@@ -33,7 +33,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              {{ k.date }}: {{ k.title }}
+              {{ k.date }}:
+              <vue-simple-markdown :source="$t(n.md)"></vue-simple-markdown>
             </a>
             <form
               v-show="edit"
@@ -49,7 +50,7 @@
                 </div>
                 <div class="ui labeled input">
                   <input
-                    v-model="k.title"
+                    v-model="k.md"
                     type="text"
                     placeholder="標題"
                   >
@@ -93,7 +94,7 @@
           </div>
           <div class="ui labeled input">
             <input
-              v-model="title"
+              v-model="md"
               type="text"
               placeholder="標題"
             >
@@ -114,59 +115,16 @@
         </a>
       </form>
     </div>
-    <form
-      v-show="!logged"
-      class="ui form container"
-    >
-      <div class="ui left icon input">
-        <input
-          v-model="email"
-          type="text"
-          placeholder="帳號"
-        >
-        <i class="user icon" />
-      </div>
-      <br>
-      <div class="ui left icon input">
-        <input
-          v-model="password"
-          type="password"
-          placeholder="密碼"
-        >
-        <i class="lock icon" />
-      </div>
-      <br>
-      <br>
-      <div
-        id="r"
-        class="ui checkbox"
-      >
-        <input
-          v-model="remember"
-          type="checkbox"
-          name="example"
-        >
-        <label>記住我</label>
-      </div>
-      <br>
-      <br>
-      <a
-        class="ui huge blue button"
-        @click="tryLogin()"
-      >
-        登入
-      </a>
-    </form>
   </div>
 </template>
 
 <script>
-import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from '../firebase.js'
 import { ref, set, onValue } from 'firebase/database'
 
 export default {
   name: 'EPaper',
+  props: ['logged', 'news'],
   metaInfo: {
     title: '管理員',
   },
@@ -174,43 +132,20 @@ export default {
     edit: false,
     try: 0,
     href: '',
-    title: '',
+    md: '',
     date: '',
     email: '',
     password: '',
-    docs: [],
-    logged: false,
-    user: null,
-    remember: false
+    news: [],
+    user: null
   }),
-  watch: {
-    remember (newR) {
-      localStorage.remember = newR
-      if (!newR) {
-        localStorage.email = ''
-        localStorage.password = ''
-      }
-    }
-  },
   mounted () {
-    const vm = this
-    onValue(ref(db, 'docs'), (snapshot) => {
-      const data = snapshot.val()
-      vm.docs = data
-    })
-    if (localStorage.email) {
-      vm.email = localStorage.email
-    }
-    if (localStorage.password) {
-      vm.password = localStorage.password
-      vm.remember = true
-    }
   },
   methods: {
     save () {
-      var ans = [ ...this.docs]
-      set(ref(db, 'docs'), ans).then(() => {
-        console.log('docs updated!')
+      var ans = [ ...this.news]
+      set(ref(db, 'news'), ans).then(() => {
+        console.log('news updated!')
       })
     },
     r (list) {
@@ -221,63 +156,18 @@ export default {
       return ans
     },
     submit () {
-      var ans = [ ...this.docs]
+      var ans = [ ...this.news]
       ans.push({
-        title: this.title,
+        md: this.md,
         date: this.date,
-        href: this.href,
+        type: 'log',
         time: new Date().getTime()
       })
-      set(ref(db, 'docs'), ans).then(() => {
-        console.log('docs updated!')
+      set(ref(db, 'news'), ans).then(() => {
+        console.log('news updated!')
       })
-      this.title = ''
+      this.md = ''
       this.date = ''
-      this.href = ''
-    },
-    /* register () {
-      const vm = this
-      createUserWithEmailAndPassword(auth, vm.email, vm.password).then((data) => {
-        // console.log(data.user)
-        vm.createAccount(data.user.uid, vm.email)
-        vm.a = 'Login'
-        // this.$router.push('/')
-      })
-        .catch(error => {
-          console.log(error.message)
-        })
-    },
-    createAccount (uid, email) {
-      set(ref(db, 'users/' + uid),
-        {
-          id: uid,
-          email: email,
-          createTime: new Date().getTime()
-        }).then(() => {
-        console.log('user created!')
-      })
-    }, */
-    tryLogin () {
-      if (this.try < 3) {
-        console.log('try to login as:' + (this.email || this.email))
-        this.try++
-        const vm = this
-        signInWithEmailAndPassword(auth, this.email || this.email, this.password)
-          .then((data) => {
-            vm.logged = true
-            vm.user = data.user
-            window.alert('您已成功登入')
-          })
-          .catch(error => {
-            console.log(error.message)
-          })
-        if (this.remember) {
-          localStorage.email = this.email
-          localStorage.password = this.password
-        }
-      } else {
-        window.alert('密碼輸入錯誤超過三次，請重新登入')
-      }
     }
   }
 }

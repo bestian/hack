@@ -81,7 +81,7 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-    router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale", @changeLang="changeLang")
+    router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale", @changeLang="changeLang", :logged="logged")
     //footer.ui.container#ad
       .ui.list
          .item 試課學費: 500元
@@ -107,6 +107,7 @@ import { ref, set, onValue } from 'firebase/database'
 const provider = new GoogleAuthProvider()
 provider.addScope('https://www.googleapis.com/auth/userinfo.email')
 const chatsRef = ref(db, 'chats')
+const newsRef = ref(db, 'news')
 const inapp = new InApp(navigator.userAgent || navigator.vendor || window.opera)
 
 export default {
@@ -120,12 +121,9 @@ export default {
   data() {
     return {
       locale: 'zh-TW',
-      news: [
-        { date: '2022-11-5', type: 'log', md: '將所有FAQ翻成簡體字和英文' },
-        { date: '2022-11-24', type: 'log', md: '將部份FAQ翻成簡體字和英文' },
-        { date: '2022-11-23', type: 'log', md: '將首頁和介紹頁翻成簡體字和英文' }
-      ],
+      news: [],
       email: null,
+      logged: false,
       token: null,
       chats: [],
       isInApp: inapp.isInApp,
@@ -153,6 +151,11 @@ export default {
       // console.log(data)
       vm.chats = data
     })
+    onValue(newsRef, (snapshot) => {
+      const data = snapshot.val()
+      // console.log(data)
+      vm.news = data
+    })
     console.log(vm.isInApp)
     getRedirectResult(auth).then((result) => {
         // console.log(result)
@@ -171,6 +174,9 @@ export default {
         vm.token = token
         // The signed-in user info.
         vm.uid = result.user.uid
+        if (vm.uid === 'RQLcEkS3gnOpzJxc5msr40CS7rj2') {
+          vm.logged = true
+        }
         // console.log(user)
         vm.photoURL = decodeURI(user.photoURL)
         // console.log(vm.photoURL)
