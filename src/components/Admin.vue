@@ -34,7 +34,7 @@
               rel="noopener noreferrer"
             >
               {{ k.date }}:
-              <vue-simple-markdown :source="$t(n.md)"></vue-simple-markdown>
+              <vue-simple-markdown :source="$t(k.md)"></vue-simple-markdown>
             </a>
             <form
               v-show="edit"
@@ -53,13 +53,6 @@
                     v-model="k.md"
                     type="text"
                     placeholder="標題"
-                  >
-                </div>
-                <div class="ui labeled input">
-                  <input
-                    v-model="k.href"
-                    type="text"
-                    placeholder="網址"
                   >
                 </div>
               </div>
@@ -98,13 +91,6 @@
               type="text"
               placeholder="標題"
             >
-          </div>
-          <div class="ui labeled input">
-            <input
-              v-model="href"
-              type="text"
-              placeholder="網址"
-            >
           </div>    
         </div>
         <a
@@ -119,8 +105,8 @@
 </template>
 
 <script>
-import { auth, db } from '../firebase.js'
-import { ref, set, onValue } from 'firebase/database'
+import { db } from '../db.js'
+import { ref, set} from 'firebase/database'
 
 export default {
   name: 'EPaper',
@@ -136,7 +122,6 @@ export default {
     date: '',
     email: '',
     password: '',
-    news: [],
     user: null
   }),
   mounted () {
