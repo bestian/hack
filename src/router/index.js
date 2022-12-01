@@ -11,6 +11,11 @@ export default new Router({
       component: () => import('@/components/Home.vue'),
     },
     {
+      path: '/admin',
+      name: 'Admin',
+      component: () => import('@/components/Admin.vue'),
+    },
+    {
       path: '/lang/:lang',
       name: 'Home',
       component: () => import('@/components/Home.vue'),
