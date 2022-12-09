@@ -205,7 +205,7 @@ export default {
     },
     loginGoogle () {
       if (this.isInApp) {
-        window.alert('本系統不支援facebook, link等app內部瀏覽，請用一般瀏覽器開啟，方可登入，謝謝')
+        window.alert('本系統不支援facebook, line等app內部瀏覽，請用一般瀏覽器開啟，方可登入，謝謝')
       } else {
         signInWithRedirect(auth, provider)
       }
