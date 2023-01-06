@@ -30,7 +30,7 @@
             .image
               i.globe.icon
             .description
-              h3.ui.header 網路App設計{{$t('Web_App_Designs')}}
+              h3.ui.header {{$t('Web_App_Designs')}}
                 .sub.header {{$t('works')}}
               .ui.bulleted.list
                 a.item(v-for="s in wsites", :key="s.n", :href="s.h", target="_blank", rel="noopener noreferrer")
@@ -105,7 +105,6 @@ export default {
       { n: '李雅卿的隨緣自強', d: '個人網站', h: 'https://life3.pages.dev/' },
     ],
     msites: [
-      { n: '念佛號', d: '佛號共修App', h: 'https://bestian.github.io/number/' },
       { n: '佛門咒文集', d: '咒文意譯查詢App', h: 'https://bestian.github.io/q-spell/' },
       { n: '萌典App', d: '教育部字典App', h: 'https://play.google.com/store/apps/details?id=org.moedict.app' },
       { n: '認字遊戲', d: '中文字學習App', h: 'https://play.google.com/store/apps/details?id=tw.bestian.word' },
