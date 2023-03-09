@@ -17,7 +17,7 @@ export default new Router({
     },
     {
       path: '/lang/:lang',
-      name: 'Home',
+      name: 'Home1',
       component: () => import('@/components/Home.vue'),
     },
     {
@@ -47,7 +47,7 @@ export default new Router({
     },
     {
       path: '/gift',
-      name: 'Payment',
+      name: 'Gift',
       component: () => import('@/components/Gift.vue'),
     },
     {
