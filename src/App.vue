@@ -1,6 +1,9 @@
 <template lang='pug'>
   #app
-    sui-menu#nav-bar.no-print(:widths="7" inverted="")
+    sui-menu#nav-bar.no-print.fat-only(:widths="8" inverted="")
+      sui-menu-item
+        a.item(@click="visible = !visible")
+          i.bars.icon
       sui-menu-item
         router-link(to="/")
           sui-icon(name="home")
@@ -25,7 +28,6 @@
       sui-menu-item
         sui-dropdown(icon="world")
           img.flag.fat-only(:src="$t('flag')")
-          span.fat-only {{$t(locale)}}
           i.angle.down.icon
           sui-dropdown-menu(button, inverted="true")
             sui-dropdown-item(@click="locale = 'zh-TW'") 
@@ -81,7 +83,57 @@
         router-link(to="/chat")
           sui-icon(name="file")
           span.fat-only 留言
-    router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale", @changeLang="changeLang", :logged="logged")
+    sui-menu#nav-bar.no-print.thin-only(:widths="2" inverted="")
+      sui-menu-item
+        a.item(@click="visible = !visible")
+          i.bars.icon
+      sui-menu-item.clickable(v-if="!uid", @click="loginGoogle()")
+        sui-icon(name="google")
+        span {{ $t('login') }}
+      sui-menu-item(v-if="uid")
+        img.ui.avatar(:src="photoURL", referrerpolicy="no-referrer")
+        sui-dropdown(icon="angle down")
+          sui-dropdown-menu(button="button", padded="padded", inverted="true")
+            sui-dropdown-item
+              router-link#black(to="/chat")
+                sui-icon(name="file")
+                span {{ $t('comment') }}
+            sui-dropdown-divider
+            sui-dropdown-item
+              a.ui(@click="logout()")
+                sui-icon(name="user")
+                span {{ $t('logout') }}
+    sui-sidebar-pushable
+      sui-menu(
+        is="sui-sidebar",
+        :visible="visible",
+        animation="overlay",
+        width="thin",
+        icon="labeled",
+        inverted,
+        vertical)
+        sui-menu-item
+          router-link(to="/")
+            sui-icon(name="home")
+            span {{ $t('home') }}
+        sui-menu-item
+          router-link(to="/about")
+            sui-icon(name="user")
+            span {{ $t('about_me') }}
+        sui-menu-item
+          router-link(to="/comments")
+            sui-icon(name="comments")
+            span {{ $t('clients') }}
+            span {{ $t('comments') }}
+        sui-menu-item
+          router-link(to="/course")
+            sui-icon(name="users")
+            span {{ $t('courses') }}
+      sui-sidebar-pusher
+        br
+        br
+        br
+        router-view(:likes = "likes", :chats = "chats", :news="news", @submit = "submit", :dark="dark", :email = "email", :locale="locale", @changeLang="changeLang", :logged="logged")
     //footer.ui.container#ad
       .ui.list
          .item 試課學費: 500元
@@ -120,6 +172,7 @@ export default {
   },
   data() {
     return {
+      visible: false,
       locale: 'zh-TW',
       news: [],
       email: null,
@@ -330,6 +383,7 @@ body {
 
 #nav-bar {
   font-size: 1.2em;
+  margin: 0;
   background-color: hsla(195, 29%, 23%, 1);
 /*  text-shadow: 1px 1px hsla(167, 84%, 73%, 0.8) !important; */
 }
@@ -621,6 +675,9 @@ p {
 @media screen and (min-width: 661px) {
   .thin-only {
     display: none !important;
+    position: absolute !important;
+    top: 0;
+    width: 0;
   }
   footer.tada#ad {
     padding-left: 20vw;
@@ -630,6 +687,9 @@ p {
 @media screen and (max-width: 660px) {
   .fat-only {
     display: none !important;
+    position: absolute !important;
+    top: 0;
+    width: 0;
   }
 }
 

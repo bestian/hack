@@ -4,7 +4,7 @@
       .ui.segment
         h2 {{$t('News')}}
         .ui.divided.list
-          .item(v-for="n in news", :key="n.md")
+          .item(v-for="n in rvrv(news)", :key="n.md")
             | {{n.date}}:
             vue-simple-markdown(:source="$t(n.md)")
       .ui.segment
@@ -95,6 +95,7 @@ export default {
       { n: '台東永明佛寺', h: 'https://sites.google.com/view/https://sites.google.com/view/innerpurelight/%E9%A6%96%E9%A0%81' },
     ],
     wsites: [
+      { n: 'ET科技教育', d: '線上課程平台', h: 'https://etcoding.tech/' },
       { n: 'Blockly-HTML', d: '用拼圖寫網頁', h: 'https://bestian.github.io/blockly-html/' },
       { n: '自由數學', d: '數學開放教材和小工具', h: 'https://math.alearn.org.tw/' },
       { n: '萌典', d: '教育部字典民間版', h: 'https://bestian.github.io/q-moedict/' },
@@ -116,6 +117,17 @@ export default {
     console.log(this.$route.params.lang)
     if (this.$route.params.lang) {
       this.$emit('changeLang', this.$route.params.lang)
+    }
+  },
+  methods: {
+    rvrv (list) {
+      if (!list) {
+        return []
+      } else {
+        let arr = [...list]
+        arr.reverse()
+        return arr.slice(0,3)
+      }
     }
   }
 };
