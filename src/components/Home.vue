@@ -101,7 +101,7 @@ export default {
       { n: '萌典', d: '教育部字典民間版', h: 'https://bestian.github.io/q-moedict/' },
       { n: '自學地圖', d: '自學家庭入口網站', h: 'https://map.alearn.org.tw/' },
       { n: '自主學習2.0', d: '自學社群互認地圖', h: 'https://bestian.github.io/q-moedict/' },
-      { n: '念佛號', d: '佛號共修登錄網站', h: 'https://bestian.github.io/number/' },
+      { n: '念佛號', d: '佛號共修登錄網站', h: 'https://bestian.github.io/buddhist_name/' },
       { n: '佛門咒文集', d: '咒文意譯查詢', h: 'https://bestian.github.io/q-spell/' },
       { n: '李雅卿的隨緣自強', d: '個人網站', h: 'https://life3.pages.dev/' },
     ],
