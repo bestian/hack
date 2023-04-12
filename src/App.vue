@@ -750,4 +750,8 @@ a {
 /*  cursor: url('/img/cursor.png'), auto !important; */
 }
 
+.ui.card .description {
+  padding: .6em;
+}
+
 </style>
